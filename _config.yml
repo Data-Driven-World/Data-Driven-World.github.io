@@ -145,7 +145,7 @@ defaults:
       pageview: true
 
 collections:
-  collection1:
+  Notes:
     output: true
   collection2:
     output: true
