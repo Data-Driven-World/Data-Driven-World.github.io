@@ -1,0 +1,49 @@
+<!-- start custom article footer snippet -->
+
+<script>
+    contentAnswers = document.getElementsByClassName("content_answer")
+    var i;
+  
+    for (i = 0; i < contentAnswers.length; i++){
+      stringval = contentAnswers[i].innerHTML
+      console.log(stringval)
+      stringval = stringval.replace(/\*{1,2}(.*?)\*{1,2}/g, '<strong>$1</strong>')
+      stringval = stringval.replace(/`(.*?)`/g, '<code>$1</code>');
+      console.log(stringval)
+      contentAnswers[i].innerHTML = stringval
+  
+    }
+  </script>
+  <script>
+    contentAnswers = document.getElementsByClassName("custom_box")
+    var i;
+  
+    for (i = 0; i < contentAnswers.length; i++){
+      stringval = contentAnswers[i].innerHTML
+      console.log(stringval)
+      stringval = stringval.replace(/\*{1,2}(.*?)\*{1,2}/g, '<strong>$1</strong>')
+      stringval = stringval.replace(/`(.*?)`/g, '<code>$1</code>');
+      console.log(stringval)
+      contentAnswers[i].innerHTML = stringval
+  
+    }
+  </script>
+  
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content_answer = this.nextElementSibling;
+        if (content_answer.style.display === "block") {
+          content_answer.style.display = "none";
+        } else {
+          content_answer.style.display = "block";
+          // this.style.background = "#e6d4ff"
+        }
+      });
+    }
+    </script>
+<!-- end custom article footer snippet -->

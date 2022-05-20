@@ -1,0 +1,21 @@
+.article__content {
+  code.success {
+    color: $text-color-theme-light-d;
+    background-color: $green;
+  }
+
+  code.info {
+    color: $text-color-theme-light-d;
+    background-color: $blue;
+  }
+
+  code.warning {
+    color: $text-color-theme-light-d;
+    background-color: $yellow;
+  }
+
+  code.error {
+    color: $text-color-theme-light-d;
+    background-color: $red;
+  }
+}

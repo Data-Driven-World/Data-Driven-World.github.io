@@ -1,0 +1,26 @@
+<!-- start custom article top snippet -->
+<button id="btnScrollToTop" class="btnScrollToTop"> &uarr; </button>
+
+<script>
+var btnScrollToTop = document.getElementById("btnScrollToTop");
+var article = document.getElementsByClassName("page__main js-page-main has-aside cell cell--auto")
+article[0].addEventListener("scroll", function () {
+    console.log("scrolled");
+    article[0].scrollTop > 50 ? btnScrollToTop.classList.add("show") : btnScrollToTop.classList.remove("show");
+});
+
+btnScrollToTop.addEventListener("click", function () {
+    console.log("clicked")
+    var article = document.getElementsByClassName("page__main js-page-main has-aside cell cell--auto")
+    console.log(article[0].scrollTop)
+
+    article[0].scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+  });
+
+</script>
+
+
+<!-- end custom article top snippet -->
