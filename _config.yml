@@ -13,13 +13,13 @@
 
 ## => Site Settings
 ##############################
-text_skin: "ocean" # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
+text_skin: "dark" # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 # url: "https://username.github.io"
 # baseurl: /baseurl # does not include hostname
-title: 12.345 Subject
+title: 10.020 Data Driven World
 description: > # this means to ignore newlines until "Language & timezone"
-  Welcome to 12.345 Course Site!
+  Welcome to 10.020 Data Driven World Course Site!
 
 ## => Language and Timezone
 ##############################
@@ -29,11 +29,11 @@ lang: en # the language of your site, default as "en"
 ##############################
 author:
   type: # "person" (default), "organization"
-  name: Your Name
+  name: Oka Kurniawan
   url:
   avatar: # path or url of avatar image (square)
-  bio: I am an amazing person.
-  email:
+  bio: I will tell you more when we meet.
+  email: oka_kurniawan@sutd.edu.sg
   facebook: # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
   twitter: # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
   weibo: # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
@@ -48,8 +48,8 @@ author:
 
 ## => GitHub Repository (if the site is hosted by GitHub), won't be useful if you don't enable _show_edit_on_github
 ##############################
-repository: user_name/repo_name
-repository_tree: master
+repository: Data-Driven-World/Data-Driven-World.github.io
+repository_tree: main
 
 ## => Paths
 ##############################
