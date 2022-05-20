@@ -1,9 +1,9 @@
 header:
   - title: Home
     url: /index.html
-  - title: Collection1
-    url: /collection1/overview
-    key: collection1
+  - title: Notes
+    url: /notes/overview
+    key: notes
   - title: Collection2
     url: /collection2/brief
     key: collection2

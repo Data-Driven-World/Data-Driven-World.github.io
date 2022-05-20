@@ -20,14 +20,14 @@ Notes for Data Driven World
 
 Notes:
 
-- [Bubble Sort and Insertion Sort](./BubbleSort_InsertionSort.ipynb)
+- [Bubble Sort and Insertion Sort]({% link _Notes/BubbleSort_InsertionSort.md %})
 
 ## Week 02: Analysing Programs
 
 Notes:
 
-- [Binary Heap and Heapsort](./BinaryHeap_Heapsort.ipynb)
-- [Analysing Computation Time](./ComputationTime.ipynb)
+- [Binary Heap and Heapsort]({% link _Notes/BinaryHeap_Heapsort.md %})
+- [Analysing Computation Time]({% link _Notes/ComputationTime.md %})
 
 ## Week 03: Divide and Conquer
 

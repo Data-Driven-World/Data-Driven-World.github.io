@@ -134,8 +134,8 @@ defaults:
       type: posts
     values:
       layout: article
-      # sidebar:
-      #   nav: layouts
+      #sidebar:
+      #  nav: layouts
       sharing: true
       license: true
       aside:
@@ -148,9 +148,9 @@ collections:
   Notes:
     output: true
   collection2:
-    output: true
+    output: false
   collection3:
-    output: true
+    output: false
 
 ## => Plugins
 ##############################
