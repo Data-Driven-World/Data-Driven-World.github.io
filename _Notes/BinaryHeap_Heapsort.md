@@ -13,8 +13,6 @@ show_edit_on_github: false
 show_date: false
 ---
 
-# Binary Heap and Heapsort
-
 Previously, we discussed two sorting algorithms called [Bubble Sort and Insertion Sort]({% link _Notes/BubbleSort_InsertionSort.md %}). In this section we will apply our programming skills to investigate another sorting algorithm called the Heapsort. We will then compare the performance of Heapsort with the previous [Bubble Sort and Insertion Sort]({% link _Notes/BubbleSort_InsertionSort.md %}). We will discuss some notations on how to analyze these performance.
 
 One reason why we introduce different sorting algorithms is to show you that there are many ways to solve the same problems. At the same time, these different ways may have different performances. After we introduce binary heap and heapsort algorithm, we will begin to introduce you how to analyze these different algorithms in terms of computation time. You will notice that Heapsort algorithm is a much better sorting algorithm as compared to Bubble sort and Insertion sort algorithms.

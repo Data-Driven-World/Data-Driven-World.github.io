@@ -33,22 +33,22 @@ Notes:
 
 Notes:
 
-- [Divide and Conquer](./Divide_Conquer.ipynb)
-- [Merge Sort](./Merge_Sort.ipynb)
+- [Divide and Conquer]({% link _Notes/Divide_Conquer.md %})
+- [Merge Sort]({% link _Notes/Merge_Sort.md %})
 
 ## Week 04: Object-Oriented Paradigm
 
 Notes:
 
-- [Object Oriented Programming](./Object_Oriented_Programming.ipynb)
-- [Stack and Queues](./Stack_Queues.ipynb)
+- [Object Oriented Programming]({% link _Notes/Object_Oriented_Programming.md %})
+- [Linear Data Structures]({% link _Notes/Linear_Data_Structures.md %})
 
 ## Week 05: Searching Data
 
 Notes:
 
-- [Introduction to Graph](./Intro_to_Graph.ipynb)
-- [Graph Search](./Graph_Search.ipynb)
+- [Introduction to Graph]({% link _Notes/Intro_to_Graph.md %})
+- [Graph Search]({% link _Notes/Graph_Search.md %})
 
 ## Week 06: Inheritance and Object-Oriented Design
 
