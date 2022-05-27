@@ -54,35 +54,35 @@ Notes:
 
 Notes:
 
-- [Inheritance and Abstract Base Class](./Inheritance_ABC.ipynb)
-- [Fixed-Size Array and Linked List](./Array_LinkedList.ipynb)
+- [Inheritance and Abstract Base Class]({% link _Notes/Inheritance_ABC.md %})
+- [Fixed-Size Array and Linked List]({%link _Notes/Array_LinkedList.md %})
 
 ## Week 08: Visualizing and Processing Data
 
 Notes:
 
-- [Working With Data](./Working_With_Data.ipynb)
-- [Creating Plots using Matplotlib and Seaborn](./Visualization.ipynb)
+- [Working With Data]({% link _Notes/Working_With_Data.md %})
+- [Creating Plots using Matplotlib and Seaborn]({% link _Notes/Visualization.md %})
 
 ## Week 09: Modeling Continuous Data
 
 Notes:
 
-- [Linear Regression](./LinearRegression.ipynb)
-- [Multiple Linear Regression](./Multiple_Linear_Regression.ipynb)
+- [Linear Regression]({% link _Notes/LinearRegression.md %})
+- [Multiple Linear Regression]({% link _Notes/Multiple_Linear_Regression.md %})
 
 ## Week 10: Classifying Categorical Data
 
 Notes:
 
-- [Logistic Regression](./Logistic_Regression.ipynb)
-- [Confusion Matrix and Metrics](./Confusion_Matrix_Metrics.ipynb)
+- [Logistic Regression]({% link _Notes/Logistic_Regression.md %})
+- [Confusion Matrix and Metrics]({% link _Notes/Confusion_Matrix_Metrics.md %})
 
 ## Week 12: Design of State Machines
 
-- [State Machine](./State_Machine.ipynb)
-- [SM Abstract Class](./StateMachine_ABC.ipynb)
-- [State Space Search](./State_Space_Search.ipynb)
+- [State Machine]({% link _Notes/State_Machine.md %})
+- [SM Abstract Class]({% link _Notes/StateMachine_ABC.md %})
+- [State Space Search]({% link _Notes/State_Space_Search.md %})
 
 ## Contributors
 
