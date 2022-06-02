@@ -29,14 +29,14 @@ The problem is specified as follows. Given a sequence of numbers, write some ste
 
 For example, given the following input:
 
-```
+```python
 # Python Code
 numbers = [16, 14, 10, 8, 7, 8, 3, 2, 4, 1]
 ```
 
 We want to write some steps that sort the numbers, such that the output will be:
 
-```
+```python
 [1, 2, 3, 4, 7, 8, 8, 10, 14, 16]
 ```
 
@@ -277,14 +277,14 @@ Insertion sort is another algorithm that solves the same problem. Let's start by
 
 Given the following input:
 
-```
+```python
 # Python Code
 numbers = [16, 14, 10, 8, 7, 8, 3, 2, 4, 1]
 ```
 
 We want to write some steps that sort the numbers such that the output will be:
 
-```
+```python
 [1, 2, 3, 4, 7, 8, 8, 10, 14, 16]
 ```
 
