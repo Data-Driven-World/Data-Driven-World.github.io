@@ -133,7 +133,9 @@ Given an index of a node in a binary tree, where the left and the right children
 
     Input: index of the current node in a heap
     Output: None
-    Process: re-order the elements in the heap in such a way that the max-heap property is satisfied from the current index node.
+    Process: re-order the elements in the heap 
+             in such a way that the max-heap property is satisfied 
+             from the current index node.
     assumption: 
         - left child forms a tree that satisfies max-heap property
         - right child forms a tree that satisfies max-heap property
