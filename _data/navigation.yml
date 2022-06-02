@@ -4,9 +4,9 @@ header:
   - title: Notes
     url: /notes/overview
     key: notes
-  - title: Collection2
-    url: /collection2/brief
-    key: collection2
+  - title: Learning Objectives
+    url: /lo/weekly
+    key: lo-weekly
   - title: Collection3
     url: /collection3/overview
     key: collection3

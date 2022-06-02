@@ -147,8 +147,8 @@ defaults:
 collections:
   Notes:
     output: true
-  collection2:
-    output: false
+  Learning_Objectives:
+    output: true
   collection3:
     output: false
 
