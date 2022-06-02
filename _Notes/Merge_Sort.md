@@ -189,7 +189,7 @@ where $c$ is a constant and $c > 0$.
 
 We can draw the recurrence tree as shown in the figure below.
 
-![](https://www.dropbox.com/s/4tsdybn4s5fpzst/mergesort_tree.png?raw=1)
+![](https://www.dropbox.com/s/0k68wutsuhdkx6g/mergesort_tree.jpeg?raw=1)
 
 Note that at the bottom of the tree, there are $n$ leaves, where $n$ is the number of input in the array. We can also calculate the level at the bottom. At every level, the computation time at each node in the recurrence tree is given by:
 
