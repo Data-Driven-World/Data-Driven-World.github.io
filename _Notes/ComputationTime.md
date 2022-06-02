@@ -13,8 +13,6 @@ show_edit_on_github: false
 show_date: false
 ---
 
-# Computation Time
-
 A performance of a computer program can be measured using its computation time and its memory space that it occupies. In this section, we will focus on analysing and measuring computation time.
 
 ## Asymptotic Notation
@@ -121,7 +119,7 @@ $$f = \Theta(g)$$
 
 if and only if,
 
-$f=O(g)$ and $g=O(f)$
+$$f=O(g)\text{ and } g=O(f)$$
 
 For example, 
 
@@ -173,8 +171,10 @@ We generate the input array of integers with different number of elements from 1
 
 If we run version 1 of Bubble Sort algorithm on the randomly shuffled array. The output time in seconds are shown here.
 
-```
-bubbletime = [5.7220458984375e-06, 2.2649765014648438e-05, 0.0014679431915283203, 0.2126140594482422, 25.051520347595215]
+```python
+bubbletime = [5.7220458984375e-06, 2.2649765014648438e-05, 
+              0.0014679431915283203, 0.2126140594482422, 
+              25.051520347595215]
 ```
 
 We can plot this and see the relationship between the number of elements and the computation time. To see the relationship better in this big range of number, we plot the log of $y$ and the log of $x$.
@@ -184,14 +184,16 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 nelements = [10, 100, 1000, 10000, 100000]
-bubbletime = [5.7220458984375e-06, 2.2649765014648438e-05, 0.0014679431915283203, 0.2126140594482422, 25.051520347595215]
+bubbletime = [5.7220458984375e-06, 2.2649765014648438e-05, 
+              0.0014679431915283203, 0.2126140594482422, 
+              25.051520347595215]
 
 plt.title("Bubble Sort on Randomly Shuffled Array")
 plt.xlabel("log(number of input)")
 plt.ylabel("log(computation time (s))")
 plt.plot(np.log(nelements), np.log(bubbletime),'o-')
 ```
-![](/assets/images/week2/plot_time_bubblesort.png)
+![](/assets/images/week2/plot_time_bubblesort.jpeg)
 
 We can see that the computation time increases as the input increases. Moreover we can see that the relationship is almost a straight line when we plot the logarithmic of the y axis and the logarithmic of the x axis. In fact, the relationship is a quadratic. If we get the slope of this log plot, taking the x-axis between 6 to 10, we get:
 
@@ -213,15 +215,17 @@ $$T(n) = O(n^2)$$
 
 On the other hand, this is the computation time when the input is already sorted.
 
-```
-bubbletimeSorted = [6.4373016357421875e-06, 1.9073486328125e-06, 4.291534423828125e-06, 3.147125244140625e-05, 0.00030159950256347656]
+```python
+bubbletimeSorted = [6.4373016357421875e-06, 1.9073486328125e-06, 
+                    4.291534423828125e-06, 3.147125244140625e-05, 0.00030159950256347656]
 ```
 
 We can plot this again on the same input.
 
 ```python
 nelements = [10, 100, 1000, 10000, 100000]
-bubbletimeSorted = [6.4373016357421875e-06, 1.9073486328125e-06, 4.291534423828125e-06, 3.147125244140625e-05, 0.00030159950256347656]
+bubbletimeSorted = [6.4373016357421875e-06, 1.9073486328125e-06, 
+                    4.291534423828125e-06, 3.147125244140625e-05, 0.00030159950256347656]
 
 plt.title("Bubble Sort on an Already Sorted Array")
 plt.xlabel("log(number of input)")
@@ -229,7 +233,7 @@ plt.ylabel("log(computation time (s))")
 plt.plot(np.log(nelements), np.log(bubbletimeSorted),'o-')
 ```
 
-![](/assets/images/week2/plot_time_bubblesort_sorted.png)
+![](/assets/images/week2/plot_time_bubblesort_sorted.jpeg)
 
 Taking the slope between 8 to 11, we have approximately the following slope:
 
@@ -245,13 +249,14 @@ $$T(n) = O(n)$$
 
 We can do the same with Insertion Sort Algorithm. Below is the output when the input is randomly shuffled.
 
-```
-insertiontime = [6.198883056640625e-06, 7.867813110351562e-06, 0.0006382465362548828, 0.06774091720581055, 6.839613199234009]
+```python
+insertiontime = [6.198883056640625e-06, 7.867813110351562e-06, 
+                 0.0006382465362548828, 0.06774091720581055, 6.839613199234009]
 ```
 
 We can plot this with the same input.
 
-![](/assets/images/week2/plot_time_insertionsort_random.png)
+![](/assets/images/week2/plot_time_insertionsort_random.jpeg)
 
 We can again notice that the computation time increases in this logarithmic scales with a slope of about 2. This means that the computation time is also quadratic.
 
@@ -261,15 +266,17 @@ $$T(n) = O(n^2)$$
 
 On the other hand, this is the output when the input is already sorted.
 
-```
-insertiontimeSorted = [5.7220458984375e-06, 1.430511474609375e-06, 4.0531158447265625e-06, 3.123283386230469e-05, 0.0003333091735839844]
+```python
+insertiontimeSorted = [5.7220458984375e-06, 1.430511474609375e-06, 
+                       4.0531158447265625e-06, 3.123283386230469e-05, 0.0003333091735839844]
 ```
 
 And if we plot, we will see the following.
 
 ```python
 nelements = [10, 100, 1000, 10000, 100000]
-insertiontimeSorted = [5.7220458984375e-06, 1.430511474609375e-06, 4.0531158447265625e-06, 3.123283386230469e-05, 0.0003333091735839844]
+insertiontimeSorted = [5.7220458984375e-06, 1.430511474609375e-06, 
+                       4.0531158447265625e-06, 3.123283386230469e-05, 0.0003333091735839844]
 
 plt.title("Insertion Sort on an Already Sorted Array")
 plt.xlabel("log(number of input)")
@@ -277,7 +284,7 @@ plt.ylabel("log(computation time (s))")
 plt.plot(np.log(nelements), np.log(insertiontimeSorted),'o-')
 ```
 
-![](/assets/images/week2/plot_time_insertionsort_sorted.png)
+![](/assets/images/week2/plot_time_insertionsort_sorted.jpeg)
 
 Similarly, in this plot, looking at the x axis between 7 to 11, the slope is about 1 indicating that the computation time is linear. So the computation time when the input is already sorted is linearly increasing with the input numbers, similar to Bubble Sort. This means that in the best case scenario, the computation time for Insertion Sort is linear.
 
@@ -287,15 +294,19 @@ $$T(n) = O(n)$$
 
 We can now check the computation time for heapsort algorithm. The computation time for randomly shuffled array is as shown below.
 
-```
-heapsorttime = [5.0067901611328125e-06, 7.867813110351562e-06, 9.512901306152344e-05, 0.0012400150299072266, 0.015644311904907227, 0.21677017211914062]
+```python
+heapsorttime = [5.0067901611328125e-06, 7.867813110351562e-06, 
+                9.512901306152344e-05, 0.0012400150299072266, 
+                0.015644311904907227, 0.21677017211914062]
 ```
 
 A quick look actually shows that heapsort is much faster the other two. Let's plot it.
 
 ```python
 nelements = [10, 100, 1000, 10000, 100000, 1000000]
-heapsorttime = [5.0067901611328125e-06, 7.867813110351562e-06, 9.512901306152344e-05, 0.0012400150299072266, 0.015644311904907227, 0.21677017211914062]
+heapsorttime = [5.0067901611328125e-06, 7.867813110351562e-06, 
+                9.512901306152344e-05, 0.0012400150299072266, 
+                0.015644311904907227, 0.21677017211914062]
 
 plt.title("Heapsort on Randomly Shuffled Array")
 plt.xlabel("log(number of input)")
@@ -303,7 +314,7 @@ plt.ylabel("log(computation time (s))")
 plt.plot(np.log(nelements), np.log(heapsorttime),'o-')
 ```
 
-![](/assets/images/week2/plot_time_heapsort_random.png)
+![](/assets/images/week2/plot_time_heapsort_random.jpeg)
 
 We can see that the logarithmic plot has the slope of about:
 
@@ -316,7 +327,9 @@ It turns out that the computation time for Heapsort is logarithmic. We can see a
 ```python
 nelements = np.array([10, 100, 1000, 10000, 100000, 1000000])
 nlog = nelements * np.log(nelements)
-heapsorttime = [5.0067901611328125e-06, 7.867813110351562e-06, 9.512901306152344e-05, 0.0012400150299072266, 0.015644311904907227, 0.21677017211914062]
+heapsorttime = [5.0067901611328125e-06, 7.867813110351562e-06, 
+                9.512901306152344e-05, 0.0012400150299072266, 
+                0.015644311904907227, 0.21677017211914062]
 
 plt.title("Heapsort on Randomly Shuffled Array")
 plt.xlabel("number of input * log(number of input)")
@@ -324,7 +337,7 @@ plt.ylabel("computation time (s)")
 plt.plot(nlog, heapsorttime,'o-')
 ```
 
-![](/assets/images/week2/plot_time_heapsort_random_xaxis.png)
+![](/assets/images/week2/plot_time_heapsort_random_xaxis.jpeg)
 
 Notice that now the points fall almost in a straight line. This means that the computation time for heapsort is:
 
@@ -332,8 +345,10 @@ $$T(n) = O(n\log(n))$$
 
 Now, what happens when we run the algorithm on an already sorted list? It turns out, that the computation time for different number of input elements are as follows.
 
-```
-heapsorttimeSorted = [1.2874603271484375e-05, 7.3909759521484375e-06, 7.82012939453125e-05, 0.0008978843688964844, 0.009733200073242188, 0.11059808731079102]
+```python
+heapsorttimeSorted = [1.2874603271484375e-05, 7.3909759521484375e-06, 
+                      7.82012939453125e-05, 0.0008978843688964844, 
+                      0.009733200073242188, 0.11059808731079102]
 ```
 
 It turns out that the computation time is still
@@ -345,7 +360,9 @@ We can plot this after modifying the x-axis accordingly.
 ```python
 nelements = np.array([10, 100, 1000, 10000, 100000, 1000000])
 nlog = nelements * np.log(nelements)
-heapsorttimeSorted = [1.2874603271484375e-05, 7.3909759521484375e-06, 7.82012939453125e-05, 0.0008978843688964844, 0.009733200073242188, 0.11059808731079102]
+heapsorttimeSorted = [1.2874603271484375e-05, 7.3909759521484375e-06, 
+                      7.82012939453125e-05, 0.0008978843688964844, 
+                      0.009733200073242188, 0.11059808731079102]
 
 plt.title("Heapsort on an already Sorted Shuffled Array")
 plt.xlabel("number of input * log(number of input)")
@@ -353,7 +370,7 @@ plt.ylabel("computation time (s)")
 plt.plot(nlog, heapsorttime,'o-')
 ```
 
-![](/assets/images/week2/plot_time_heapsort_sorted.png)
+![](/assets/images/week2/plot_time_heapsort_sorted.jpeg)
 
 Let's summarize our findings in a table form.
 
@@ -665,6 +682,6 @@ $T(n) = O(n\log(n)) $
 
 In summary, different algorithm may have different performance in terms of computational time. The following image shows the different plots for some common computational time in computing.
 
-![](https://interactivepython.org/runestone/books/published/pythonds/_images/newplot.png)
+<img src="https://interactivepython.org/runestone/books/published/pythonds/_images/newplot.png" alt="Trulli" width="700" height="500" style="background-color:white">
 
 In our examples above, both Bubble Sort and Insertion sort is quadratic while Heapsort is log linear. We can see that Heapsort is much faster as the number of elements grows big. 
