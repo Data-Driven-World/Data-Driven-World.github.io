@@ -17,13 +17,13 @@ show_date: false
 
 In previous sections, we have worked with various algorithms and data. For example, we did sorting algorithm in a sequence of data of a list or array-like type. List and array is one kind of data where the item has relationship only with its previous and next item in a sequence. Stack and Queues are another kind of data structures. Even with these two, each item is related only in linear fashion, either with the next one at the top of the Stack or with the next in the sequence of the Queue. A Graph allows more relationship to be represented between each item. Two examples of graph data structures are shown below.
 
-<img src="https://www.dropbox.com/s/2ecr6wn6ynzx1hg/MRT_Train.png?raw=1" alt="Train Station Graph" width="600"/>
-<img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/Control-flow-graph-ex.svg/753px-Control-flow-graph-ex.svg.png" alt="Control Flow Graph" width="600"/>
+<img src="https://www.dropbox.com/s/2ecr6wn6ynzx1hg/MRT_Train.png?raw=1" alt="Train Station Graph" style="background-color:white" width="600"/>
+<img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/Control-flow-graph-ex.svg/753px-Control-flow-graph-ex.svg.png" style="background-color:white" alt="Control Flow Graph" width="600"/>
 
 
 In the first example, the graph represent a kind of connection between places like in a map. With this kind of data, we can find a path from one place to another place or finding the shortest distance between two places. In the second example, the graph represent the control flow of a computer program. Compiler can use this information to optimize the code. Both are a Graph data type that represent different things. We can define a few things when dealing with a Graph.
 
-<img src="https://www.dropbox.com/s/0q4gn6jk1ctg3q1/Graphs.png?raw=1" alt="Image of an Abstract Graph" width="600"/>
+<img src="https://www.dropbox.com/s/0q4gn6jk1ctg3q1/Graphs.png?raw=1" alt="Image of an Abstract Graph" style="background-color:white" width="600"/>
 
 - **Vertex**: A vertex is a node that is connected by edges in a graph. A vertex can have a name which is also called its "key". In the above example, V1, V2, V3, etc are the vertices.
 - **Edge**: An edge in the figure above is represented by the lines connecting two vertices. An edge can be uni-directinal or bi-directional. The direction is usually represented by the arrow. Bi-directional edges usually do not have arrow heads. In the above examples, E1, E2, E3, etc are edges. Note that E1 and E6 are bi-directional while the rest are uni-directional.
@@ -87,13 +87,13 @@ You have learnt Object Oriented programming in the previous week. We can apply t
 
 The `Vertex` class is similar to each entry in the dictionary. This class contains information on that particular vertex and who are the neighbouring or adjacent vertices connected this particular vertex. This class can also contains the weights of the connection between this vertex to its neighbours. The `Graph` class, on the other hand, contains the list of all the vertices in the graph. Each of this vertex is of the type `Vertex`. We can draw the UML diagram of these two classes as follows.
 
-<img src="https://www.dropbox.com/s/lokugh7w6v71ccr/Graph_Vertex_Relationship.png?raw=1" alt="drawing" width="600"/>
+<img src="https://www.dropbox.com/s/lokugh7w6v71ccr/Graph_Vertex_Relationship.png?raw=1" alt="drawing" style="background-color:white" width="600"/>
 
 The above UML diagram shows that a `Graph` is composed of one or more `Vertex` objects. This is another *composition* relationship between two classes. 
 
 We can specify the attributes and methods for both classes as shown in the image below.
 
-![](https://www.dropbox.com/s/xpqf7vwpjumim87/Graph_Vertex_Specification.png?raw=1)
+![](https://www.dropbox.com/s/2bxq7gexfjyffyr/Graph_Vertex_Specification.jpeg?raw=1)
 
 The class `Graph` has an attribute called `vertices`. This attribute contains all the vertices in the graph where each vertex is of the type `Vertex`. This class has several methods like how to create or retrieve a `Vertex` object in the graph, add an edge between two vertices given their starting and ending `id`s. It may also have some other helper methods like to get all the neighbouring vertices of a given `Vertex` or to get the number of vertices in the graph. You can design some other methods but these are some of the common operations we may want to perform with a graph.
 
