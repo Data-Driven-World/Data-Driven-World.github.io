@@ -21,7 +21,7 @@ You have encountered `list` as one of the built-in data types that Python suppor
 
 Stack is a type of data structure that follows the LIFO (Last in First out) principle. Stack is common in daily life. Consider a **stack** of books. 
 
-<center><img src=https://cdn.pixabay.com/photo/2012/04/03/13/26/books-25154_960_720.png height=250 width=250></center>
+<center><img src="https://cdn.pixabay.com/photo/2012/04/03/13/26/books-25154_960_720.png" height=250 width=250></center>
 
 Now, let's think about what are the operations we can do with such a structure. We can do the following:
 - We can add new book into the stack by putting it at the top. This operation is called a **push**.
@@ -34,15 +34,15 @@ What you cannot do, however, are the following:
 
 If you want to do those two operations, you have to start by removing the books at the top first. This is why Stack is called Last in First out (LIFO). We can generalize this into an abstract concept of Stack data structure as shown below.
 
-<center><img src=https://upload.wikimedia.org/wikipedia/commons/a/a8/Programming-stack.png></center>
+<center><img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Programming-stack.png" style="background-color:white"></center>
 
 As you can see, there are three operations related to Stack:
+
 - push
 - pop
 - and peek
 
-We can create a stack using Object Oriented Programming by defining a class. A Stack class has at least the following attributes and methods ...
-
+We can create a stack using Object Oriented Programming by defining a class. A Stack class has at least the following attributes and methods. 
 
 
 ```
@@ -62,13 +62,13 @@ You can use [this animation](https://yongdanielliang.github.io/animation/web/Sta
 ## Queue
 
 Queue is another common data structure that we find frequently in daily life. For example, the image below shows a queue of people to Louvre Museum.
-<center><img src=https://upload.wikimedia.org/wikipedia/commons/6/61/Queue-to-the-Louvre.jpg height=250 width=250></center>
+<center><img src="https://upload.wikimedia.org/wikipedia/commons/6/61/Queue-to-the-Louvre.jpg" height=250 width=250></center>
 
 
 Notice that Queue is different from Stack. Stack follows Last in First out principle. On the other hand, Queue follows the First in First out (FIFO) principle. The first person that enters the queue is the first person that can enter the Louvre Museum. We can abstract this as a kind of data structures shown below.
 
 
-<center><img src=https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Data_Queue.svg/405px-Data_Queue.svg.png></center>
+<center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Data_Queue.svg/405px-Data_Queue.svg.png" style="background-color:white"></center>
 
 
 Queues are similar to Stacks in some manners. For example, you can't access the elements in middle of the queue. This is like taking someone from the middle of the queue and let him or her enter the museum before those who are at the front of the queue. You can't also insert an element to somewhere in the middle of the queue. This is called cutting queues. No one will be happy with this. So we can only access item from the front of the queue and insert an item from the rear of the queue. These are the two operations of Queues. 
@@ -148,7 +148,7 @@ Radix sort will go through each digit of all numbers and put them in the buckets
 
 A simple animation for radix sorting:  
 <center>
-<img src=https://drive.google.com/uc?export=view&id=1CUsu4T_Q7N9Lc6s4F6lUNugkkdYG0A70>
+<img src="https://drive.google.com/uc?export=view&id=1CUsu4T_Q7N9Lc6s4F6lUNugkkdYG0A70">
 </center>
 
 Source: [visualgo.net](https://visualgo.net/en/sorting?slide=16).  
@@ -269,13 +269,13 @@ which is the sorted arrangement of the numbers.
 ## Queue with Double Stack
 
 Queue data structure can be implemented in different ways. The first way that comes to our mind maybe simply to use a list as its internal storage. The problem with list is that one of the Queue operation will be slow. Why is this so? Consider if we use the following code to add item into the list:
-```
+```python
 def enqueue(self, item):
     self.items.append(item)
 ```
 In this example, whenever we add item into the Queue, we always add it to the back. This operation takes constant time $O(1)$. However, the removal part, must be written as
 
-```
+```python
 def dequeue(self):
     return self.items.pop(0)
 ```
@@ -288,7 +288,7 @@ The answer is yes. We can use 2 Stack data structures as Queue's internal storag
 
 An example of a Queue implemented using 2 Stacks are shown below.
 
-<center><img src=https://www.dropbox.com/s/zpcn9lgji78tka6/queue_double_stack.png?raw=1 width=480></img></center>
+<center><img src="https://www.dropbox.com/s/zpcn9lgji78tka6/queue_double_stack.png?raw=1" style="background-color:white" width=480></center>
 
 With this implementation both enqueue and dequeue are constant time $O(1)$. Recall that it takes constant time to add an item to the end of a list and to pop an item from the end of a list. What is tricky about this implementation is that when we try to dequeue an item while the Left Stack is empty. To do this we follow the following procedures:
 1. Copy all items from the Right Stack to the Left Stack.
@@ -298,5 +298,5 @@ With this implementation both enqueue and dequeue are constant time $O(1)$. Reca
 
 These steps are shown in the image below.
 
-<center><img src=https://www.dropbox.com/s/jswcz36nv20q9kp/queue_doublestack_enqueue.png?raw=1 height=480></img></center>
+<center><img src="https://www.dropbox.com/s/jswcz36nv20q9kp/queue_doublestack_enqueue.png?raw=1" style="background-color:white" height=480></center>
 
