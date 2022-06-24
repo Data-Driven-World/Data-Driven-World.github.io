@@ -55,7 +55,7 @@ plt.plot(z,y)
 
 
 
-![png](/assets/images/week10/Logistic_Regression_4_1.png)
+![png](/assets/images/week10/Logistic_Regression_4_1.jpeg)
 
 
 We can write our hypothesis as follows.

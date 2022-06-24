@@ -252,7 +252,7 @@ Third, we ask is the state finite? In this case the answer is yes. The reason is
 
 Fourth, we draw the state transition diagram based on our problem formulation. A figure of our state transition diagram is shown below.
 
-<img src="https://www.dropbox.com/s/5vglr22byn4dvs1/lightbox_state_transition_diagram.png?raw=1" alt="drawing" width="600"/>
+<img src="/assets/images/week12/lightbox_state_transition_diagram.jpeg" alt="drawing" width="600"/>
 
 The states are represented by the circle and we have only two states, i.e. "on" and "off". The arrow direction tells us the **next state function**. Given the current state and the input value, we know what is the next state by looking at the arrow direction. Furthermore, each arc is labelled with an input and its output. So for example, `B=0/OFF` on the most right arrow means that when the current state is "off" and the input 0, the output is "off" for that transition. This provides the **output function**.  
 

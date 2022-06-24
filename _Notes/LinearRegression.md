@@ -57,7 +57,7 @@ sns.scatterplot(y='resale_price', x='floor_area_sqm', data=df_tampines)
 
 
 
-![png](/assets/images/week9/LinearRegression_4_1.png)
+![png](/assets/images/week9/LinearRegression_4_1.jpeg)
 
 
 Notice that the resale price increases as the floor area increases. So we can make a hypothesis by creating a straight line equation that predicts the resale price given the floor area data. The figure below shows the plot of a straight line and the existing data together.
@@ -77,7 +77,7 @@ sns.lineplot(y=y, x='floor_area_sqm', data=df_tampines, color='orange')
 
 
 
-![png](/assets/images/week9/LinearRegression_6_1.png)
+![png](/assets/images/week9/LinearRegression_6_1.jpeg)
 
 
 Note that in the above code, we created a straight line equation with the following coefficients:
@@ -123,7 +123,7 @@ $$\hat{\beta}_j = \hat{\beta}_j - \alpha \frac{\partial}{\partial \hat{\beta}_j}
 
 In order to understand the above equation, let's take a look at a two countour plot below.
 
-<img src="https://www.dropbox.com/s/87td2jxzjguh4qw/gradient_descent.png?raw=1"  style="width: 720px;"/>
+<img src="/assets/images/week9/gradient_descent.jpeg"  style="width: 720px;"/>
 
 
 The contour plot shows the minimum somewhere in the centre. The idea of gradient descent is that we move the fastest to the minimum if we choose to move in the direction with the steepest slope. The steepest slope can be found from the gradient of the function. Let's look at point $x_0$ in the figure. The gradient in the direction of $\beta_0$ is non zero as can be seen from the contour since it is perpendicular to the contour lines. On the other hand, the gradient in the direction of $\beta_1$ is zero as it is parallel with the contour line at $x_0$. Recall that contour lines show the points with the same value. When the points have the same values, the gradient is zero. We can then substitute this into the above equation.

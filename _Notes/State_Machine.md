@@ -144,7 +144,7 @@ The first one is the output function which we have discussed. The second mathema
 
 To illustrate that the output function can be different from the next state function. Let's consider a new state machine called the Coke Machine. The figure below shows what we call as the **state transition diagram**. There are many possible design of a Coke machine and the one below is just one particular example of our design choice.
 
-![](https://www.dropbox.com/s/kzk6nkdss7wvw85/coke_sm.png?raw=1)
+![jpeg](/assets/images/week12/coke_sm.jpeg)
 
 
 Each directed arc in the state diagram is labelled as $x/y$ where $x$ denotes the input received and $y$, the output generated. For example, the arc that connects state 0 to state 1 that’s labelled `50/(50, ’--’,0)` means that when the dispenser receives 50¢ (50 before the /) in state 0, it moves to state 1 and generates an output of `(50, ’--’,0)`. This tuple of values in the output indicates that the dispenser display shows 50 which is the amount deposited by the user, no coke has been dispensed yet as indicated by `--`, and no change has been returned to the user as indicated by the last entry which is a 0.

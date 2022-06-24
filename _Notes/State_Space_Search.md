@@ -30,7 +30,7 @@ the problem is to find a sequence of input that brings us to the goal state give
 
 Let's take a look an an example. Consider the case where we have the following states:
 
-<img src="https://www.dropbox.com/s/3q0hsnbgssl2saa/state_space_map.png?raw=1" alt="drawing" width="600"/>
+<img src="/assets/images/week12/state_space_map.jpeg" alt="drawing" width="600"/>
 
 We do not draw any arrow in the above diagram to simplify the drawing as we assume that the transition is bi-directional. This means that there is a transition from S to A and from A to S. 
 
@@ -103,7 +103,7 @@ The above code should output 'G' because there is only two transition and so act
 
 Our state-space search can be represented as a search tree having the starting state as its root. For example, if we want to search path from state S to state D, we can draw the following search tree.
 
-![](https://www.dropbox.com/s/gr5qaspewcillsk/state_search_trees.png?raw=1)
+![](/assets/images/week12/state_search_trees.jpeg)
 
 In the above tree, we label the edges with the input action that one takes from one state to another state following the `statemap` dictionary in the previous section. If we can build this tree, we can find the path from S to D and we know that we need to take the following actions:
 1. Take 0 from S to reach B

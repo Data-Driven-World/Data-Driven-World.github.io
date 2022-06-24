@@ -486,7 +486,7 @@ sns.histplot(x='resale_price', data=df_tampines)
 
 
 
-![png](/assets/images/week8/Visualization_11_1.png)
+![png](/assets/images/week8/Visualization_11_1.jpeg)
 
 
 In the above plot, we use `df_tampines` as our data source and use `resale_price` column as our x-axis. We can change the plot if we want to show it vertically.
