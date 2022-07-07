@@ -11,7 +11,7 @@ aside:
 
 This course provides fundamentals for students with the necessary skills in a data driven world. The first half of the course focuses on providing students with algorithmic thinking and different paradigms of computation such as procedural, object-oriented design and state machine. The second half of the course focuses on a basic introduction to machine learning for categorical and continuous data. Students will be able to apply both algorithms and basic machine learning techniques to solve real-world problems driven by data and computation. 
 
-![](https://www.dropbox.com/s/szxzxabwxcxguzm/course_overview.png?raw=1)
+![](/assets/images/home/course_overview.png)
 
 # Prerequisite	
 
@@ -62,6 +62,6 @@ Students are expected to do their pre-reading and homework on their own while di
 
 # Lesson Format
 
-![](https://www.dropbox.com/s/7513g6sqwu82oy4/lesson_format.png?raw=1)
+![](/assets/images/home/lesson_format.png)
 
 

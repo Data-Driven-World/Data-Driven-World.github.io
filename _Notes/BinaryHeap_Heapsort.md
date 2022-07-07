@@ -22,11 +22,11 @@ One reason why we introduce different sorting algorithms is to show you that the
 
 Before, discussing Heapsort algorithm, we have to introduce a new data structure called *binary heap* or simply called *heap*. The heap is an array of object that we can view as a nearly complete binary tree. You are familiar with the concept of array. But what is a binary tree? The easiest way to explain it is using some examples. The image below shows you an array of integers.
 
-![Array of Integers Representing Binary Heap](https://www.dropbox.com/s/shsolzhu4hy6f80/Binary_Heap_Array.png?raw=1)
+![Array of Integers Representing Binary Heap](/assets/images/week2/Binary_Heap_Array.png)
 
 We have indicated the indices of each element in the array, which starts from 0. We can visualize the elements in this array in a form of a *tree* as shown below.
 
-![Binary Tree Satisfying Heap Property](https://www.dropbox.com/s/zmy2r3hbte1twc3/Binary_Heap.png?raw=1)
+![Binary Tree Satisfying Heap Property](/assets/images/week2/Binary_Heap.png)
 
 A *tree* in computer science is up-side down. It consists of *nodes* and it has one *root* node, which is at the top. In a *binary* tree, each node has only *two* children, which we will call the *left* child and the *right* child. Every node, except the root, has a *parent* node. The node without children is what we called a *leaf*. 
 
@@ -51,7 +51,7 @@ Now, let's go back to our definition of a *heap*. The heap is an array of object
 Let's start by considering how to calculate the index of the parent node. Let's take a look at the example tree we have considered.
 
 
-![Binary Tree Satisfying Heap Property](https://www.dropbox.com/s/zmy2r3hbte1twc3/Binary_Heap.png?raw=1)
+![Binary Tree Satisfying Heap Property](/assets/images/week2/Binary_Heap.png)
 
 
 Note the following:
@@ -120,7 +120,7 @@ There are two kinds of *heap*: max-heaps and min-heaps. In this case we will dis
 This means that in a max-heap, the parent nodes are always greater that their children. This also implies that the largest node is at the *root*. The figure below is an example of a max-heap because it satisfies the condition above.
 
 
-![Binary Tree Satisfying Heap Property](https://www.dropbox.com/s/zmy2r3hbte1twc3/Binary_Heap.png?raw=1)
+![Binary Tree Satisfying Heap Property](/assets/images/week2/Binary_Heap.png)
 
 
 ### Heapify - Maintaining the Heap Property
@@ -145,7 +145,7 @@ Given an index of a node in a binary tree, where the left and the right children
 
 Let's take a look at the tree below.
 
-![](https://www.dropbox.com/s/lpcnmb4f4ds21pk/Heapify_1.png?raw=1)
+![](/assets/images/week2/Heapify_1.png)
 
 Note the following:
 * The current node is index 1, which has the element of 4.
@@ -159,15 +159,15 @@ Let's look at the particular example above. Given the tree above, we do the foll
 
 * We first find the largest child of the current node. The current node is element 4 (index 1). The largest child is element 14 (index 3), which is the left child of the current node. 
 
-    ![](https://www.dropbox.com/s/lpcnmb4f4ds21pk/Heapify_1.png?raw=1)
+    ![](/assets/images/week2/Heapify_1.png)
 * We then swap the current node with the largest child, i.e. element 4 (index 1) with element 14 (index 3).
 
-    ![](https://www.dropbox.com/s/7bm11r4ha9k6cg4/Heapify_2.png?raw=1)
+    ![](/assets/images/week2/Heapify_2.png)
 
 * We, then, move our current index to the place where we swap, i.e. old index of element 14. So we are now at index 3.
 * We do the same thing by looking if any of the children is larger than the current node. Since $8 > 4$, we swap 4 (index 3) with 8 (index 8).
 
-    ![](https://www.dropbox.com/s/eca3mt38aks1xgj/Heapify_3.png?raw=1)
+    ![](/assets/images/week2/Heapify_3.png)
     
 * We, then, move our current index to the place where we swap, i.e. old index of element 8. So we are now at index 8. 
 * Since this node has no more children, we stop. We can check whether the node has more children by calculating the index of the *left* child and see if it is still within the length of the array minus one, i.e. $left(i) < n-1$, where $i$ is the current node index and $n$ is the number of element in the array.
@@ -243,13 +243,13 @@ Let's consider an array as shown below.
 
 * We first visualize this array as a binary tree as shown below. Note that this tree does not satisfy *max-heap property*.
 
-    ![](https://www.dropbox.com/s/k1jufq5nuywiqc6/Build_Heap_1.png?raw=1)
+    ![](/assets/images/week2/Build_Heap_1.png)
 
 * We will start from the middle index, i.e. $n/2 - 1 = 10/2 - 1 = 4$, which is the fifth element, i.e. 14. Notice that all the elements after 14 are all *leaves*. We call *max-heapify* on 14 and the result is a swap between 14 and 16. We only have one iteration because now 14 has reached the end of the array and cannot be compared with any other nodes. In the figure below, we indicate the next element to consider with a *dotted* circle.
  
     [1, 2, 8, 7, **14**, 9, 3, 10, 4, 16]
 
-    ![](https://www.dropbox.com/s/xszuwjf0ex8m5xn/Build_Heap_2.png?raw=1)
+    ![](/assets/images/week2/Build_Heap_2.png)
 
     [1, 2, 8, 7, **16**, 9, 3, 10, 4, **14**]
 
@@ -257,7 +257,7 @@ Let's consider an array as shown below.
 
     [1, 2, 8, **7**, 16, 9, 3, 10, 4, 14]
     
-    ![](https://www.dropbox.com/s/wb6bqx9t5g9m067/Build_Heap_3.png?raw=1)
+    ![](/assets/images/week2/Build_Heap_3.png)
     
     [1, 2, 8, **10**, 16, 9, 3, **7**, 4, 14]
     
@@ -265,7 +265,7 @@ Let's consider an array as shown below.
 
     [1, 2, **8**, 10, 16, 9, 3, 7, 4, 14]
     
-    ![](https://www.dropbox.com/s/8499yrhez2ldneu/Build_Heap_4.png?raw=1)
+    ![](/assets/images/week2/Build_Heap_4.png)
     
     [1, 2, **9**, 10, 16, **8**, 3, 7, 4, 14]
     
@@ -273,7 +273,7 @@ Let's consider an array as shown below.
     
     [1, **2**, 9, 10, **16**, 8, 3, 7, 4, 14]
     
-    ![](https://www.dropbox.com/s/ftmaampbbcgkkp8/Build_Heap_5.png?raw=1)
+    ![](/assets/images/week2/Build_Heap_5.png)
 
     [1, **16**, 9, 10, **2**, 8, 3, 7, 4, 14]
     
@@ -281,7 +281,7 @@ Let's consider an array as shown below.
 
     [1, 16, 9, 10, **2**, 8, 3, 7, 4, **14**]
     
-    ![](https://www.dropbox.com/s/46l91ewzviaiw9k/Build_Heap_6.png?raw=1)
+    ![](/assets/images/week2/Build_Heap_6.png)
     
     [1, 16, 9, 10, **14**, 8, 3, 7, 4, **2**]
 
@@ -289,7 +289,7 @@ Let's consider an array as shown below.
 
     [**1**, **16**, 9, 10, 14, 8, 3, 7, 4, 2]
     
-    ![](https://www.dropbox.com/s/3vljl9yhslw4tre/Build_Heap_7.png?raw=1)
+    ![](/assets/images/week2/Build_Heap_7.png)
     
     [**16**, **1**, 9, 10, 14, 8, 3, 7, 4, 2]
     
@@ -297,7 +297,7 @@ Let's consider an array as shown below.
     
     [16, **1**, 9, 10, **14**, 8, 3, 7, 4, 2]
     
-    ![](https://www.dropbox.com/s/3fcjya44zfrtpni/Build_Heap_8.png?raw=1)
+    ![](/assets/images/week2/Build_Heap_8.png)
     
     [16, **14**, 9, 10, **1**, 8, 3, 7, 4, 2]
     
@@ -305,7 +305,7 @@ Let's consider an array as shown below.
     
     [16, 14, 9, 10, **1**, 8, 3, 7, 4, **2**]
     
-    ![](https://www.dropbox.com/s/hybvbafyxb86jlw/Build_Heap_9.png?raw=1)
+    ![](/assets/images/week2/Build_Heap_9.png)
 
     [16, 14, 9, 10, **2**, 8, 3, 7, 4, **1**]
     
