@@ -139,7 +139,7 @@ To illustrate that, let's take a look at the example above on summing the elemen
 
 The recursion tree can be drawn as follows.
 
-![](https://www.dropbox.com/s/kfvkbj3pcw28xp1/sum_recursiontree.png?raw=1)
+![](/assets/images/week3/sum_recursiontree.png)
 
 The first figure on the left shows that the computation time for $n$ elements is a constant $c$ plus $T(n-1)$. The second figure in the middle shows the tree when we expland $T(n-1)$. That recursive call is when the input array is $n-1$ elements. The computation time when $n-1$ can be explanded as another $c$ plus $T(n-2)$. We can continue doing this until we are left only with one element, which is shown on the figure on the right with $T(1)$. The tree only has one child on each node and each level has the same cost which shown by the arrow pointing to the right. We can show that there are $n$ levels in the three for $n$ elements of input in the original call. 
 
@@ -217,7 +217,7 @@ The computation time can be calculated as follows:
 
 From the above describe, we have the same recursive tree as before.
 
-![](https://www.dropbox.com/s/kfvkbj3pcw28xp1/sum_recursiontree.png?raw=1)
+![](/assets/images/week3/sum_recursiontree.png)
 
 From here, we can conclude that the computation time is linear, i.e. $T(n) = O(n)$, a function of the input integer. 
 
@@ -231,7 +231,7 @@ Tower of Hanoi is a classic example of when its recursive solution is simple and
 
 Given $n$ disks and three towers, one has to move the $n$ disks from the *source* tower to the *destination tower using the other *auxilary* tower. See figure below.
 
-![](https://www.dropbox.com/s/4n2wljo4nkbogyg/tower_of_hanoi.jpeg?raw=1)
+![](/assets/images/week3/tower_of_hanoi.jpeg)
 
 In the above figure, we have three towers A, B, and C. And we have to move $n=3$ disks from tower A to tower B using tower C as the auxiliary tower. 
 
@@ -282,7 +282,7 @@ The last step is to move the two disks from C (auxiliary) to the destination tow
 
 Notice that **Step 1** and **Step 3** involve the same steps as in **Moving two disks**. In fact, we can see Step 1 as Moving two disks with tower A as the source and tower C as the destination using tower B as the auxiliary tower. Similarly, we can see Step 3 as moving two disks with tower C as the source and tower B as the destination with tower A as the auxiliary tower. Moreover, the steps in **Moving two disks** are exactly the same **three steps**. We first move the top disks to the auxiliary tower, then the bottom disk to the destination tower, and lastly the top disks to the destination tower. In this way, we can use the same steps whenever there are more than 1 disks. In general, we can view this problem for $n$ disks as shown in the figure below.
 
-![](https://www.dropbox.com/s/e8m4f012iwsfmtu/tower_of_hanoi_general.jpeg?raw=1)
+![](/assets/images/week3/tower_of_hanoi_general.jpeg)
 
 where we divide the disks into two parts:
 
@@ -324,4 +324,4 @@ Now, let's analyze it's computational time. Looking into the steps above, we not
 
 Let's draw the recursive tree for 3 disks.
 
-![](https://www.dropbox.com/s/1u1f57ch1qsofb1/tower_of_hanoi_time_3.jpeg?raw=1)
+![](/assets/images/week3/tower_of_hanoi_time_3.jpeg)

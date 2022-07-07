@@ -33,56 +33,56 @@ Let's give an example for a particular input sequence and see how merge sort sol
  
 We split the array into two parts recursively until each array is left only with one element.
 
-![](https://www.dropbox.com/s/mwvmxiz6y850dys/mergesort_split.png?raw=1)
+![](/assets/images/week3/mergesort_split.png)
 
 When we have the array with only one element, the array is trivially sorted. So now what we can do is to go up and merge the two array. This is shown in the figure below.
 
-![](https://www.dropbox.com/s/7t2gqgxgqrdt0hj/mergesort_merge.png?raw=1)
+![](/assets/images/week3/mergesort_merge.png)
 
 How do we merge the two arrays? We will give this example in the merge of the last step to get the final sorted array.
 
 The merge steps have three arrows as shown in the figure below, the *red*, *purple*, and *blue*. The red arrow points to the position of where to store the number in the sorted array. The purple arrow points to the number in the left array while the blue arrow points to the number in the right array. The merge step begins by comparing the number pointed by the purple arrow with the number pointed by the blue arrow. We then put the smaller number into the sorted array.
 
-![](https://www.dropbox.com/s/6iwdan3g6pw5q1z/merge_steps01.png?raw=1)
+![](/assets/images/week3/merge_steps01.png)
 
 We then move the arrow from which we move the number. In the example above 1 is smaller than 7, therefore, we put 1 into the position pointed by the red arrow and move the blue arrow to the next number.
 
-![](https://www.dropbox.com/s/sm60h16rtjjrs3c/merge_steps02.png?raw=1)
+![](/assets/images/week3/merge_steps02.png)
 
 These steps continue as follows.
 
-![](https://www.dropbox.com/s/ytnzq9cgck4ftwn/merge_steps03.png?raw=1)
+![](/assets/images/week3/merge_steps03.png)
 
 ---
 
-![](https://www.dropbox.com/s/x678vepjjq9lrqv/merge_steps04.png?raw=1)
+![](/assets/images/week3/merge_steps04.png)
 
 ---
 
-![](https://www.dropbox.com/s/76fq8nq78ipfq04/merge_steps05.png?raw=1)
+![](/assets/images/week3/merge_steps05.png)
 
 ---
 At this point, both left and right array have the same value, i.e. 8. We can choose arbitrarily that when the value is the same, we will take the value from the left array.
 
-![](https://www.dropbox.com/s/1tgnhb8cgvu9yp7/merge_steps06.png?raw=1)
+![](/assets/images/week3/merge_steps06.png)
 
 ---
 
-![](https://www.dropbox.com/s/k1xy3pidpoye89f/merge_steps07.png?raw=1)
+![](/assets/images/week3/merge_steps07.png)
 
 ---
 
 At this point, we have finished putting the right array. So the subsequent steps simply filling up the sorted array from the left array.
 
-![](https://www.dropbox.com/s/7r3je785gy4v4s3/merge_steps08.png?raw=1)
+![](/assets/images/week3/merge_steps08.png)
 
 ---
 
-![](https://www.dropbox.com/s/zcl6m4trxf2r18o/merge_steps09.png?raw=1)
+![](/assets/images/week3/merge_steps09.png)
 
 ---
 
-![](https://www.dropbox.com/s/il26tjy1p5kb2ne/merge_steps10.png?raw=1)
+![](/assets/images/week3/merge_steps10.png)
 
 ### (D)esign of Algorithm
 
@@ -189,7 +189,7 @@ where $c$ is a constant and $c > 0$.
 
 We can draw the recurrence tree as shown in the figure below.
 
-![](https://www.dropbox.com/s/0k68wutsuhdkx6g/mergesort_tree.jpeg?raw=1)
+![](/assets/images/week3/mergesort_tree.jpeg)
 
 Note that at the bottom of the tree, there are $n$ leaves, where $n$ is the number of input in the array. We can also calculate the level at the bottom. At every level, the computation time at each node in the recurrence tree is given by:
 
