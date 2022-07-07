@@ -14,7 +14,7 @@ show_date: false
 ---
 
 ## What is Object Oriented Programming?
-Object-oriented programming (OOP) is a programming paradigm based on the concept of "objects". (https://en.wikipedia.org/wiki/Object-oriented_programming)  
+Object-oriented programming (OOP) is a programming paradigm based on the concept of "objects". [https://en.wikipedia.org/wiki/Object-oriented_programming](https://en.wikipedia.org/wiki/Object-oriented_programming)  
 
 As your program grows in complexity, you may need something more than simple built-in data types such as `str`, `int`, or `list`. For example, when you create a game, you may need an `Avatar`, or `Weapon`, etc. In these cases, it is easier to organize your code around objects. You can think of objects as your own user-defined data types. Later you will see that these objects have two main things: 
 - attributes: which defines the characteristic of the object, and
@@ -613,7 +613,7 @@ But now it is no longer necessary and Python knows how to convert your `Coordina
 
 In designing Object Oriented programs, we usually use a [UML diagram](https://en.wikipedia.org/wiki/Class_diagram). UML stands for *Unified Modeling Language* and it gives some specifications how to represent the classes visually. For example, our `RobotTurtle` class is drawn as the following UML class diagram.
 
-<img src="https://www.dropbox.com/s/afrdqumj0ohbz9x/basic_class_attr_method.png?raw=1" alt="drawing" style="background-color:white" width="400"/>
+<img src="/assets/images/week4/basic_class_attr_method.png" alt="drawing" style="background-color:white" width="400"/>
 
 The UML Class diagram consists of three compartment:
 
@@ -623,11 +623,11 @@ The UML Class diagram consists of three compartment:
 
 Sometime, it is useful to identify the property's type especially when there is a case of composition as in our `pos` property. In this case, we know that `pos` is of the type `Coordinate`. This is drawn in UML diagram as follows.
 
-<img src="https://www.dropbox.com/s/nlm154eyyuuxv69/basic_class_attr_method_type.png?raw=1" alt="drawing" style="background-color:white" width="400"/>
+<img src="/assets/images/week4/basic_class_attr_method_type.png" alt="drawing" style="background-color:white" width="400"/>
 
 UML diagram also allows us to specify the relationship between different classes. For example, `RobotTurtle` and `Coordinate` relationship can be drawn as shown below.
 
-<img src="https://www.dropbox.com/s/f32r1evjv2zvcde/UML_class_relationship.png?raw=1" alt="drawing" style="background-color:white" width="600"/>
+<img src="/assets/images/week4/UML_class_relationship.png" alt="drawing" style="background-color:white" width="600"/>
 
 In this diagram, we see that one `RobotTurtle` can have one `Coordinate`. This is a specific kind of *association* relationship called **composition**. This means that `RobotTurtle` is composed of a `Coordinate`. When the object `RobotTurtle` is destroyed, the `Coordinate` object associated with it is also destroyed. There are other kinds of relationship which we will introduce along the way. 
 
