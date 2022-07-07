@@ -288,7 +288,7 @@ The answer is yes. We can use 2 Stack data structures as Queue's internal storag
 
 An example of a Queue implemented using 2 Stacks are shown below.
 
-<center><img src="https://www.dropbox.com/s/zpcn9lgji78tka6/queue_double_stack.png?raw=1" style="background-color:white" width=480></center>
+<center><img src="/assets/images/week4/queue_double_stack.png" style="background-color:white" width=480></center>
 
 With this implementation both enqueue and dequeue are constant time $O(1)$. Recall that it takes constant time to add an item to the end of a list and to pop an item from the end of a list. What is tricky about this implementation is that when we try to dequeue an item while the Left Stack is empty. To do this we follow the following procedures:
 1. Copy all items from the Right Stack to the Left Stack.
@@ -298,5 +298,5 @@ With this implementation both enqueue and dequeue are constant time $O(1)$. Reca
 
 These steps are shown in the image below.
 
-<center><img src="https://www.dropbox.com/s/jswcz36nv20q9kp/queue_doublestack_enqueue.png?raw=1" style="background-color:white" height=480></center>
+<center><img src="/assets/images/week4/queue_doublestack_enqueue.png" style="background-color:white" height=480></center>
 

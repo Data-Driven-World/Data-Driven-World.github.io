@@ -13,8 +13,6 @@ show_edit_on_github: false
 show_date: false
 ---
 
-# Graph Search
-
 ## Introduction
 
 In the previous lesson, we have introduced how we can represent a graph using object oriented programming. We created two classes `Vertex` and `Graph`. One main use cases with this kind of data is to do some search. For example, given the graph of MRT lines, we would like to search what is the path to take from one station to another station. We usually are interested in the shortest path. This is what Google Map and other Map application does. In this lesson, we will discuss two graph search algorithms: breadth-first search and depth-first search.
@@ -28,17 +26,17 @@ Breadth first search is normally used to find a shortest path between two vertic
 ### (C)ases
 
 
-<img src="https://www.dropbox.com/s/tcbxn51s2l31rs0/bfs_graph_example.png?raw=1" alt="drawing" width="400"/>
+<img src="/assets/images/week5/bfs_graph_example.jpg" alt="drawing" width="400"/>
 
 Let's say we want to find the shortest path from A to F. The way breadth-first search does is to calculate the distance of every vertex from A. So in this case, B will have a distance of 1 since it takes only one step from A to B. On the other hand, C has a distance of 2. D, however, has a distance of 1 since there is an edge from A to D connecting the two vertices directly. Vertex E has a distance 2 because from A it can go to D and then to E in two steps. Finally, F has a distance of 3. There are actually two paths from A to F. The first one is A - B - C - F and the second one is A - D - E - F. Notice that both has the same distance, which is 3. 
 
 How can we obtain all the distances for each vertex? We will start with the starting vertex which in this case is A. Next, we can look into the neighbouring vertices that A has. So in this case, A has two neighbours, i.e. B and D. We can then explore each of the neighbours. We can draw the the vertex that we are exploring as a kind of a tree.
 
-<img src="https://www.dropbox.com/s/ypky19tg7g7mnfm/bfs_tree1.png?raw=1" alt="drawing" width="400"/>
+<img src="/assets/images/week5/bfs_tree1.jpg" alt="drawing" width="400"/>
 
 We can then take turn to explore the neighbours of each of the children in the tree. In this case, B has two neighbours, i.e. A and C. But since we have visited A, we do not want to visit A again. So we should only visit C. This indicates that we need to mark the vertices that we have visited. Similarly, D has three children, i.e. A, C and E. But both A and C has been visited, so we should just add E into our tree. We can continue the same steps until all vertices have been visited. The final tree looks like the following.
 
-<img src="https://www.dropbox.com/s/4vrpt3k7z1p6m0u/bfs_tree2.png?raw=1" alt="drawing" width="400"/>
+<img src="/assets/images/week5/bfs_tree2.jpg" alt="drawing" width="400"/>
 
 Notice that we can actually add F either to C or to E in the tree above. In this case, we choose to add to C. The question is when do we stop? We should stop when all the vertices have been explored in terms of their children. Therefore, we need some way to indicate if a Vertex's children have been fully explored. The way we are going to do this is to colour the vertices. Moreover, we are going to use three different colours:
 - white: is used to indicate that we have not visited the vertex
@@ -47,7 +45,7 @@ Notice that we can actually add F either to C or to E in the tree above. In this
 
 With this in mind, the image below shows the progression of the vertex exploration and how the colour of each vertex changes.
 
-<img src="https://www.dropbox.com/s/73pz6r5evdspo1h/bfs_colour.png?raw=1" alt="drawing" width="600"/>
+<img src="/assets/images/week5/bfs_colour.jpg" alt="drawing" width="600"/>
 
 In the figures above, we use a Queue data structure to explore the vertices. When we visit vertex, we put all its neighbouring vertices into a queue. This also ensures that we explore the vertices in a **breadth-first** manner. For example, when we explore B from A, we did not go to C but rather D, which is at the same level as B in our search tree. This is where the name breadth-first search comes from. So now we are ready to write our algorithm for breadth-first search.
 
@@ -147,11 +145,11 @@ As mentioned in the Introduction, we will do this using the concept of **Inherit
 
 Inheritance is an important concept in object oriented programming that allows us to re-use existing code or classes we have written. In our example here, we already have a class `Vertex` and `Graph`. However, the class `Vertex` only contains `id` and `neighbours`. 
 
-![](https://www.dropbox.com/s/xpqf7vwpjumim87/Graph_Vertex_Specification.png?raw=1)
+![](/assets/images/week5/Graph_Vertex_Specification.jpg)
 
 As shown in the previous section, our `Vertex` object has additional attributes such as *colour*, *distance*, and *parent*. We can actually create a new class containing all these new properties as well as the commonly found properties of a vertex (`id` and `neighbours`). However, we will duplicate our codes and rewriting the methods that is the same for all `Vertex` objects such as adding a neighbour. Inheritance allows us to create a new class without duplicating all the other parts that is the same. By using inheritance, we create a new class by *deriving* it from an existing base class. In this example, we can create a new class called `VertexSearch` that is derived from a base class `Vertex`. When a class inherits another class, the new class possess all the attributes and methods of its parent class. This means that `VertexSearch` class contains both `id` and `neighbours` as well as all the methods that `Vertex` class has. What we need to do is simply to specify what is different with `VertexSearch` that `Vertex` class does not have. We can represent this relationship using a UML diagram as shown below.
 
-<img src="https://www.dropbox.com/s/wjvpqsuffe2b72u/vertexsearch.png?raw=1" alt="drawing" width="600"/>
+<img src="/assets/images/week5/vertexsearch.jpg" alt="drawing" width="600"/>
 
 In the UML diagram, the relationship is represented as an arrow with a white triangle pointing from the child class to the parent class. This relationship is also called **is-a** relationship which simply means that `VertexSearch` *is-a* `Vertex`, it has all the attributes and methods of a `Vertex` object. 
 
@@ -197,11 +195,11 @@ There is another kind of search that can be done on a graph. This is called **de
 
 ### (C)ases
 
-<img src="https://www.dropbox.com/s/tcbxn51s2l31rs0/bfs_graph_example.png?raw=1" alt="drawing" width="400"/>
+<img src="/assets/images/week5/bfs_graph_example.jpg" alt="drawing" width="400"/>
 
 In depth-first search, we go down the tree before moving to the next siblings. For example, as we start from A, we look into its neighbouring vertices. So vertex A has two neighbours, i.e. B and D. The depth-first search algorithm will visit one of them, say vertex B. After it visits B, it will explore one of the neighbours of B instead of visiting D. This is illustrated below.
 
-<img src="https://www.dropbox.com/s/2i51iiacaag5yax/dfs_graph.png?raw=1" alt="drawing" width="600"/>
+<img src="/assets/images/week5/dfs_graph.jpg" alt="drawing" width="600"/>
 
 In the figures above, every time we visit a vertex, we put a timestamp on that vertex called **discovery time**. Once we finish visiting all the neighbours of that vertex, we put another timestamp called **finishing time**. For example, vertex A has a discovery time 1 and finishing time 12 as indicated by 1/12 in the figure. 
 
@@ -210,7 +208,7 @@ We also labelled the edges with two different kind of symbols. The solid line ed
 
 This brings us to the other kind of edges discovered by depth-first search. The dashed line edges are called **back edges**. These are those edges connected a vertex u to an ancestor v in a depth-first tree. For example, A is an ancestor of D. We can see that because we explore D through A - B - C - D. So the edge connecting D to A is a back edge since it connects D to one of its ancestor. Similarly with the edge (C, F). The depth-first forest is shown below.
 
-<img src="https://www.dropbox.com/s/buajqhy3fxuncag/dfs_forest.png?raw=1" alt="drawing" width="400"/>
+<img src="/assets/images/week5/dfs_forest.jpg" alt="drawing" width="400"/>
 
 ### (D)esign of Algorithm
 
@@ -268,21 +266,21 @@ This function simply set the discovery time for the visited vertex u and begins 
 
 One application of depth-first search algorithm is to perform a topological sort. For example, if we have list of task with dependencies, we can sort which task should be performed first. The figure below gives an example of this dependencies tasks 
 
-![](https://www.dropbox.com/s/mdhddjsb0m6cygb/topological_sort_graph.png?raw=1)
+![](/assets/images/week5/topological_sort_graph.jpg)
 
 The figure above shows a directed graph of dependencies between different tasks. For example, the task wearing a pant must be done only after the task of wearing underpant and wearing a shirt. We can use the finishing time of DFS to determine the sequence of tasks. 
 
 Let's try to perform DFS for the above graph. The discovery time and the finishing time for each task is shown in the figure below.
 
-![](https://www.dropbox.com/s/fze9fhc95evmfv5/topological_sort_finishingtime.png?raw=1)
+![](/assets/images/week5/topological_sort_finishingtime.jpg)
 
 In the process of DFS, it somehow starts with "undershirt" and traverse to all the children vertices in the tree, i.e. "pants", "wallets", "belt", and then "shoes". After this, it creates another tree starting from "socks", and then another tree starting from "watch", and finally another tree starting from "underpant". The depth-first forest looks like the figure below.
 
-![](https://www.dropbox.com/s/cj0syo50t5ynljw/depth_first_forest.png?raw=1)
+![](/assets/images/week5/depth_first_forest.jpg)
 
 We can re-order the tasks by its finishing time from the largest to the smallest as shown in the figure below.
 
-![](https://www.dropbox.com/s/rkzwk35plixiql9/sorted_graph.png?raw=1)
+![](/assets/images/week5/sorted_graph.jpg)
 
 The sequence above is based on its finishing time from the largest to the smallest. The first three are independent and their sequence can be interchanged, but subsequently, "shirt" must be done only after "undershirt" task. This sequence may also depends on which vertex the search encounters first. With this in mind, we can write the topological sort steps as follows.
 
