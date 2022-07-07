@@ -89,7 +89,7 @@ f4 = MixedFraction(1, 2) # this is the same as Fraction(1, 2)
 ```
 The UML class diagram can be seen as shown below.
 
-<img src="https://www.dropbox.com/s/6qlhf36vpufmx1t/fraction_mixedfraction.png?raw=1" alt="drawing" width="400"/>
+<img src="/assets/images/week6/fraction_mixedfraction.jpg" alt="drawing" width="400"/>
 
 In the above UML diagram, we choose not to have any additional attributes but only different initialization arguments. This means that we have to initialize the numerator and the denominator from the three arguments used in the initialization `MixedFraction(top, bottom, whole)`, i.e.
 
@@ -112,7 +112,7 @@ Now, let's look at another example
 
 Another example we can work on is to extend the class `Queue` to implement a new data structure called `Deque` (pronounced as deck). The difference between a `Queue` and a `Deque` is that in `Queue` the item only has one entrance which is from the back of the Queue. The exit of a `Queue` object is at the front of the Queue. On the other hand, a `Deque` can be inserted other from the front or from the rear. Its item also can be popped out from either the front or the rear. Below is the UML representation of the class diagram when `Queue` is implemented using a double Stack.
 
-<img src="https://www.dropbox.com/s/pzvvr4x5ja768lu/queue_deque.png?raw=1" alt="drawing" width="400"/>
+<img src="/assets/images/week6/queue_deque.jpg" alt="drawing" width="400"/>
 
 Notice that in the above UML class diagram, we use `/` to represent computed property, i.e. `/size` and `/is_empty`. `Deque` does not have any additional attributes or property. The only changes are the methods. We rename and add additional methods for `Deque` class. In this cass, `add_rear(item)` of `Deque` is the same as `enqueue(item)` of a `Queue` object. Similarly, `remove_front()` method of `Deque` is the same as `dequeue()` of a `Queue` object. This is also true for the case of `peek_front()` and `peek()`. Thus, we need not re-write half of the methods in `Deque` class since we can simply call its parent class' methods. 
 

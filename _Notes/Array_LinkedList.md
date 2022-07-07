@@ -25,7 +25,7 @@ int mynumber[10];
 
 Such declaration reserves 10 spaces in the memory to store an array of `int` type. If one `int` number takes 32-bit (32 digits of 0s and 1s), then the program reserves 10 spaces of 32-bit in the memory as shown in the figure below.
 
-<img src="https://www.dropbox.com/s/4u2gpuz0e3eq5sg/array_memory.png?raw=1" alt="drawing" width="600"/>
+<img src="/assets/images/week6/array_memory.jpg" alt="drawing" width="600"/>
 In the example that we have, `n` is 10 and so the index of the last element is $n-1=9$. You can access element using the index. For example, you can use `mynumber[0]` to access the first element and `mynumber[9]` to access the last element. In C programming language, the name of the array is also the address of the first element. 
 
 Once it is declared to have 10 spaces, the array cannot be extended. You need to reallocate the memory if you have more numbers than what is declared. Moreover, each element has the same data type. The consequence of this is that each element occupies the same size in the memory. Since it occupies the same size, it is easy to know where the other data are. The advantage of this way of creating an array is that it is fast and simple.
@@ -79,7 +79,7 @@ In your problem set, you will create your own list based on a fixed-array of Num
 
 Initially, when the list is created, `MyArrayList` will create an empty array with some fixed initial size, say 16 elements. When all the 16 elements are filled up, and a new data is appended, `MyArrayList` will double the size to 32 elements and put the new data at the next empty position. See figure below.
 
-![](https://www.dropbox.com/s/4vbjzuodevk2dim/array_add_element.png?raw=1)
+![](/assets/images/week6/array_add_element.jpg)
 
 This is one way to work. The disadvantage of this method is that we always have to reserve extra memory space to work. For example, we have 17 elements, we actually reserving 32 spaces where the other 15 positions are empty. The advantage is that since the size is fixed for each element, it is easy to locate the data at any position using its index. Later on, we will consider a different way of creating a list using Linked List.
 
@@ -87,7 +87,7 @@ This is one way to work. The disadvantage of this method is that we always have 
 
 What can we do to insert an element into a list made with fixed-size array? To insert one element, one can first check if there is enough space in the allocated memory. If there is not enough space, we can double the size of the array as in the case of adding an element at the end. If there is enough space for one more element, then no doubling of memory is needed and we can just shift all the element to the right by one position and insert the element at the position we want it. This is illustrated in the figure below.
 
-![](https://www.dropbox.com/s/8f428i6ws9rvos5/array_insert.png?raw=1)
+![](/assets/images/week6/array_insert.jpg)
 
 The above figure shows what happens when we insert the data at position 2 (third position). Assuming that the array is already full, we need to ensure that we have enough capacity to insert a new element. Therefore, we first need to increase the memory size by doubling the array. Once there is enough space, we shift all the elements to the right and modify the value of the element at position 2 (third position). 
 
@@ -107,7 +107,7 @@ The linked list itself stores **references** to two nodes:
 
 This is shown in the figure below.
 
-![](https://www.dropbox.com/s/d7y7fjjbvjih4bo/linkedlist.png?raw=1)
+![](/assets/images/week6/linkedlist.jpg)
 
 Notice that the element itself can be a reference to another object. This arrangement allows several flexibility. First, the element can be objects of different sizes. Since the way to get to some element is through the *next* references, there is no constraint that the element must be of the same size. Moreover, you can add new element as needed by creating a new node and point the tail to the new node and the last element's next reference to this new node. In this way, you need not reserve any empty memory space as in the fixed size array. This arrangement also allows you to have a list with any size without declaring how many elements would be in the list. 
 
@@ -131,7 +131,7 @@ Recall that a linked list has references to the first and the last node. To inse
 
 This is shown in the figure below. 
 
-![](https://www.dropbox.com/s/mi5j49igw3dj8ko/linkedlist_insert_first.png?raw=1)
+![](/assets/images/week6/linkedlist_insert_first.jpg)
 
 Inserting at the end of the linked list involves similar process:
 1. Create a new Node with the new element.
@@ -142,7 +142,7 @@ The only tricky thing is when the linked list is empty. In this case, the *tail*
 
 If we wish to insert an element in between the first and the last position, we first need to *traverse* the linked list to that particular position. We then do the operation as shown in the figure below.
 
-![](https://www.dropbox.com/s/2oe8dyirw8h3rn3/linkedlist_insert_mid.png?raw=1)
+![](/assets/images/week6/linkedlist_insert_mid.jpg)
 
 In the above figure, we insert a new element at position 2 (third element). In order to do so, we do the following:
 1. Traverse up to Node 1.
@@ -156,7 +156,7 @@ What is the computational time of inserting an element. The worst case is when w
 
 Removing an element also can be categorized into these three positions: first, last, or in between the first and the last. Let's start for the case when we remove the first element. This is shown in the figure below.
 
-![](https://www.dropbox.com/s/ghb4ztyjp40vin7/linkedlist_remove_first.png?raw=1)
+![](/assets/images/week6/linkedlist_remove_first.jpg)
 
 In this case, we do the following:
 1. Store the head into a temporary node variable
@@ -174,7 +174,7 @@ In the case of removing the last element:
 
 Lastly, we need to consider the case when we remove an element which position is in between the first and the last. This is shown in the figure below.
 
-![](https://www.dropbox.com/s/tyrywfuyh5u5zzy/linkedlist_remove_mid.png?raw=1)
+![](/assets/images/week6/linkedlist_remove_mid.jpg)
 
 In the above figure, we remove element at position 1 (second position). To do this, we follow the following steps:
 1. Traverse the nodes until the node before (i.e. Node 0 in this case) and set it as the current node.
@@ -188,7 +188,7 @@ Since removing node involves traversing the linked list, the worst case complexi
 
 We have discussed two ways of implementing a list and each have its own advantages and disadvantages. For some application, one may choose to use a list based on fixed-size array, while for other applicaiton, one may choose to use a linked list. Both kinds of list, however, can be designed to implement the same operations. This is where our lesson on inheritance can be applied. We can design a base class for our list that is inherited by the two ways of implementing a list. The UML diagram is shown below.
 
-<img src="https://www.dropbox.com/s/74u5b1aqykqhydb/uml_array_linkedlist.png?raw=1" alt="drawing" width="600"/>
+<img src="/assets/images/week6/uml_array_linkedlist.jpg" alt="drawing" width="600"/>
 
 In the UML above, we showed that `MyAbstractList` implements the Abstract Base Class of `Iterator`. To satisfies this, you need to define a method called `__iter__()` in `MyAbstractList` that returns an iterator object. The class `MyAbstractList` also defines some common property and methods for both `MyArrayList` and `MyLinkedList` such as:
 - `size`, which is an attribute that stores the number of items in the list.
