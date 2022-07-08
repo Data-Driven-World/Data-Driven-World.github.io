@@ -116,7 +116,7 @@ or we can also take the following sequence of actions:
 
 We can facilitate this search by creating a class called `SearchNode` that contains the information needed to build the search Trees. The UML diagram for `SearchNode` is shown below.
 
-<img src="https://www.dropbox.com/s/lh251q4xq3d4oq3/SearchNode_class_UML.png?raw=1" alt="drawing" width="400"/>
+<img src="/assets/images/week12/SearchNode_class_UML.png" alt="drawing" width="400"/>
 
 The class has three attributes:
 - state, which identifies the node for the particular state it represents in the tree

@@ -21,7 +21,7 @@ The problem of classification deals with *categorical* data. In this problem, we
 
 Let's take an example of breast cancer classification problem. Let's say depending on the cell size, an expert can identify if the cell is benign or malignant. We can plot something like the following figure.
 
-![](https://www.dropbox.com/s/drkggfjxttwjjfu/cancer_cell_plot.png?raw=1)
+![](/assets/images/week10/cancer_cell_plot.png)
 
 In the y-axis, value of 1 means it is a malignant cell while value of 0 means it is benign. The x-axis can be considered as a normalized size of the cell with mean 0 and standard deviation of 1 (recall z-normalization).
 
@@ -82,7 +82,7 @@ The above relationship shows that we can map the value of linear regression into
 
 The above conditions also means that we can classify $y=1$ when $\beta^T x \geq 0$ and $y = 0$ when $\beta^T x < 0$. We can draw these boundary conditions.
 
-![](https://www.dropbox.com/s/ncflm4853mdy8es/decision_boundary.png?raw=1)
+![](/assets/images/week10/decision_boundary.png)
 
 In the figure above, we indicated the predicted label $y$ with the orange colour. We see that when $p(x)\geq 0.5$, the data is marked as $y=1$ (orange). On the other hand, when $p(x) \leq 0.5$, the data is marked as $y=0$ (orange). The thick black line shows the decision boundary for this particular example. 
 

@@ -26,7 +26,7 @@ The reason is that every state machine has different **initial state** and diffe
 
 Let's draw the UML diagram of the `StateMachine` class. 
 
-<img src="https://www.dropbox.com/s/cdtyl69s2jrabrd/SM_class.png?raw=1" alt="drawing" width="400"/>
+<img src="/assets/images/week12/SM_class.png" alt="drawing" width="400"/>
 
 In this class diagram, we identify that `StateMachine` is an abstract class which requires another sub class to implement some of its definition. We also specifies using `<<abstract>>` notation that it is the `get_next_values(state, inp)` that the sub class has to define. Note also that the `start_state` must be initialized by the sub-class also since each state machine may have different initial state. 
 
