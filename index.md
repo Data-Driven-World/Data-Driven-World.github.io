@@ -29,6 +29,11 @@ This course provides fundamentals for students with the necessary skills in a da
 | Pre-Class Activities          | 8          |
 | Participation                 | 2          |
 
+For Audit students to be considered pass, they need to have above 80% scores for the following assessments:
+- 1D Projects
+- Cohort Sessions and Homeworks
+- Pre-Class Activities
+
 # Learning Objectives
 
 By the end, students should be able to:
