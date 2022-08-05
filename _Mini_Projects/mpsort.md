@@ -19,7 +19,6 @@ In this mini project, you will develop a web app to sort numbers. By the end of 
 - Create a simple web app using Flask web framework
 - Use Transcrypt Python library to create front-end web script with Python
 - Run a localhost web server 
-- Deploy web app to Amazon Elastic Beanstalk
 
 ## Setup
 

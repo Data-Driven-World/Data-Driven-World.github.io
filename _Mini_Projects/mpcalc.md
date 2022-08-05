@@ -494,10 +494,6 @@ The expected output for both exercises 1 and 2 can be found in this video.
 
 [Mini Project 2 Expected Output](https://web.microsoftstream.com/video/1392234b-aa8a-412d-92c7-e2cf2b803175)
 
-## Optional: Deploying to Amazon Elastic Beanstalk
-
-Check [Deploying to Amazon Elastic Beanstalk](../mp_sort/DeployEB.md).
-
 ## Troubleshooting
 
 1. I got, `ModuleNotFoundError: No module named ''?` 
