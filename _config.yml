@@ -147,10 +147,10 @@ defaults:
 collections:
   Notes:
     output: true
+  Mini_Projects:
+    output: true
   Learning_Objectives:
     output: true
-  collection3:
-    output: false
 
 ## => Plugins
 ##############################

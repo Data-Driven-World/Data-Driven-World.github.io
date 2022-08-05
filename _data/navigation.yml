@@ -4,12 +4,12 @@ header:
   - title: Notes
     url: /notes/overview
     key: notes
+  - title: Mini Projects
+    url: /mini_projects/overview
+    key: miniprojects
   - title: Learning Objectives
     url: /lo/weekly
     key: lo-weekly
-  - title: Collection3
-    url: /collection3/overview
-    key: collection3
 
 collection1:
   - title: Overview
