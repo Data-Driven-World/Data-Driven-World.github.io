@@ -1,5 +1,5 @@
 ---
-title: Overview
+title: Data Driven World Notes
 permalink: /notes/overview
 key: notes-overview
 layout: article
@@ -12,9 +12,6 @@ aside:
 show_edit_on_github: false
 show_date: false
 ---
-# Data Driven World Notes
-
-Notes for Data Driven World
 
 ## Week 01: Python Revision and Sorting Algorithm
 
