@@ -13,6 +13,30 @@ show_edit_on_github: false
 show_date: false
 ---
 
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [Mini Project 1: Sorting App](#mini-project-1-sorting-app)
+    - [Learning Objectives](#learning-objectives)
+    - [Setup](#setup)
+        - [Install Git](#install-git)
+        - [Downloading Repository](#downloading-repository)
+        - [Go to Mini Project 1 Folder](#go-to-mini-project-1-folder)
+        - [Create Virtual Environment](#create-virtual-environment)
+    - [Brief Overview of Flask Project Structure](#brief-overview-of-flask-project-structure)
+        - [HTML for Exercise 1](#html-for-exercise-1)
+        - [Using Transcrypt](#using-transcrypt)
+        - [Run Flask](#run-flask)
+            - [Vocareum](#vocareum)
+            - [Local Computer](#local-computer)
+    - [Task 1: Generating Random Integers](#task-1-generating-random-integers)
+    - [Task 2: Sorting Numbers](#task-2-sorting-numbers)
+    - [Task 3: Creating a Text Input](#task-3-creating-a-text-input)
+    - [Task 4: Sorting User Input](#task-4-sorting-user-input)
+    - [Expected Output](#expected-output)
+
+<!-- markdown-toc end -->
+
 
 ## Learning Objectives
 In this mini project, you will develop a web app to sort numbers. By the end of this assignment, you should be able to:
@@ -33,13 +57,20 @@ Clone the mini project repository from Github. On your terminal or Git Bash, typ
 
 ```shell
 cd Downloads
-git clone https://github.com/kurniawano/d2w_mini_projects.git
+git clone https://github.com/Data-Driven-World/d2w_mini_projects
 ```
 
 ### Go to Mini Project 1 Folder
 
 Once you have downloaded the repository, you can go to the repository and to the folder called `mp_sort` for this mini project.
 
+Windows:
+```dos
+cd d2w_mini_projects\mp_sort
+dir
+```
+
+Unix/MacOS
 ```shell
 cd d2w_mini_projects/mp_sort
 ls
@@ -82,7 +113,7 @@ Unix/MacOS:
 $ cd ~/Downloads/d2w_mini_projects/mp_sort
 ```
 
-From the root folder, i.e. `mp_sort`, first make sure that you have installed `pipenv` package.
+First make sure that you have installed `pipenv` package.
 
 ```shell
 pip install --user pipenv
