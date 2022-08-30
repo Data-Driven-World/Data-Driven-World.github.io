@@ -239,12 +239,14 @@ HTML code normally contains of two section, the header and the body. Each of the
 
 ```html
 <head>
+  {% raw %}
 	<title>{{title}}</title>
+  {% endraw %}
 	<script type="module">import * as library from '/static/__target__/library.js'; window.library = library;</script>
 </head>
 ```
 
-The `<title>` set the title of the page. Inside this tag we found `{{title}}`. The two curly braces is a Jinja template syntax that allow you to change the HTML code. It is a kind of variable that you can set. This variable `title` is actually set when `render_template()` is called in `routes.py`.
+The `<title>` set the title of the page. Inside this tag we found {% raw %}{{title}}{% endraw %}. The two curly braces is a Jinja template syntax that allow you to change the HTML code. It is a kind of variable that you can set. This variable `title` is actually set when `render_template()` is called in `routes.py`.
 
 ```python
 @application.route('/ex1')
