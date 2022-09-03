@@ -5,10 +5,11 @@
 ///
 
 // main colors
-$main-color-1: #54d1fa;
+$main-color-1: #ffe253;
+$link-color-1: $main-color-1;
 $text-color-1: rgba(#fff, 0.8);
 
-$main-color-2: #ff006a;
+$main-color-2: #54d1fa;
 $text-color-2: rgba(#fff, 0.8);
 
 $main-color-3: #191a1f;
@@ -37,10 +38,10 @@ $text-background-color: rgba(#fff, 0.05);
 
 // header and footer colors
 $header-text-color: $text-color-3;
-$header-background: $main-color-3;
+$header-background: $background-color;
 
 $footer-text-color: $text-color-3;
-$footer-background: $main-color-3;
+$footer-background: $background-color;
 
 // border and shadow colors
 $border-color: mix(#fff, $background-color, 20%);

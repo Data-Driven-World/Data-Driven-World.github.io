@@ -62,7 +62,7 @@ $base: (
   font-size-h6-xs: 0.85rem,
 
   font-weight: 400,
-  font-weight-light: 200,
+  font-weight-light: 300,
   font-weight-bold: 900,
 
   line-height-xl: 2,
@@ -95,11 +95,11 @@ $z-indexes: (
 );
 
 $layout: (
-  header-height: 5rem,
-  header-height-sm: 3rem,
+  header-height: 3.5rem,
+  header-height-sm: 2.5rem,
   content-max-width: 950px,
   sidebar-width: 250px,
-  sidebar-header-height: 3rem,
+  sidebar-header-height: 2rem,
   aside-width: 220px,
 );
 

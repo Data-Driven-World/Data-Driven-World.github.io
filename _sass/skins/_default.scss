@@ -5,13 +5,14 @@
 ///
 
 // main colors
-$main-color-1: #82d7f7;
+$main-color-1: #54d1fa;
+$link-color-1: #120093;
 $text-color-1: #fff;
 
 $main-color-2: #282b31;
 $text-color-2: #fff;
 
-$main-color-3: #f8f7f7;
+$main-color-3: #e7e7e7;
 $text-color-3: #333;
 
 $main-color-theme-light: rgba(#000, 0.9);
@@ -23,7 +24,7 @@ $background-color: #f8f7f7;
 // text colors
 $text-color-theme-light-d: #000;
 $text-color-theme-light: #1e2127;
-$text-color-theme-light-l: #888;
+$text-color-theme-light-l: rgb(107, 107, 107);
 
 $text-color-theme-dark-d: #fff;
 $text-color-theme-dark: rgba(#fff, 0.95);
@@ -37,10 +38,10 @@ $text-background-color: rgba(#000, 0.05);
 
 // header and footer colors
 $header-text-color: $text-color-3;
-$header-background: $main-color-3;
+$header-background: $background-color;
 
 $footer-text-color: $text-color-3;
-$footer-background: $main-color-3;
+$footer-background: $background-color;
 
 // border and shadow colors
 $border-color: mix(#000, $background-color, 20%);
