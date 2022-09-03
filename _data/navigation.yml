@@ -11,86 +11,64 @@ header:
     url: /lo/weekly
     key: lo-weekly
 
-collection1:
-  - title: Overview
+Notes:
+  - title: Week 1
     children:
-      - title: Quick Start
-        url: /collection1/overview
-
-collection2:
-  - title:
+      - title: Sort
+        url: /notes/bubble_insertion_sort
+  - title: Week 2
     children:
-      - title: Overview
-        url: /collection2/overview
-      - title: Brief
-        url: /collection2/brief
-      - title: Brief Info
-        url: /collection2/brief-info
-      - title: Item Cover
-        url: /collection2/item-cover
-      - title: Item Cover Readmore
-        url: /collection2/item-cover-excerpt-readmore
-      - title: Item Cover Excerpt
-        url: /collection2/item-cover-excerpt
-      - title: Item Cover Readmore Info
-        url: /collection2/item-cover-excerpt-readmore-info
-      - title: Grid
-        url: /collection2/grid
-      - title: Grid Small
-        url: /collection2/grid-small
-
-collection3:
-  - title: Tutorial Mode
-    url: /collection3/overview
-  - title: Start
+      - title: Heap
+        url: /notes/binary_heap_sort
+      - title: Computation Time
+        url: /notes/computation_time
+  - title: Week 3
     children:
-      - title: Quick Start
-        url: /collection3/quick-start
-      - title: Structure
-        url: /collection3/structure
-      - title: Update from 1.x to 2.x
-        url: /collection3/update-from-1-to-2
-  - title: Customization
+      - title: Divide and Conquer
+        url: /notes/divide_conquer
+      - title: Merge Sort
+        url: /notes/merge_sort
+  - title: Week 4
     children:
-      - title: Configuration
-        url: /collection3/configuration
-      - title: Navigation
-        url: /collection3/navigation
-      - title: Layouts
-        url: /collection3/layouts
-      - title: Logo and Favicon
-        url: /collection3/logo-and-favicon
-      - title: Authors
-        url: /collection3/authors
-      - title: Internationalization
-        url: /collection3/i18n
-  - title: Content
+      - title: OOP
+        url: /notes/oo_programming
+      - title: Linear Data Structures
+        url: /notes/linear_data_structure
+  - title: Week 5
     children:
-      - title: Writing Posts
-        url: /collection3/writing-posts
-      - title: Additional Styles
-        url: /collection3/additional-styles
-      - title: Extensions
-        url: /collection3/extensions
-      - title: Markdown Enhancements
-        url: /collection3/markdown-enhancements
-  - title: Extra
+      - title: Introduction to Graph
+        url: /notes/intro_graph
+      - title: Graph Search
+        url: /notes/graph_search
+  - title: Week 6
     children:
-      - title: Spacing
-        url: /collection3/spacing
-      - title: Grid
-        url: /collection3/grid
-      - title: Icons
-        url: /collection3/icons
-      - title: Image
-        url: /collection3/image
-      - title: Button
-        url: /collection3/button
-      - title: Item
-        url: /collection3/item
-      - title: Card
-        url: /collection3/card
-      - title: Hero
-        url: /collection3/hero
-      - title: Swiper
-        url: /collection3/swiper
+      - title: Inheritance
+        url: /notes/inheritance_abc
+      - title: Array and Linked List
+        url: /notes/array_linkedlist
+  - title: Week 8
+    children:
+      - title: Working with Data
+        url: /notes/working_with_data
+      - title: Matplotlib and Seaborn
+        url: /notes/visualization
+  - title: Week 9
+    children:
+      - title: Linear Regression
+        url: /notes/linear_regression
+      - title: Multiple Linear Regression
+        url: /notes/multiple_linear_regression
+  - title: Week 10
+    children:
+      - title: Logistic Regression
+        url: /notes/logistic_regression
+      - title: Confusion Matrix and Metrics
+        url: /notes/confusion_matrix_metrics
+  - title: Week 12
+    children:
+      - title: State Machine
+        url: /notes/state_machine
+      - title: SM Abstract Class
+        url: /notes/abstract_sm_class
+      - title: State Space Search
+        url: /notes/state_space_search

@@ -1,21 +1,21 @@
 /* start custom scss snippet */
-.btnScrollToTop {       
-  opacity: 0;   
+.btnScrollToTop {
+  opacity: 0;
   width: 40px;
   height: 40px;
-  color: $text-color-function;
+  color: #282b31;
   background-color: $main-color-1;
   position: fixed;
   bottom: 5%;
-  right: 5%;    
-  border-radius: 50%; 
-  font: bold 20px monospace;       
+  right: 5%;
+  border-radius: 50%;
+  font: bold 20px monospace;
   transition: opacity 0.5s, transform 0.5s;
 }
 
-.btnScrollToTop.show {      
-  opacity: 1;  
-  transition: opacity 1s, transform 1s;     
+.btnScrollToTop.show {
+  opacity: 1;
+  transition: opacity 1s, transform 1s;
 }
 
 .btnScrollToTop:active {
@@ -23,11 +23,11 @@
 }
 
 .center_full {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .center_seventy {
   display: block;
   margin-left: auto;
@@ -47,14 +47,14 @@
   margin-right: auto;
   width: 40%;
 }
-  
-  .blueborder {
-    border-style: solid;
-    border-color: #287ec7;
-    padding: 10px;
-    line-height: 1.8;
-    color: black;
-  }
+
+.blueborder {
+  border-style: solid;
+  border-color: #287ec7;
+  padding: 10px;
+  line-height: 1.8;
+  color: black;
+}
 
 .redborder {
   border-style: solid;
@@ -125,7 +125,6 @@
   font-size: 0.9em;
 }
 
-
 /* Style the button that is used to open and close the collapsible content */
 .collapsible {
   background-color: $main-color-3;
@@ -142,10 +141,11 @@
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 //   .active,
-.collapsible.active, .collapsible:hover, collapsible:focus {
+.collapsible.active,
+.collapsible:hover,
+collapsible:focus {
   background-color: $main-color-1;
 }
-
 
 /* Style the collapsible content. Note: hidden by default */
 .content_answer {

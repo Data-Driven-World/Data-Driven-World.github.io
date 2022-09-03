@@ -2,6 +2,7 @@ body,
 html,
 .root,
 .layout--page {
+  -webkit-font-smoothing: antialiased;
   height: 100%;
 }
 
@@ -146,6 +147,7 @@ html,
 .hero--light {
   .article__info {
     color: $text-color-theme-light;
+    -webkit-font-smoothing: antialiased;
   }
 }
 .hero--dark {

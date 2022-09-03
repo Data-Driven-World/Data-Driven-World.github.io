@@ -13,9 +13,10 @@
 
 ## => Site Settings
 ##############################
-text_skin: "dark" # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
-highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-# url: "https://username.github.io"
+text_skin_alt: "dark" # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
+highlight_theme_alt: "tomorrow-night" # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
+text_skin: "default" # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
+highlight_theme: "tomorrow" # url: "https://username.github.io"
 # baseurl: /baseurl # does not include hostname
 title: 10.020 Data Driven World
 description: > # this means to ignore newlines until "Language & timezone"
