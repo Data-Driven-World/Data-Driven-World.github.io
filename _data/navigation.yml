@@ -12,7 +12,63 @@ header:
     key: lo-weekly
 
 Notes:
-  - title: Sort
+  - title: Week 1
     children:
-      - title: Bubble and Insertion Sort
+      - title: Sort
         url: /notes/bubble_insertion_sort
+  - title: Week 2
+    children:
+      - title: Heap
+        url: /notes/binary_heap_sort
+      - title: Computation Time
+        url: /notes/computation_time
+  - title: Week 3
+    children:
+      - title: Divide and Conquer
+        url: /notes/divide_conquer
+      - title: Merge Sort
+        url: /notes/merge_sort
+  - title: Week 4
+    children:
+      - title: OOP
+        url: /notes/oo_programming
+      - title: Linear Data Structures
+        url: /notes/linear_data_structure
+  - title: Week 5
+    children:
+      - title: Introduction to Graph
+        url: /notes/intro_graph
+      - title: Graph Search
+        url: /notes/graph_search
+  - title: Week 6
+    children:
+      - title: Inheritance
+        url: /notes/inheritance_abc
+      - title: Array and Linked List
+        url: /notes/array_linkedlist
+  - title: Week 8
+    children:
+      - title: Working with Data
+        url: /notes/working_with_data
+      - title: Matplotlib and Seaborn
+        url: /notes/visualization
+  - title: Week 9
+    children:
+      - title: Linear Regression
+        url: /notes/linear_regression
+      - title: Multiple Linear Regression
+        url: /notes/multiple_linear_regression
+  - title: Week 10
+    children:
+      - title: Logistic Regression
+        url: /notes/logistic_regression
+      - title: Confusion Matrix and Metrics
+        url: /notes/confusion_matrix_metrics
+  - title: Week 12
+    children:
+      - title: State Machine
+        url: /notes/state_machine
+      - title: SM Abstract Class
+        url: /notes/abstract_sm_class
+      - title: State Space Search
+        url: /notes/state_space_search
