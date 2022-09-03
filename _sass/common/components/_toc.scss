@@ -1,7 +1,7 @@
 ul.toc {
   display: block;
   margin: 0;
-  color: $text-color;
+  color: $text-color-l;
   list-style-type: none;
   & > li {
     margin: map-get($spacers, 1) / 2 0;
@@ -19,12 +19,13 @@ ul.toc {
   .toc-h6 {
     a {
       padding-left: 0.8rem !important;
-      @include link-colors($text-color);
+      @include link-colors($text-color-l);
     }
     &.active {
       a {
         font-weight: bold;
         border-left: 2px solid $main-color-1;
+        @include link-colors($text-color);
       }
     }
   }
