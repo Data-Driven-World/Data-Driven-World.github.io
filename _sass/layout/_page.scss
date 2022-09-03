@@ -2,7 +2,6 @@ body,
 html,
 .root,
 .layout--page {
-  -webkit-font-smoothing: antialiased;
   height: 100%;
 }
 
@@ -79,17 +78,16 @@ html,
   width: 80%;
   max-width: map-get($layout, sidebar-width);
   height: 100%;
-  background-color: $main-color-3;
+  background-color: $background-color;
   @include split-line(right);
   @include transition(transform map-get($animation, duration));
   @include overflow(auto);
   .sidebar-toc {
-    padding: map-get($spacers, 3) map-get($spacers, 3) map-get($spacers, 4)
-      map-get($spacers, 4);
+    padding: map-get($spacers, 3) map-get($spacers, 3) map-get($spacers, 4) map-get($spacers, 4);
   }
 }
 .sidebar-button {
-  @include clickable($text-color-d, rgba($main-color-3, 0.75));
+  @include clickable($text-color-d, rgba($main-color-3, .75));
 }
 
 .page__mask {
@@ -125,7 +123,7 @@ html,
 @include media-breakpoint-down(lg) {
   .page__sidebar {
     position: fixed;
-    @include transform(translate(-map-get($layout, sidebar-width), 0));
+    @include transform(translate(- map-get($layout, sidebar-width), 0));
   }
 
   .page__actions {
@@ -148,6 +146,7 @@ html,
 .hero--light {
   .article__info {
     color: $text-color-theme-light;
+    -webkit-font-smoothing: antialiased;
   }
 }
 .hero--dark {
