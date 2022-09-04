@@ -79,16 +79,17 @@ html,
   width: 80%;
   max-width: map-get($layout, sidebar-width);
   height: 100%;
-  background-color: $background-color;
+  background-color: $main-color-3;
   @include split-line(right);
+  border-right-width: 0px;
   @include transition(transform map-get($animation, duration));
   @include overflow(auto);
   .sidebar-toc {
-    padding: map-get($spacers, 3) map-get($spacers, 3) map-get($spacers, 4) map-get($spacers, 4);
+    padding: map-get($spacers, 4) map-get($spacers, 3) map-get($spacers, 4) 6rem;
   }
 }
 .sidebar-button {
-  @include clickable($text-color-d, rgba($main-color-3, .75));
+  @include clickable($text-color-d, rgba($main-color-3, 0.75));
 }
 
 .page__mask {
@@ -124,7 +125,7 @@ html,
 @include media-breakpoint-down(lg) {
   .page__sidebar {
     position: fixed;
-    @include transform(translate(- map-get($layout, sidebar-width), 0));
+    @include transform(translate(-map-get($layout, sidebar-width), 0));
   }
 
   .page__actions {

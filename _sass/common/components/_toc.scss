@@ -44,7 +44,8 @@ ul.toc {
   }
   .toc-h1 {
     @include split-line(bottom);
-    padding: map-get($spacers, 2) 0 map-get($spacers, 1) 0;
+    border-bottom-width: 0px;
+    padding: map-get($spacers, 1) 0 map-get($spacers, 1) 0;
     margin-bottom: map-get($spacers, 2);
     color: $text-color-d;
     &,
@@ -127,7 +128,7 @@ ul.toc--navigator {
     a {
       font-size: map-get($base, font-size-sm);
       // font-weight: map-get($base, font-weight-bold);
-      line-height: map-get($base, line-height-sm);
+      line-height: map-get($base, line-height-xxs);
     }
   }
 }
