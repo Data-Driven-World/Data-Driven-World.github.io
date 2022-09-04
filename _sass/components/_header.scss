@@ -1,7 +1,7 @@
 .header {
   background: $header-background;
   a {
-    font-weight: map-get($base, font-weight) + 300;
+    font-weight: map-get($base, font-weight);
     text-decoration: none !important;
     @include link-colors($header-text-color, $main-color-1);
   }
@@ -106,6 +106,9 @@
 }
 
 .navigation__item {
+  a {
+    white-space: nowrap;
+  }
   &::after {
     display: block;
     margin-bottom: -4px;
