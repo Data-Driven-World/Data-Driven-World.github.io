@@ -1,5 +1,5 @@
 ---
-title: Weekly Learning Objectives
+title: 10.020 DDW Learning Objectives
 permalink: /lo/weekly
 key: lo-weekly
 layout: article
