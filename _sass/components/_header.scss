@@ -12,6 +12,7 @@
     @include media-breakpoint-down(md) {
       @include flex-direction(column);
     }
+    margin-top: 1rem;
   }
 }
 
@@ -41,10 +42,10 @@
   @include flex-wrap(nowrap);
   @include flex(1);
   height: map-get($layout, header-height);
-  margin-left: map-get($spacers, 3);
   white-space: nowrap;
+  margin-top: 1rem;
   @include media-breakpoint-down(md) {
-    height: auto;
+    height: map-get($layout, header-height);;
     margin-right: 0;
   }
   & > .header__brand {
@@ -99,7 +100,7 @@
     @include menu(3, 2, nowrap);
     @include align-items(center);
     @include media-breakpoint-down(md) {
-      height: auto;
+      height: map-get($layout, header-height);
     }
     .search-button {
       @include media-breakpoint-down(md) {

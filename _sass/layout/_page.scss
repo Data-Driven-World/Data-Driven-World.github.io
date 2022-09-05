@@ -86,6 +86,9 @@ html,
   @include overflow(auto);
   .sidebar-toc {
     padding: map-get($spacers, 4) map-get($spacers, 3) map-get($spacers, 4) 6rem;
+    @include media-breakpoint-down(lg) {
+      padding: map-get($spacers, 4) map-get($spacers, 3) map-get($spacers, 4) map-get($spacers, 3);
+    }
   }
 }
 .sidebar-button {
