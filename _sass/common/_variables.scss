@@ -70,6 +70,7 @@ $base: (
   line-height: 1.6,
   line-height-sm: 1.4,
   line-height-xs: 1.2,
+  line-height-xxs: 1,
 
   spacer: 1rem,
 
@@ -98,8 +99,8 @@ $layout: (
   header-height: 3.5rem,
   header-height-sm: 2.5rem,
   content-max-width: 950px,
-  sidebar-width: 250px,
-  sidebar-header-height: 2rem,
+  sidebar-width: 300px,
+  sidebar-header-height: 1rem,
   aside-width: 220px,
 );
 

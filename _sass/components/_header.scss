@@ -1,7 +1,8 @@
 .header {
   background: $header-background;
+  float: right;
   a {
-    font-weight: map-get($base, font-weight) + 300;
+    font-weight: map-get($base, font-weight);
     text-decoration: none !important;
     @include link-colors($header-text-color, $main-color-1);
   }
@@ -39,7 +40,7 @@
   @include flex-wrap(nowrap);
   @include flex(1);
   height: map-get($layout, header-height);
-  margin-right: map-get($spacers, 3);
+  margin-left: map-get($spacers, 3);
   white-space: nowrap;
   @include media-breakpoint-down(md) {
     height: auto;
@@ -63,6 +64,7 @@
 .header__brand {
   @include flexbox();
   @include align-items(center);
+  justify-content: center;
   & > svg {
     width: map-get($base, font-size-h4) * 1.6;
     height: map-get($base, font-size-h4) * 1.6;
@@ -106,6 +108,9 @@
 }
 
 .navigation__item {
+  a {
+    white-space: nowrap;
+  }
   &::after {
     display: block;
     margin-bottom: -4px;

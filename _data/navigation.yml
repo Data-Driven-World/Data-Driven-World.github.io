@@ -14,11 +14,11 @@ header:
 Notes:
   - title: Week 1
     children:
-      - title: Sort
+      - title: Sorting Algorithms
         url: /notes/bubble_insertion_sort
   - title: Week 2
     children:
-      - title: Heap
+      - title: Binary Heap
         url: /notes/binary_heap_sort
       - title: Computation Time
         url: /notes/computation_time
@@ -36,7 +36,7 @@ Notes:
         url: /notes/linear_data_structure
   - title: Week 5
     children:
-      - title: Introduction to Graph
+      - title: Basics of Graph
         url: /notes/intro_graph
       - title: Graph Search
         url: /notes/graph_search

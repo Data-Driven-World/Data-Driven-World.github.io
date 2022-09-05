@@ -5,7 +5,7 @@
     line-height: map-get($base, line-height);
   }
   @include block-elements() {
-    margin: map-get($spacers, 3) 0;
+    margin: map-get($spacers, 2) 0;
     @media print {
       margin: map-get($spacers, 2) 0;
     }

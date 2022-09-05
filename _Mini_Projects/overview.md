@@ -1,5 +1,5 @@
 ---
-title: Overview
+title: 10.020 DDW Mini Projects
 permalink: /mini_projects/overview
 key: miniprojects-overview
 layout: article
