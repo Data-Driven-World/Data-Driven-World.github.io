@@ -1,6 +1,6 @@
 .header {
   background: $header-background;
-  float: right;
+  // float: right;
   a {
     font-weight: map-get($base, font-weight);
     text-decoration: none !important;
@@ -8,6 +8,7 @@
   }
   .main {
     @include flexbox();
+    justify-content: flex-end;
     @include media-breakpoint-down(md) {
       @include flex-direction(column);
     }
