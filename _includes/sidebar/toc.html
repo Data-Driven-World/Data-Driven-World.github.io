@@ -7,13 +7,6 @@
     <div style="font-weight: 700">{{ site.title }}</div>
     {%- endif -%}
   </div>
-  {%- if site.search.provider -%}
-  <button
-    class="button button--secondary button--circle search-button js-search-toggle"
-  >
-    <i class="fas fa-search"></i>
-  </button>
-  {%- endif -%}
 </div>
 <div class="sidebar-toc">
   {%- assign _sidebar_nav = site.data.navigation[page.sidebar.nav] -%} {%- if
