@@ -157,4 +157,17 @@ collapsible:focus {
   font-size: 0.9em;
 }
 
+/* theme toggle button */
+.theme-toggle-button{
+  display: flex;
+  height: 100%;
+  padding: 1rem;
+  align-items: center;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.theme-toggle-button.active{
+  background-color: none;
+}
 /* end custom scss snippet */
