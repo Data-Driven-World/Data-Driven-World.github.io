@@ -14,6 +14,9 @@ show_date: false
 
 This document shall provide you with sufficient knowledge to understand why you type every single command to get the mini projects running. It is **not** technically in-depth (you'd have to go to ISTD for that), but is _sufficient_ to get you through the mini projects **setup**.
 
+<span style="color:#f7007f;"><b>Disclaimer</b></span>: note that everything described here is a **gross** oversimplification of what actually happens in your computer. Take the subject **50.005** in ISTD (Term 5) if you'd like to learn more.
+{:.error}
+
 ## Interacting with Your Computer
 
 Most of you have been using your computer daily by interacting with its Desktop **graphical user interface**:
@@ -27,8 +30,9 @@ You customise your desktop: wallpaper, shortcuts, files, screensaver --- forming
 
 A desktop environment typically consists of icons, windows, toolbars, folders, wallpapers and desktop widgets.
 {:.info}
+<br>
 
-Long before Desktop GUI is made, people interact with their computers via the the **Command Line Interface** (CLI, also known as the _terminal_). They enter **commands** via text to use the computer entirely. For example, suppose we want to rename the folder `Data-Driven-World.github.io` to `Data-Driven-World-website.github.io`. You might think that **renaming** a file can only be done by right clicking on the file and then ---> `rename`.
+Long before Desktop GUI is made, people interact with their computers via the the **Command Line Interface** (CLI, also known as the termina). They enter **commands** via text to use the computer entirely. For example, suppose we want to rename the folder `Data-Driven-World.github.io` to `Data-Driven-World-website.github.io`. You might think that **renaming** a file can only be done by right clicking on the file and then ---> `rename`.
 
 <img src="/assets/images/background/1.png"  class="center_fifty"/>
 
@@ -40,7 +44,11 @@ mv Data-Driven-World.github.io Data-Driven-World-website.github.io
 
 ## The Command Line Interface
 
-As said above, the command-line interface (CLI) is a **text**-based user interface (UI) used to **run** programs, **manage** computer files and **interact** with the computer.
+As said above, the command-line interface (CLI) is a **text**-based user interface (UI) used to **run** programs, **manage** computer files and **interact** with the computer. In fact, almost _everything_ (OS-related stuffs) can be done via the CLI.
+
+> Who needs desktop 🤷🏻‍♀️
+
+<img src="https://i.imgflip.com/6ref9m.jpg"  class="center_fifty"/>
 
 Each operating system has its own command line:
 
@@ -49,125 +57,176 @@ Each operating system has its own command line:
 - **macOS**: Terminal, iTerm2
 - **Linux**: We believe in you ☺️
 
-![cli](https://i.imgflip.com/6ref9m.jpg)
+### Getting Started
 
-### **Basic Terminology**
+Open a terminal window. Regardless of whichever OS you use, you are likely to be faced with a **prompt** (the thing with the cursor, waiting for your `command`).
 
-- Path:
-  - Each file / folder on a computer has a path, such as `C:\Users\test-user-0\Downloads\example-file.txt`
-    - The path of the `Downloads` folder is then `C:\Users\test-user-0\Downloads`
-- Directory:
-  - Treat a directory as the command-line analog of a folder
-  - Each directory can contain both files and directories
-- `.`: Refers to the current directory that you are in (when accessed from the command line)
-- `..`: Refers to the parent directory of the directory you are in
-  - This can be treated as a 'directory' as well, in the sense that you can use it multiple times in a path to refer to the grandparent / great-grandparent directory of the current directory
-    - For example, imagine the following file structure:
-      ```
-      test-user-0/
-        Desktop/
-          embarassing-file-1.jpg
-          embarassing-file-2.jpg
-          embarassing-file-3.jpg
-        Documents/
-          homework-file-1.docx
-          homework-file-2.docx
-          homework-file-3.docx
-        Downloads/
-          example-file-1.txt
-          example-file-2.txt
-          example-file-3.txt
-          test/
-            example-file-4.txt
-        weirdly-placed-file.mp4
-      ```
-      - If we are in the `test` directory, and we would like to access the file specified on the left, we would use the accompanying path on the right:
-        - `example-file-4.txt` -> `./example-file-4.txt`
-        - `example-file-1.txt` -> `../example-file-1.txt`
-        - `weirdly-placed-file.mp4` -> `../../weirdly-placed-file.mp4`
-        - `embarassing-file-2.jpg` -> `../../Desktop/embarassing-file-2.jpg`
+<img src="/assets/images/background/2.png"  class="center_seventy"/>
 
-### **Command Line Basics**
+You can type `commands` into the prompt, and then press `enter` to **execute** that command. For example, the first two commands you have to enter to **download** the `mp_sort` (mini project 1) repository is:
 
-We will walk you through the commands you will need on a daily basis, but please have the capability to research other commands on your own.
+```
+cd Downloads
+git clone https://github.com/Data-Driven-World/d2w_mini_projects
+```
 
-- `ls`: List the items in the current directory (both folders and files)
-  - You can specify a directory to list as well (e.g. `ls ../Downloads`)
-- `cd`: 'Change directory'. Allows you to navigate between directories (folders)
-  - Considering the file structure in the previous section again, if we are in `test-user-0` and would like to move to `Desktop`, use the command `cd Desktop`
-  - `cd ..`: Moves one directory up (hopefully you got this from the previous section)
-    - For example, if we are in the `Downloads` folder, `cd ..` will result in us ending up in `test-user-0`
-    - To move more than one directory up, do the same as above (e.g., `cd ../../..`)
-- `cp <file-to-be-copied> <destination-folder-or-filepath>`: Copy a file to another folder
-  - For example, if we are in the `Documents` folder, and would like to copy `homework-file-1.docx` to the `Downloads` folder, we can use `cp homework-file-1.docx ../Downloads`
-  - If a `destination-folder` is specified, the filename is copied, but if a `destination-filepath` is specified, the file is copied, but renamed to the new name specified in the filepath
-- `mv <original-filepath-of-file> <new-filepath-of-file>`: Move the file specified in the `original-filepath` to the `destination-filepath`
-  - For example, if we are in the `Downloads` folder, and would like to move `example-file-1.txt` to the `Desktop`, we can use `mv example-file-1.txt ../Desktop/example-file-1.txt`
-  - We can also use `mv` to rename files
-    - For example, if we want to rename `example-file-2.txt` to `foo-bar.txt`, we can use `mv example-file-2.txt foo-bar.txt`
-- `mkdir <new-directory-name>`: Creates a new directory with the specified name
-- `rm <filename>`: Removes the specified file
-- `rmdir <directory-name>`: Removes the specified directory
-  - If the directory is not empty, the command will fail
-- `clear`: Clears the CLI window
-- `exit`: Closes the CLI window
-- `man <command>`: Shows the manual for the specified command
+Each of the line above is **one** command. The first command is **cd** (stands for change directory). It changes your **current working directory**, just like how you click open folders after folders in your Finder or File Explorer to navigate through your **file system** and find the right location and create new things in this location you want:
 
-Once you get the hang of the commands above, we recommend condensing it on your own for easier reference, and when in doubt, `man` it.
+<img src="/assets/images/background/3.gif"  class="center_fifty"/>
 
----
+The same thing can be done via the command line:
+<img src="/assets/images/background/4.gif"  class="center_seventy"/>
 
-## **PATH**
+So `cd Downloads` is none other than **navigating** to `~/Downloads` folder.
 
-### **What is PATH?**
+The next thing to do is to **download** the starter code for your mini projects. The second command `git clone [project_url]` does that. We ask the program **git** to `clone` (**download**) the repository situated in the url into your `~/Downloads` folder. . This is essentially the same as actually opening the url on the browser, and clicking **Download ZIP**, landing the project in your `~/Downloads` folder.:
+<img src="/assets/images/background/5.png"  class="center_seventy"/>
 
-PATH is simply a variable containing a list of directories to search when you enter a command into the command line.
+Notice how the new folder `d2w_mini_projects` are created after you `clone`:
+<img src="/assets/images/background/6.gif"  class="center_seventy"/>
 
-For example, if you enter `python` into the command line, your computer then:
+### How CLI Works (Baby Edition)
 
-- Goes through the list of directories in the PATH variable
+Remember that previously you have [installed](https://git-scm.com/download/mac)`git`? Installation means that you downloaded the **program** to your computer so that your computer can **execute** (use) it. This **git** program has many **functionalities**, just like how another program you are familiar with: Microsoft Word have their own **functionalities**. The difference between **git** and Microsoft Word is that the latter has a **graphical user interface** (you can see the windows, buttons, etc and click), while the former only has a **command line interface** (it accepts textual-based commands).
+
+The <span style="color:#f7007f;"><b>horror</b></span> with CLI-only programs is that you might need to **memorise** a few useful inputs to the program _prior_ (which unlike Microsoft Word interface, the GUI is quite intuitive). This can be done by reading git [documentation](https://git-scm.com/doc) or simply googling terms like: _common **git** commands_, etc.
+
+Notice that **git** (the first word of the command you typed above) is actually a **program**, and that `clone [project_url]` is an **input** to the **git** program; it means that we tell git to `clone` from this url. **git** accepts various inputs: `git commit -m [message]`, `git init`, `git add [files]`, and [many more](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository).
+
+#### Where is git?
+
+We can find git by typing `whereis git` command (for macOS and Linux only), or `where git` command for Windows. It will print the **path** of where this `git` program is stored. In the example below, its stored in `/usr/bin/git`. We can actually find it via the file finder, and attempt to **double click** to open it.
+
+- It will open only a terminal, and print out some output before terminating
+- This is because simply **double clicking** git does not gives it adequate **input** (like `clone`)
+- This is equivalent to just typing the command `git` and pressing enter in the terminal as shown
+
+<img src="/assets/images/background/7.gif"  class="center_seventy"/>
+
+As you can see, `git` is just like any other programs you have downloaded and installed in your computer (MS Word, Steam, Telegram, Whatsapp), just that these programs have a **graphical user interface** while `git` does not.
+
+#### Where is python?
+
+`python` works the same way. You can find where `python` is installed in your computer and try to **double click** it. In the demo below, python in installed in `/Users/natalie_agus/.pyenv/shims/python`. Finding it via the file finder and double-clicking it opens a terminal window where you can use python interactively in the terminal.
+
+<img src="/assets/images/background/8.gif"  class="center_seventy"/>
+
+When you want to run a Python script, you can use the command `python file.py`, which means to give `file.py` as an **input** to the `python` **program** and **run** it.
+
+#### Summary
+
+The **first word** of each command that you have to enter to the CLI is **most likely** the **name** of the program that you want to execute. Whatever that comes on the right side of that program name is the **input** to that program.
+{:.info}
+
+A special exception is `cd` (this is not a program, go and take ISTD subject 50.005 to find out more), but all other commands you will use for `mp_sort` is a program. Try to find where the following resides (the path) in your computer and open it via the GUI file finder:
+
+1. `ls` or `dir`
+2. `flask`
+3. `pipenv`
+4. `pip`
+
+## File Path
+
+Each file on a computer has a **path**, such as `C:\Users\natalie_agus\Downloads\d2w_mini_projects\mp_sort\application.py` or `/Users/natalie_agus/Downloads/d2w_mini_projects/mp_sort/application.py`. Usually we can shorten it into `~/Downloads/example-file.txt` where `~` is `/Users/natalie_agus`, also known as your **home** path.
+
+The reason one uses `/` (macOS/Linux) and the other `\` (Windows) is because each OS uses a **different file system**. Think of it like a different manager and storage system.
+{:.info}
+
+Folders also have a **path**. The path of the `Downloads` folder is then `C:\Users\natalie_agus\Downloads` or `/Users/natalie_agus/Downloads`. It is important for your terminal to "open" the right folder before executing a command, otherwise you **may not find the file**. You can find out your terminal's current "opened" folder using the `pwd` command (macOS/Linux) or `cd` (without any parameter) for Windows.
+
+For example, if we execute the command `python application.py`, we need to **ensure** that the current working directory of the CLI is at `/Users/natalie_agus/Downloads/d2w_mini_projects/mp_sort`. The example below shows a scenario where you are at the **wrong** directory, and the file `application.py` is **not found** (error message printed _by_ the terminal).
+
+<img src="/assets/images/background/9.png"  class="center_seventy"/>
+
+We need to "open" the `mp_sort` folder first before we can successfully launch `application.py`:
+
+<img src="/assets/images/background/10.png"  class="center_seventy"/>
+
+Notice the error message is no longer `[Errno 2] No such file or directory`, but `ModuleNotFoundError: No module named 'flask'`. We know two things from this message:
+
+1. `python` has launched **succesfully**, and the error message above is printed by `python` and not our terminal
+2. We have **not** installed `flask` module for `python` to **import**
+
+### Path Navigation in CLI
+
+You can use `cd [path]` to navigate ("open") the folder that you want in the terminal.
+
+For instance, `cd /Users/natalie_agus/Downloads/d2w_mini_projects/mp_sort` opens the `mp_sort` folder right away (that is if you can **remember** its path). Usually, people can't remember the path of their files, and instead perform `cd` in **stages**, combined with `ls` or `dir` to **view** the list of files in the current opened folder:
+
+<img src="/assets/images/background/11.gif"  class="center_seventy"/>
+
+Tips: press `tab` to **autocomplete** certain commands. The example you saw above utilises many terminal **extensions** to make your terminal **pretty**. macOS or Linux users, do yourself a favor and read [this article](https://medium.com/@shivam1/make-your-terminal-beautiful-and-fast-with-zsh-shell-and-powerlevel10k-6484461c6efb).
+{:.info}
+
+## **PATH** Environment Variable
+
+Not to be confused with file **path** concept above.
+{:.error}
+
+`PATH` is simply a **variable** containing a **list** of directories to search when you enter a command into the command line. Formally, it is called **environment variable** but you don't have to understand what it means for now (take 50.005 in ISTD to find out more). This is the <span style="color:#f7007f;"><b>magic</b></span> behind command execution.
+
+You can check this list by typing `echo $PATH` in your macOS/Linux terminal, or `$Env:Path` in your Windows terminal
+
+- You will have an output looking as such
+- Each "value" is separated by the **colon** (`:`)
+  <img src="/assets/images/background/12.png"  class="center_seventy"/>
+
+For example, if you enter `python` into the terminal, the terminal does the following:
+
+- Goes through the **list** of directories in the `PATH` variable,
+  - It will start searching for `python` in `/Users/natalie_agus/.pyenv/shims` if the `PATH` content is as the screenshot above
 - Checks each directory if it contains the `python` executable
-- If it does, execute it
+- If it does, **execute** it
 - Else, check the next directory
-
-Therefore, commands can also be simply thought of 'links' to their executable counterparts that your computer knows to call when requested.
-
-> Note that everything described here is a gross oversimplification of what actually happens. Have fun learning more about it in Term 5!
+  - If `python` doesn't exist in `/Users/natalie_agus/.pyenv/shims`, it will look for `python` in the second value: `/Users/natalie_agus/.rbenv/shims`, and so on.
+- If `python` is not found anywhere, it will print `command python not found` and returns
 
 ### **Adding Executables to your PATH**
 
-If you've ever tried to execute a command and was faced with an error such as:
+If you've ever tried to execute a command and was faced with an error such as the following in Windows:
 
 ```shell
-xxx : The term 'xxx' is not recognized as the name of a cmdlet, function, script file, or operable
+[name] : The term '[name]' is not recognized as the name of a cmdlet, function, script file, or operable
 program. Check the spelling of the name, or if a path was included, verify that the path is correct and try
 again.
 At line:1 char:1
 + xxx
 + ~~~~~~~
-    + CategoryInfo          : ObjectNotFound: (xxx:String) [], CommandNotFoundException
+    + CategoryInfo          : ObjectNotFound: ([name]:String) [], CommandNotFoundException
     + FullyQualifiedErrorId : CommandNotFoundException
 ```
 
-This is simply an indication that your computer has searched through your PATH variable, but has not managed to find the program corresponding to the requested command.
+or the following in macOS/Linux:
 
-To fix this, we simply need to ensure that our computer can find this executable. Windows handles this differently from Linux / Mac OS, so we describe the process for both operating system types:
+```shell
+zsh/bash: command not found: [name]
+```
 
-#### **Windows**
+The above is simply an indication that your computer has searched through your `PATH` variable, but has not managed to find the **program** whose **name** **matches** the requested command.
+{:.info}
 
-1. Search for 'environment vairable' into the Windows search bar, and click on 'Edit the system environment variables'
-2. Click on the 'Advanced' tab
-3. At the bottom of the tab, click on 'Environment Variables'
-4. On the new 'Environment Variables' window that pops up, look for the 'Path' entry in the list of 'System variables' (bottom half of the window)
-5. Select the 'Path' entry, and click 'Edit..'
-6. You can now add a new directory by clicking 'New' and entering the desired directory
-7. When finished, click 'OK' on all the windows
-8. **Make sure to open a new command line before checking if the executable was successfully added to your PATH**
-   - Any old windows will still be using the old PATH variable
+To **fix** this, we simply need to ensure that our computer can **find** this executable. Windows handles this differently from macOS/Linux, so we describe the process for both operating system types:
 
-#### **Linux / Mac OS**
+### **Windows**
 
-The default shell (don't think too much about what a shell is for now, just think of it as a flavour of the command line) for most Linux distributions and Mac OS should be Bash. As such, we can add to our PATH by editing our `.bashrc` file, which can be thought of as a config file for our command line. This file can be found in your home directory.
+1. Search for '**Environment Variable**' into the Windows search bar, and click on '**Edit the system environment variables**'
+2. Click on the '**Advanced**' tab
+3. At the bottom of the tab, click on '**Environment Variables**'
+4. On the new '**Environment Variables**' window that pops up, look for the '**PATH**' entry in the list of '**System variables**' (bottom half of the window)
+5. Select the '**PATH**' entry, and click '**Edit...**'
+6. You can now add a new directory by clicking '**New**' and entering the desired path (the location where you want the terminal to find the program whose name matches the first word of the command you will enter in the CLI)
+7. When finished, click '**OK**' on all the windows
+8. **Make sure to close and re-open a new terminal window before checking if the executable was successfully added to your `PATH`**
+
+You can refer to [various online guides](https://docs.oracle.com/en/database/oracle/machine-learning/oml4r/1.5.1/oread/creating-and-modifying-environment-variables-on-windows.html) if you're stuck.
+
+### **macOS and Linux**
+
+We can add to our $PATH by editing our `~/.bashrc` or `~/.zshrc` file, which can be thought of as a **configuration** file for our terminal. This file can be found in your **home** directory.
+
+- If your terminal uses `zsh`, you should edit `~/.zshrc` file
+- else, you might be using `bash`, and you should edit `~/.bashrc` file
+- If you're using other stuffs like `fish`, `tcsh`, or `ksh`, you're beyond us and you're probably not reading this document 😄
 
 1. Navigate to your home directory in your command line
 
@@ -175,7 +234,7 @@ The default shell (don't think too much about what a shell is for now, just thin
 $ cd ~
 ```
 
-2. Open the `.bashrc` file with the text editor of your choice, for example `nano`:
+2. Open the `.bashrc` (or `.zshrc`) file with the text editor of your choice, for example `nano`:
 
 ```shell
 nano .bashrc
@@ -192,373 +251,80 @@ export PATH=/path/to/exec:$PATH
 
 To explain the line we just added to the `.bashrc` file:
 
-- `export <variable> = <value>` sets a variable to the specified value
+- `export <variable> = <value>` **sets** a variable to the specified value
   - Hence we are setting `PATH` to a new value
-- `/path/to/exec:$PATH` has the value of our old PATH variable, plus our desired new directory
-  - `$PATH` has a dollar sign because we want to reference the contents of the PATH vairable
+- `/path/to/exec:$PATH` has the value of our **old** PATH variable appended at the back, plus our desired new directory
+  - `$PATH` has a dollar sign because we want to reference the **contents** of the `PATH` vairable
   - `:` is the separator used for the PATH variable
 
----
+## Python Modules
 
-## **Git**
+When you navigate to wherever `mp_sort` is, e.g: `cd /Users/natalie_agus/Downloads/d2w_mini_projects/mp_sort`, and try running `python3 application.py` before anything else, you might be met with **ModuleNotFoundError**, namely that you might not have `flask` installed.
 
-Git is a version control system. It allows you to track and manage changes to your code.
+The program `pyenv` helps you install and **manage python modules** per project(libraries, which is just scripts that can be used by you as tools to do things). One popular module is `numpy`, which contains many matrix-related functions (dot product, cross product, etc). For this mini project, we will be using a bunch of python modules that we need to install. It is listed inside `requirements.txt` inside `mp_sort`:
 
-### **Basic Terminology**
+<img src="/assets/images/background/14.png"  class="center_seventy"/>
 
-Repository:
+### pyenv
 
-- A collection of files of various different versions of a project
-- Can generally imagine a repository corresponding to a project
+The first thing to do is to install `pyenv` to your computer using the command:
 
-Branch:
-
-- Corresponds to one version of the project
-- The `main` or `master` branch of the repository is generally used for the stable version of your project
-- You can create a new branch from another branch (e.g., the `main` branch), you essentially create a copy of that (`main`) branch at that point in time
-- You can have multiple branches corresponding to different versions of the project, allowing you to work on and test different parts of your code, without affecting the `main` branch
-
-Commit:
-
-- Corresponds to a 'snapshot' of the code on that branch at that point in time
-
-### **Why use Git?**
-
-Consider the following scenario:
-
-You have a codebase with a file named `math_stuff.py`. You want to make changes to this file.
-
-**Without** a version control system like Git, you would probably:
-
-- Make a copy of `math_stuff.py`, and rename it to something like `math_stuff_backup.py`
-- Make your changes to `math_stuff.py`
-- Run it and test it
-- If something breaks, you would go back to the original by renaming the edited file to something like `math_stuff_edited_BROKEN.py` and renaming `math_stuff_backup.py` back to `math_stuff.py`
-
-**With** a version control system like Git, you can instead:
-
-- Create a new branch (name it something like `dev`) from your stable branch `main`
-- Edit that branch with the proposed changes
-- Run it and test it
-- If something breaks, you can just switch back to the `main` branch without having to clown around renaming files
-- When you want to try and fix the broken code, you can just switch back to your `dev` branch and continue from where you left off
-- When you've fixed the broken code, and are ready to use it in `main`, you can merge the branches, essentially 'updating' the `main` branch with the code from the `dev` branch
-
-![vcs](https://i.imgflip.com/6rekna.jpg)
-
-### **Installing Git**
-
-You need to have Git to do the project. Download and install the software according to your OS:
-
-- Windows: [Git for Windows](https://git-scm.com/download/win)
-- Mac OS: [Git for MacOS](https://git-scm.com/download/mac)
-- Linux: We believe in you
-
-### **Basic Git Tutorial**
-
-We will walk you through creating a demo Git repo and show you the basic commands you might need to manage this repo, but we expect you to be able to find more information about Git yourself.
-
-> For any code blocks in the subsequent sections, **please only key in the parts that have a `$` at the start of the line**. Anything else indicates the output from the command line, and should be used as a reference to gauge if you have executed the commands correctly.
-
-#### **Basics**
-
-To create a new repository (be it in a new folder, or a folder with preexisting code), go to the folder in your command line, and enter `git init`.
-
-- This initializes Git in the specified directory
-
-As an example, let us create a new repository in a directory called `foo`
-
-```shell
-$ mkdir foo
-$ cd foo
-$ git init
-
-Initialized empty Git repository in /home/test-user-0/Desktop/foo/.git
+```
+pip install --user pipenv
 ```
 
-Create some test text files in the directory for us to track with Git.
+> `pip` is a program that is _installed_ (placed in the `PATH`) when you installed Python to your computer. It helps you install another program called `pyenv`.
 
-For example, let us create two test files `test.txt` and `index.html`
+If you're met with such **WARNING**, add the path to your `PATH` variable:
+<img src="/assets/images/background/13.png"  class="center_seventy"/>
 
-```shell
-$ touch test.txt index.html
-$ ls
+For instance, we add the path `/Users/natalie_agus/.local/bin` to our `.zshrc`:
 
-index.html test.txt
+```bash
+export PATH="$HOME/.local/bin:$PATH" # pipenv
 ```
 
-Check the status of the files in the repo with `git status`
+Afterwards we can use `pipenv` to **install** all modules listed in `requirements.txt`.
 
-- It will print out a list of tracked, untracked, modified, and deleted files
-- See the changes in a more compact way with `git status --short`
-  - Short status flags:
-    - ?? - Untracked files
-    - A - Files added to stage
-    - M - Modified files
-    - D - Deleted files
+### Where are these modules installed?
 
-```shell
-$ git status
+You can find the path where `pyenv` install your modules for **this project** by typing the command:
 
-On branch master
-
-No commits yet
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        index.html
-        test.txt
-
-nothing added to commit but untracked files present (use "git add" to track)
-
-$ git status --short
-
-?? index.html
-?? test.txt
+```bash
+pipenv --venv
 ```
 
-Git tells us both our files are untracked, so we have to add (stage) it to our repository in order to track it
+It will return a path **specific to this project**, for example:
 
-- Add specific files to the repo with `git add <file>`
-- Or add all files with `git add *` or `git add --all`
-
-```shell
-$ git add *
+```bash
+/Users/natalie_agus/.local/share/virtualenvs/mp_sort-Xom1cKhU
 ```
 
-Commit the newly added files to the repository to save it at this point in time
+If you open that path in your GUI File Finder, you will find all the **modules** (both scripts and executable): transcrypt, flask, wheel, etc in that location. Watch the gif below to understand more:
 
-- Commit with `git commit -m "commit message"`
-  - Each commit requires a commit message; make it meaningful!
+<img src="/assets/images/background/15.gif"  class="center_full"/>
 
-```shell
-$ git commit -m "initial commit of files"
+### pipenv shell
 
-[master (root-commit) 0fc7c0a] initial commit of files
- 2 files changed, 0 insertions(+), 0 deletions(-)
- create mode 100644 index.html
- create mode 100644 test.txt
+You still can't run `python application.py` before running `pipenv shell`.
+
+This is because despite these modules being **present** somewhere in your computer, `python` **cannot** find it. You need to **activate** the environment by typing the command `pyenv shell`, which is none other than telling the terminal to **look** for python-related modules in the path: `/Users/natalie_agus/.local/share/virtualenvs/mp_sort-Xom1cKhU`.
+
+### Summary
+
+When you work on **various projects**, they will require **various modules**. You want to be **more organised** and have a separated **environment** (a dedicated place where modules for each individual project is stored). This is what `pipenv` is for.
+{:.info}
+
+Note that you can install any module without `pipenv`, with the command:
+
+```bash
+pip install [module-name]
 ```
 
-We can now see a history of our commits with `git log`
+This will install your modules in a **standard** path such as:
 
-- Press `q` to exit the view
-  > Each commit is accompanied by a hash, which can be thought of as a unique identifier for each commit
-
-```shell
-$ git log
-
-commit 0fc7c0ae907ba28a189c08417a1f1bccd0dd0a68 (HEAD -> master)
-Author: test-user-0 <test-user-fake-email@gmail.com>
-Date:   Sun Aug 28 21:41:56 2022 +0800
-
-    initial commit of files
+```
+/Users/natalie_agus/.local/lib/python[version]/site-packages
 ```
 
-Now we can try to make changes to our committed files
-
-- Edit `test.txt` in the text editor of your choice (e.g., `nano` or `vim`)
-- Now if you `git status` again, `test.txt` will show up as modified
-- We can now re-stage this file and commit
-
-```shell
-$ git status --short
-
-M test.txt
-
-$ git add test.txt
-$ git commit -m "feat: added content to test.txt"
-
-[master 0f701a5] feat: added content to test.txt
- 1 file changed, 1 insertion(+)
-```
-
-#### **Branching**
-
-Assume we now want to test some new code, but want to leave our main branch untouched. We make a new branch to accomplish this.
-
-- `git branch <branch_name>` will create a new branch (from the current branch) with the specified name
-- The contents of this branch will be the same as the branch it was branched from
-- To see the branches for a repo, we can use `git branch`.
-- To move to a specific branch, we can use `git checkout <branch_name>`
-  - To check out a branch, and create it if it doesn't exist, we can use `git checkout -b <branch_name>`..
-
-Let us make a new branch in our repo:
-
-```shell
-$ git checkout -b dev
-
-Switched to a new branch 'dev'
-```
-
-Try editing one of the files, and then stage and commit your changes again.
-
-- If we `git log`, we can see the changes made on this branch
-- Now if we `git checkout master` then `git log`, we can see that the changes made on the `dev` branch don't show up on the `master` branch, which was exactly our intention
-
-```shell
-$ git add test.txt
-$ git commit -m "feat: added more content to test.txt"
-
-[dev 8c3a08f] feat: added more content to test.txt
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
-$ git log --oneline
-
-8c3a08f (HEAD -> dev) feat: added more content to test.txt
-0f701a5 (master) feat: added content to test.txt
-0fc7c0a initial commit of files
-
-$ git checkout master
-
-Switched to branch 'master'
-
-$ git log --oneline
-
-0f701a5 (HEAD -> master) feat: added content to test.txt
-0fc7c0a initial commit of files
-```
-
-Once we are confident that the code on our `dev` branch is working, we can `merge` our `dev` branch back into our `master` branch:
-
-```shell
-$ git merge dev
-
-Updating 0f701a5..8c3a08f
-Fast-forward
- test.txt | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-```
-
-And then we can delete our `dev` branch, since we no longer need it:
-
-```shell
-$ git branch -d dev
-
-Deleted branch dev (was 8c3a08f).
-```
-
-#### **Fixing your oopsies**
-
-Let's say after committing some code, it introduces a critical bug, and you would like to revert to a previous commit of the repository. There are 3 ways to handle this:
-
-- Reverting takes a previous commit and adds it as a new commit, keeping the log intact.
-- Resetting moves the repository back to a previous commit, discarding any changes made after that commit.
-- Amending modifies the most recent commit. It combines the changes in the staging environment with the latest commit, and creates a new commit. This commit replaces the latest commit entirely.
-
-#### **Revert**
-
-Let's assume that after merging in the last section, we found out that the code from the `dev` branch actually has a bug in it, and we would like to revert to the commit BEFORE the merge.
-
-```shell
-$ git revert HEAD
-
-[master 96d4f02] Revert "feat: added more content to test.txt"
- 1 file changed, 1 insertion(+), 1 deletion(-)
-```
-
-`git revert HEAD` will revert the latest change and commit.
-
-Similarly, `git revert HEAD~x` will revert to earlier commits, `x` being a number, such that `1` = going back 1 more, `2` = going back 2 more, etc.
-
-After reverting, if you `git log`, you should be able to see that the previous commits are still logged, and the revert was treated as a new commit as expected:
-
-```shell
-$ git log --oneline
-
-96d4f02 (HEAD -> master) Revert "feat: added more content to test.txt"
-8c3a08f feat: added more content to test.txt
-0f701a5 feat: added content to test.txt
-0fc7c0a initial commit of files
-```
-
-#### **Reset**
-
-Now let us assume that you're simply too ashamed to even revert and leave the old commits in the log. We will use `git reset` instead.
-
-`git reset xxxxxxx` (where `xxxxxxx` is the first 7 characters of the commit) will move the repo back to the commit with the specified hash, and delete any commits made after.
-
-```shell
-$ git reset 0f701a5
-$ git log --oneline
-
-0f701a5 (HEAD -> master) feat: added content to test.txt
-0fc7c0a initial commit of files
-```
-
-You should be able to see that every commit after the first edit of `test.txt` should be removed.
-
-Note that even though the commits no longer show in the log, it is not removed from Git. If you have the commit hash you can `reset` forward to it.
-
-For example, from the `git log` two cells above, we can see that our revert commit has a hash of `96d4f02`, meaning that we can do the following:
-
-```shell
-$ git reset 96d4f02
-$ git log --oneline
-
-96d4f02 (HEAD -> master) Revert "feat: added more content to test.txt"
-8c3a08f feat: added more content to test.txt
-0f701a5 feat: added content to test.txt
-0fc7c0a initial commit of files
-```
-
-And our logs return to the state they were prior to the first reset.
-
-#### **Amend**
-
-Now let's look at `amend`. Imagine that we made a commit with a typo in the commit message:
-
-```shell
-$ git commit -m "feat: updated test.tx"
-$ git log --oneline
-
-d98e4cd (HEAD -> master) feat: updated test.tx
-96d4f02 Revert "feat: added more content to test.txt"
-8c3a08f feat: added more content to test.txt
-0f701a5 feat: added content to test.txt
-0fc7c0a initial commit of files
-```
-
-Rather than deleting the repo and starting from scratch out of humiliation, we can instead simply `amend` the last commit:
-
-```shell
-$ git commit --amend -m "feat: updated test.txt"
-$ git log --oneline
-
-d98e4cd (HEAD -> master) feat: updated test.txt
-96d4f02 Revert "feat: added more content to test.txt"
-8c3a08f feat: added more content to test.txt
-0f701a5 feat: added content to test.txt
-0fc7c0a initial commit of files
-```
-
-As you can see, the commit message of our latest commit has been fixed, without making a new commit.
-
-Amend will merge the currently staged changes into the last commit, rather than making a new commit entirely.
-
-As such, this strategy works for files as well.
-
-### **Git vs Github**
-
-TODO (Necessary?)
-
-### **Git Clone**
-
-Cloning a git repository involves making a full copy of the repository, including all logging and versions of files.
-
-What is the advantage of this approach as compared to just downloading the code from Github directly?
-
-Imagine you need to download the DDW mini project repository to your computer.
-
-If you did it without cloning:
-
-- Go to the provided URL
-- Click 'Code > Download ZIP'
-- Extract the contents of the ZIP file to your computer and rename as appropriate
-
-If you did it with cloning:
-
-- Navigate to the desired destination in your command line
-- Enter `git clone <url> <destination_directory_name>`
-
-They essentially accomplish the same thing, with one just being faster and more convenient than the other. Get in the habit of cloning rather than downloading directly from GitHub.
+where `python[version]` can be your default python version, e.g: `python3.10`. You can imagine how that `site-packages` folder is going to be (very full!) when you install modules for all projects you ever touch into that folder.
