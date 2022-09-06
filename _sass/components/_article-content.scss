@@ -73,7 +73,7 @@
   }
   code {
     padding: map-get($spacers, 1) map-get($spacers, 2);
-    background-color: rgba($main-color-1, 0.2);
+    background-color: $highlight-background;
     border-radius: map-get($base, border-radius);
     span {
       padding: 0;
