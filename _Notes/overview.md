@@ -3,7 +3,7 @@ title: Data Driven World Notes
 permalink: /notes/overview
 key: notes-overview
 layout: article
-nav_key: Notes
+nav_key: notes
 sidebar:
   nav: Notes
 license: false

@@ -4,6 +4,8 @@ permalink: /mini_projects/overview
 key: miniprojects-overview
 layout: article
 nav_key: miniprojects
+sidebar:
+  nav: MiniProjects
 license: false
 aside:
   toc: true
