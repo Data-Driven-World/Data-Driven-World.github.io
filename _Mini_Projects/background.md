@@ -107,7 +107,7 @@ As you can see, `git` is just like any other programs you have downloaded and in
 
 #### Where is python?
 
-`python` works the same way. You can find where `python` is installed in your computer and try to **double click** it. In the demo below, python in installed in `/Users/natalie_agus/.pyenv/shims/python`. Finding it via the file finder and double-clicking it opens a terminal window where you can use python interactively in the terminal.
+`python` works the same way. You can find where `python` is installed in your computer and try to **double click** it. In the demo below, python in installed in `/Users/natalie_agus/.pipenv/shims/python`. Finding it via the file finder and double-clicking it opens a terminal window where you can use python interactively in the terminal.
 
 <img src="/assets/images/background/8.gif"  class="center_seventy"/>
 
@@ -174,11 +174,11 @@ You can check this list by typing `echo $PATH` in your macOS/Linux terminal, or 
 For example, if you enter `python` into the terminal, the terminal does the following:
 
 - Goes through the **list** of directories in the `PATH` variable,
-  - It will start searching for `python` in `/Users/natalie_agus/.pyenv/shims` if the `PATH` content is as the screenshot above
+  - It will start searching for `python` in `/Users/natalie_agus/.pipenv/shims` if the `PATH` content is as the screenshot above
 - Checks each directory if it contains the `python` executable
 - If it does, **execute** it
 - Else, check the next directory
-  - If `python` doesn't exist in `/Users/natalie_agus/.pyenv/shims`, it will look for `python` in the second value: `/Users/natalie_agus/.rbenv/shims`, and so on.
+  - If `python` doesn't exist in `/Users/natalie_agus/.pipenv/shims`, it will look for `python` in the second value: `/Users/natalie_agus/.rbenv/shims`, and so on.
 - If `python` is not found anywhere, it will print `command python not found` and returns
 
 ### **Adding Executables to your PATH**
@@ -261,19 +261,19 @@ To explain the line we just added to the `.bashrc` file:
 
 When you navigate to wherever `mp_sort` is, e.g: `cd /Users/natalie_agus/Downloads/d2w_mini_projects/mp_sort`, and try running `python3 application.py` before anything else, you might be met with **ModuleNotFoundError**, namely that you might not have `flask` installed.
 
-The program `pyenv` helps you install and **manage python modules** per project(libraries, which is just scripts that can be used by you as tools to do things). One popular module is `numpy`, which contains many matrix-related functions (dot product, cross product, etc). For this mini project, we will be using a bunch of python modules that we need to install. It is listed inside `requirements.txt` inside `mp_sort`:
+The program `pipenv` helps you install and **manage python modules** per project(libraries, which is just scripts that can be used by you as tools to do things). One popular module is `numpy`, which contains many matrix-related functions (dot product, cross product, etc). For this mini project, we will be using a bunch of python modules that we need to install. It is listed inside `requirements.txt` inside `mp_sort`:
 
 <img src="/assets/images/background/14.png"  class="center_seventy"/>
 
-### pyenv
+### pipenv
 
-The first thing to do is to install `pyenv` to your computer using the command:
+The first thing to do is to install `pipenv` to your computer using the command:
 
 ```
 pip install --user pipenv
 ```
 
-> `pip` is a program that is _installed_ (placed in the `PATH`) when you installed Python to your computer. It helps you install another program called `pyenv`.
+> `pip` is a program that is _installed_ (placed in the `PATH`) when you installed Python to your computer. It helps you install another program called `pipenv`.
 
 If you're met with such **WARNING**, add the path to your `PATH` variable:
 <img src="/assets/images/background/13.png"  class="center_seventy"/>
@@ -288,7 +288,7 @@ Afterwards we can use `pipenv` to **install** all modules listed in `requirement
 
 ### Where are these modules installed?
 
-You can find the path where `pyenv` install your modules for **this project** by typing the command:
+You can find the path where `pipenv` install your modules for **this project** by typing the command:
 
 ```bash
 pipenv --venv
@@ -308,7 +308,7 @@ If you open that path in your GUI File Finder, you will find all the **modules**
 
 You still can't run `python application.py` before running `pipenv shell`.
 
-This is because despite these modules being **present** somewhere in your computer, `python` **cannot** find it. You need to **activate** the environment by typing the command `pyenv shell`, which is none other than telling the terminal to **look** for python-related modules in the path: `/Users/natalie_agus/.local/share/virtualenvs/mp_sort-Xom1cKhU`.
+This is because despite these modules being **present** somewhere in your computer, `python` **cannot** find it. You need to **activate** the environment by typing the command `pipenv shell`, which is none other than telling the terminal to **look** for python-related modules in the path: `/Users/natalie_agus/.local/share/virtualenvs/mp_sort-Xom1cKhU`.
 
 ### Summary
 
