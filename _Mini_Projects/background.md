@@ -230,24 +230,24 @@ We can add to our $PATH by editing our `~/.bashrc` or `~/.zshrc` file, which can
 
 1. Navigate to your home directory in your command line
 
-```shell
-$ cd ~
-```
+   ```shell
+   $ cd ~
+   ```
 
 2. Open the `.bashrc` (or `.zshrc`) file with the text editor of your choice, for example `nano`:
 
-```shell
-nano .bashrc
-```
+   ```shell
+   nano .bashrc
+   ```
 
 3. Scroll to the bottom of the file, and add the following line:
 
-```
-export PATH=/path/to/exec:$PATH
-```
+   ```
+   export PATH=/path/to/exec:$PATH
+   ```
 
 4. Save the file (`Ctrl-O` then `Return` then `Ctrl-X` in `nano`)
-   > Please edit `/path/to/exec` to point to the directory where your executable is located, and do not just blindly copy-and-paste
+   > Please edit `/path/to/exec` to point to the directory where your executable is located, and **do not just blindly copy-and-paste**
 
 To explain the line we just added to the `.bashrc` file:
 
@@ -261,7 +261,7 @@ To explain the line we just added to the `.bashrc` file:
 
 When you navigate to wherever `mp_sort` is, e.g: `cd /Users/natalie_agus/Downloads/d2w_mini_projects/mp_sort`, and try running `python3 application.py` before anything else, you might be met with **ModuleNotFoundError**, namely that you might not have `flask` installed.
 
-The program `pipenv` helps you install and **manage python modules** per project(libraries, which is just scripts that can be used by you as tools to do things). One popular module is `numpy`, which contains many matrix-related functions (dot product, cross product, etc). For this mini project, we will be using a bunch of python modules that we need to install. It is listed inside `requirements.txt` inside `mp_sort`:
+The program `pipenv` helps you install and **manage python modules** per project (libraries, which is just scripts that can be used by you as tools to do things). One popular module is `numpy`, which contains many matrix-related functions (dot product, cross product, etc). For this mini project, we will be using a bunch of python modules that we need to install. It is listed inside `requirements.txt` inside `mp_sort`:
 
 <img src="/assets/images/background/14.png"  class="center_seventy"/>
 
@@ -328,3 +328,16 @@ This will install your modules in a **standard** path such as:
 ```
 
 where `python[version]` can be your default python version, e.g: `python3.10`. You can imagine how that `site-packages` folder is going to be (very full!) when you install modules for all projects you ever touch into that folder.
+
+## Conclusion
+
+We have introduced to you **how command works**, and that the first word of a command is none other than the _name_ of the program you'd like to execute (well, at least for now). The commands that have been introduced to you for this mini project are:
+
+1. `cd`: change directory
+2. `git` (clone)
+3. `pwd` for macOS/Linux or `echo %cd%` for Windows: check current working directory (check currently "opened" folder)
+4. `ls` for macOS/Linux or `dir` for Windows: print out the files/folders in the currently "opened" folder
+5. `pip install ...`: run pip to install necessary modules for your project, like `flask`
+6. `python ....`, `flask....`: run `pip` or `python` for your project
+
+> Notice that `flask run` and `python application.py` does the same thing, that is to run the script `application.py`.
