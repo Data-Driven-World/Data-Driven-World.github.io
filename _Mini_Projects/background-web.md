@@ -21,19 +21,19 @@ This document should provide you with the basic idea on how to setup a basic web
 
 When you type in a URL (a.k.a web address) in your web browser's search bar, you can think of your browser as sending a **request** message out to the internet to reach the recepient with that address matching the URL you just typed. For example, type: `http://natalieagus.net:1234` in your web browser (you need to allow unsecure connection), and you will be faced with this output:
 
-<img src="/assets/images/background/17.png"  class="center_seventy"/>
+<img src="/assets/images/background/17.png"  class="center_fifty"/>
 
 ### Inspecting a Site
 
 This is a _website_, an **overtly simple** website containing just a **single** text: `My first server!`. Where did your browser get this particular information? Before we go there, let's see what "this" information is. Right click on your browser and click **inspect** (you might need to [enable **developer tools**](https://support.apple.com/en-sg/guide/safari/sfri20948/mac) if you use Safari):
 
-<img src="/assets/images/background/18.png"  class="center_seventy"/>
+<img src="/assets/images/background/18.png"  class="center_fifty"/>
 
 ### Looking at Sources
 
 Under `Sources` tab you should see that there's only **one** file called `index` that's sent by `natalieagus.net:1234`. Inside that file we can find a text `My first server!` and **nothing else**. No color, no styling, no images, no videos, no fancy stuffs that you will find in a modern website. Whereas if you load our course website and **inspect**, under Sources tab you will see a lot more files being sent over by `https://data-driven-world.github.io`:
 
-<img src="/assets/images/background/20.png"  class="center_seventy"/>
+<img src="/assets/images/background/20.png"  class="center_full"/>
 
 All these files: `.js, .css, .html` are **processed** and **rendered** by our browser so that you can see what you currently see on your browser page.
 
@@ -48,7 +48,7 @@ A web server is an application (just like any regular application in your comput
 
 > You can think of the Internet as a bunch of _roads_ (medium) made for these "packets" of data to "travel".
 
-<img src="/assets/images/background/16.png"  class="center_seventy"/>
+<img src="/assets/images/background/16.png"  class="center_full"/>
 
 ### Physical Location
 
@@ -64,7 +64,7 @@ We **don't know**. Github does not exactly advertise its server locations for se
 
 When you type in the command `flask run` for the mini projects, you are essentially spawning a **web server** in your own computer. That is why you can access your website by typing the URL `http://127.0.0.1:5000/` in your web browser. The value `127.0.0.1` means **yourself** (your own addresss), so your browser will send a **request packet** addressed to yourself, which will arrive at the python web server you are currently running. It will then reply with the necessary files for your browser to render the MP1 welcome page:
 
-<img src="/assets/images/background/21.png"  class="center_seventy"/>
+<img src="/assets/images/background/21.png"  class="center_full"/>
 
 ## Hello Flask!
 
@@ -81,7 +81,7 @@ There are **plenty of web frameworks** out there: [Ruby on Rails](https://rubyon
 
 Create a new folder named `flaskexample` in a **path** of your choice, and "open" that folder in your terminal by `cd`-ing to it. Then, you can run the command `pipenv install flask` to install it to the `flaskexample` (matching the folder name) virtual environment.
 
-<img src="/assets/images/background/22.png"  class="center_seventy"/>
+<img src="/assets/images/background/22.png"  class="center_full"/>
 
 Now create a new file called `app.py` inside `flaskexample` folder with the following content:
 
@@ -102,7 +102,7 @@ The file `app.py` **must** be in this name. `flask` looks for `app` folder or `a
 
 This will prompt you to open `http://127.0.0.1:5000/` on your browser, and you will be met with the message `My first server!` which is what's returned by the `index()` function above.
 
-<img src="/assets/images/background/23.png"  class="center_seventy"/>
+<img src="/assets/images/background/23.png"  class="center_full"/>
 
 The mini project is **more complicated** than just sending a text back to your browser. There are several **routes** (like different **paths**) in the MP; that is if you add a slash `/[path]` at the back of the URL, the `flask` app knows which files to **serve** (send back) to your browser. Looking at routes.py, this should be **obvious**:
 
