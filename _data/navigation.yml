@@ -15,9 +15,7 @@ MiniProjects:
   - title: Background
     children:
       - title: Getting Started with CLI
-        url: /mini_projects/background-cli
-      - title: Web Basics
-        url: /mini_projects/background-web
+        url: /mini_projects/background
   - title: Mini Project 1
     children:
       - title: MP Sort

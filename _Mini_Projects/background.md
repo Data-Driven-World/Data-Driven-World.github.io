@@ -1,6 +1,6 @@
 ---
-title: Command Line Basics
-permalink: /mini_projects/background-cli
+title: Background Knowledge
+permalink: /mini_projects/background
 key: miniprojects-background
 layout: article
 license: false
