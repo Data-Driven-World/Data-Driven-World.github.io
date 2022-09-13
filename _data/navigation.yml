@@ -11,6 +11,26 @@ header:
     url: /lo/weekly
     key: lo-weekly
 
+MiniProjects:
+  - title: Background
+    children:
+      - title: Getting Started with CLI
+        url: /mini_projects/background-cli
+      - title: Web Basics
+        url: /mini_projects/background-web
+  - title: Mini Project 1
+    children:
+      - title: MP Sort
+        url: https://github.com/Data-Driven-World/d2w_mini_projects/blob/master/mp_sort/Readme.md
+  - title: Mini Project 2
+    children:
+      - title: MP Calc
+        url: https://github.com/Data-Driven-World/d2w_mini_projects/blob/master/mp_calc/Readme.md
+  - title: Mini Project 3
+    children:
+      - title: MP TicTacToe
+        url: https://github.com/Data-Driven-World/d2w_mini_projects/blob/master/mp_tictactoe/Readme.md
+
 Notes:
   - title: Week 1
     children:

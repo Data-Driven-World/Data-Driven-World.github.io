@@ -1,6 +1,6 @@
 .header {
   background: $header-background;
-  float: right;
+  // float: right;
   a {
     font-weight: map-get($base, font-weight);
     text-decoration: none !important;
@@ -8,9 +8,11 @@
   }
   .main {
     @include flexbox();
+    justify-content: flex-end;
     @include media-breakpoint-down(md) {
       @include flex-direction(column);
     }
+    margin-top: 1rem;
   }
 }
 
@@ -40,10 +42,11 @@
   @include flex-wrap(nowrap);
   @include flex(1);
   height: map-get($layout, header-height);
-  margin-left: map-get($spacers, 3);
   white-space: nowrap;
+  margin-top: 1rem;
+  margin-left: 10rem;
   @include media-breakpoint-down(md) {
-    height: auto;
+    height: map-get($layout, header-height);;
     margin-right: 0;
   }
   & > .header__brand {
@@ -64,7 +67,8 @@
 .header__brand {
   @include flexbox();
   @include align-items(center);
-  justify-content: center;
+  justify-content: left;
+  color: $text-color;
   & > svg {
     width: map-get($base, font-size-h4) * 1.6;
     height: map-get($base, font-size-h4) * 1.6;
@@ -97,7 +101,7 @@
     @include menu(3, 2, nowrap);
     @include align-items(center);
     @include media-breakpoint-down(md) {
-      height: auto;
+      height: map-get($layout, header-height);
     }
     .search-button {
       @include media-breakpoint-down(md) {

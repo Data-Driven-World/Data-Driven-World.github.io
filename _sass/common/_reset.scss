@@ -67,6 +67,7 @@ body {
   }
 }
 
+
 @include block-elements() {
   padding: 0;
   margin: map-get($spacers, 2) 0;
@@ -188,4 +189,22 @@ input {
 // mermaid
 .mermaidTooltip {
   display: none;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: blue orange;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 3px;
+}
+
+*::-webkit-scrollbar-track {
+  background: $background-color;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: transparent;
 }

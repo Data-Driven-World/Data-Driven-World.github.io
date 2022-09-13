@@ -5,16 +5,18 @@
     line-height: map-get($base, line-height);
   }
   @include block-elements() {
-    margin: map-get($spacers, 2) 0;
+    margin: map-get($spacers, 3) 0;
     @media print {
-      margin: map-get($spacers, 2) 0;
+      margin: map-get($spacers, 3) 0;
     }
   }
   @include heading-elements() {
     position: relative;
-    margin-top: map-get($spacers, 4);
+    margin-top: map-get($spacers, 5);
+    margin-bottom: map-get($spacers, 2);
     @media print {
-      margin-top: map-get($spacers, 3);
+      margin-top: map-get($spacers, 4);
+      margin-bottom: map-get($spacers, 2);
     }
     & > .anchor {
       @include link-colors($border-color, $main-color-1);
@@ -73,7 +75,7 @@
   }
   code {
     padding: map-get($spacers, 1) map-get($spacers, 2);
-    background-color: rgba($main-color-1, 0.2);
+    background-color: $highlight-background;
     border-radius: map-get($base, border-radius);
     span {
       padding: 0;
