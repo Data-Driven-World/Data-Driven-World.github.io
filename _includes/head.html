@@ -28,10 +28,14 @@ path=_paths_rss -%}
 />
 
 {%- include head/favicon.html -%} {%- include snippets/prepend-baseurl.html
-path='/assets/css/main_alt.css' -%}
-<link class="other-stylesheet" rel="stylesheet" href="{{ __return }}" />
-{%- include snippets/prepend-baseurl.html path='/assets/css/main.css' -%}
+path='/assets/css/main.css' -%}
 <link class="current-stylesheet" rel="stylesheet" href="{{ __return }}" />
+
+<style class="current-style">
+  @import url("{{ '/assets/css/main.css' | relative_url }}");
+  @import url("{{ '/assets/css/main_alt.css' | relative_url }}");
+</style>
+
 {%- include snippets/get-sources.html -%} {%- assign _sources = __return -%}
 <link rel="stylesheet" href="{{ _sources.font_awesome }}" />
 
