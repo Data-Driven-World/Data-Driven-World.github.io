@@ -46,7 +46,8 @@
   margin-top: 1rem;
   margin-left: 10rem;
   @include media-breakpoint-down(md) {
-    height: map-get($layout, header-height);;
+    height: map-get($layout, header-height);
+    margin-left: 1rem;
     margin-right: 0;
   }
   & > .header__brand {
@@ -105,7 +106,7 @@
     }
     .search-button {
       @include media-breakpoint-down(md) {
-        display: none;
+        // display: none;
       }
     }
   }
