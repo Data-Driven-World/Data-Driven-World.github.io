@@ -1,3 +1,33 @@
 <!-- start custom main bottom snippet -->
+<button id="btnScrollToTop" class="btnScrollToTop">&uarr;</button>
 
+<script>
+  var btnScrollToTop = document.getElementById("btnScrollToTop");
+  var article = document.getElementsByClassName(
+    "page__main js-page-main has-aside cell cell--auto"
+  );
+  article[0].addEventListener("scroll", function () {
+    article[0].scrollTop > 50
+      ? btnScrollToTop.classList.add("show")
+      : btnScrollToTop.classList.remove("show");
+  });
+
+  article[0].addEventListener("touchmove", function () {
+    article[0].scrollTop > 50
+      ? btnScrollToTop.classList.add("show")
+      : btnScrollToTop.classList.remove("show");
+  });
+
+  btnScrollToTop.addEventListener("click", function () {
+    var article = document.getElementsByClassName(
+      "page__main js-page-main has-aside cell cell--auto"
+    );
+    console.log(article[0].scrollTop);
+
+    article[0].scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
 <!-- end custom main bottom snippet -->

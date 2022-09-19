@@ -30,7 +30,10 @@ MiniProjects:
     children:
       - title: MP TicTacToe
         url: https://github.com/Data-Driven-World/d2w_mini_projects/blob/master/mp_tictactoe/Readme.md
-
+  - title: Grading
+    children:
+      - title: Checkoff Protocol
+        url: /mini_projects/checkoff
 Notes:
   - title: Week 1
     children:
