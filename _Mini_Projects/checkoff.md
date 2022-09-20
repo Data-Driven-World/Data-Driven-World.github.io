@@ -55,6 +55,9 @@ Here's the general rubric for the Q&A section **for each exercise**:
 | 😟`0.25 ` | Cannot answer any question accurately, but at least know **which file** contain their answer, and some explanation                  |
 | 😵‍💫`0`     | **No idea** at all about the project, not even about admin matters like which file should contain their answer                      |
 
+Note that we might ask any of you for answers. Please ensure that everybody knows all parts of the project, at least the big picture. This is where you will learn.
+{:.info}
+
 ## Mini Project 1 Details
 
 There are **8 checks** for both exercises in MP1. Each is worth **0.25 pts**, totalling of **2pts** under "Working Test Case" **criteria**.
