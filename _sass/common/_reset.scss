@@ -193,12 +193,16 @@ input {
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: blue orange;
+  // scrollbar-color: blue orange;
 }
 
 /* Works on Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 3px;
+  width: 10px;
+}
+
+*::-webkit-scrollbar-thumb:horizontal{
+  background: transparent;
 }
 
 *::-webkit-scrollbar-track {
@@ -206,5 +210,6 @@ input {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: transparent;
+  background-color: rgba($text-color, 0.2);;
+  
 }

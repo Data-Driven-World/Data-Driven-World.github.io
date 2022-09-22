@@ -1,7 +1,7 @@
 .main {
   width: 100%;
   max-width: map-get($layout, content-max-width) + 220px;
-  padding: 0 map-get($spacers, 4);
+  padding: 0 map-get($spacers, 5);
   margin: 0 auto;
   @include media-breakpoint-down(lg) {
     padding: 0 map-get($spacers, 3);
