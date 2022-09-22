@@ -331,7 +331,7 @@ Note:
 
 ## Heapsort
 
-Now, we can consider Heapsort algorithm. The idea of a heapsort is pretty simple. For any arbitrary array, we can sort the integers in the array by first building a _binary heap_. Once binary heap is built, we know that the maximum is at the _root_ node. With this, we can swap the _root_ node with the last element and then exclude it from our heap. We then should restore the _max-heap property_ after this swap because now the _root_ node will be a small number. We can do this repetitively until there is no more element in the heap.
+Now, we can consider Heapsort algorithm. The idea of a heapsort is pretty simple. For any arbitrary array, we can sort the integers in the array by first building a _max-heap_. Once the max-heap is built, we know that the maximum is at the _root_ node. With this, we can swap the _root_ node with the last element and then exclude it from our heap. We then should restore the _max-heap property_ after this swap because now the _root_ node will be a small number. We can do this repetitively until there is no more element in the heap.
 
 ### (P)roblem Statement
 
