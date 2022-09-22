@@ -1,21 +1,24 @@
 .header {
   background: $header-background;
+  // float: right;
   a {
-    font-weight: map-get($base, font-weight) + 300;
+    font-weight: map-get($base, font-weight);
     text-decoration: none !important;
     @include link-colors($header-text-color, $main-color-1);
   }
   .main {
     @include flexbox();
+    justify-content: flex-end;
     @include media-breakpoint-down(md) {
       @include flex-direction(column);
     }
+    margin-top: 1rem;
   }
 }
 
 .header--dark {
   @extend .text--dark;
-  background: rgba(#000, .15);
+  background: rgba(#000, 0.15);
   .navigation__item--active {
     &::after {
       @include split-line(bottom, 4px, $text-color-theme-dark);
@@ -25,7 +28,7 @@
 
 .header--light {
   @extend .text--light;
-  background: rgba(#fff, .15);
+  background: rgba(#fff, 0.15);
   .navigation__item--active {
     &::after {
       @include split-line(bottom, 4px, $text-color-theme-light);
@@ -39,10 +42,12 @@
   @include flex-wrap(nowrap);
   @include flex(1);
   height: map-get($layout, header-height);
-  margin-right: map-get($spacers, 3);
   white-space: nowrap;
+  margin-top: 1rem;
+  margin-left: 10rem;
   @include media-breakpoint-down(md) {
-    height: auto;
+    height: map-get($layout, header-height);
+    margin-left: 1rem;
     margin-right: 0;
   }
   & > .header__brand {
@@ -63,6 +68,8 @@
 .header__brand {
   @include flexbox();
   @include align-items(center);
+  justify-content: left;
+  color: $text-color;
   & > svg {
     width: map-get($base, font-size-h4) * 1.6;
     height: map-get($base, font-size-h4) * 1.6;
@@ -95,17 +102,20 @@
     @include menu(3, 2, nowrap);
     @include align-items(center);
     @include media-breakpoint-down(md) {
-      height: auto;
+      height: map-get($layout, header-height);
     }
     .search-button {
       @include media-breakpoint-down(md) {
-        display: none;
+        // display: none;
       }
     }
   }
 }
 
 .navigation__item {
+  a {
+    white-space: nowrap;
+  }
   &::after {
     display: block;
     margin-bottom: -4px;
@@ -115,7 +125,7 @@
 }
 .navigation__item--active {
   a {
-    @include link-colors($main-color-1, $main-color-1);
+    // @include link-colors($main-color-1, $main-color-1);
   }
   &::after {
     @include split-line(bottom, 4px, $main-color-1);

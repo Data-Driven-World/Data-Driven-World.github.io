@@ -2,6 +2,7 @@ body,
 html,
 .root,
 .layout--page {
+  -webkit-font-smoothing: antialiased;
   height: 100%;
 }
 
@@ -75,19 +76,23 @@ html,
 .page__sidebar {
   z-index: map-get($z-indexes, sidebar);
   display: block;
-  width: 80%;
+  width: 70%;
   max-width: map-get($layout, sidebar-width);
   height: 100%;
-  background-color: $background-color;
+  background-color: $main-color-3;
   @include split-line(right);
+  border-right-width: 0px;
   @include transition(transform map-get($animation, duration));
   @include overflow(auto);
   .sidebar-toc {
-    padding: map-get($spacers, 3) map-get($spacers, 3) map-get($spacers, 4) map-get($spacers, 4);
+    padding: map-get($spacers, 4) map-get($spacers, 3) map-get($spacers, 4) 10rem;
+    @include media-breakpoint-down(lg) {
+      padding: map-get($spacers, 4) map-get($spacers, 3) map-get($spacers, 4) map-get($spacers, 3);
+    }
   }
 }
 .sidebar-button {
-  @include clickable($text-color-d, rgba($main-color-3, .75));
+  @include clickable($text-color-d, rgba($main-color-3, 0.75));
 }
 
 .page__mask {
@@ -146,6 +151,7 @@ html,
 .hero--light {
   .article__info {
     color: $text-color-theme-light;
+    -webkit-font-smoothing: antialiased;
   }
 }
 .hero--dark {
