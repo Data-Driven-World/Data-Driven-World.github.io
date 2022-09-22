@@ -325,3 +325,31 @@ Now, let's analyze it's computational time. Looking into the steps above, we not
 Let's draw the recursive tree for 3 disks.
 
 ![](/assets/images/week3/tower_of_hanoi_time_3.jpeg)
+
+Note that if $n=3$, it takes constant $c$ time and $2 \times T(n-1) = 2 \times T(2)$ computational time. In the recursive steps, each of this $T(2)$ recursive call consists of another constant $c$ time and $2 \times T(1)$ time. The tree stops at $i = n - 1 = 2$ when it reaches the base case as there is only one disk left. 
+
+Now we can generalize this to $n$ disks. The recursive tree looks as the one below.
+
+![](https://www.dropbox.com/s/lm7p0w6lgq89yge/tower_of_hanoi_time_n.png?raw=1)
+
+There will be $n$ levels from $i = 0 $ up to $i = n - 1$. Moreover, at each level, the sum total time is $2^i \times c$. If we sum up all the levels, we have the following series:
+
+$$T(n) = \sum_{i = 0}^{n-1} 2^i c = c \sum_{i = 0}^{n-1}2^i$$
+
+Recall that the sum for a Geometric series is given as follows
+
+$$a + ar + a r^2 + \ldots + a r^{n-1} = \frac{a(1-r^n)}{1 - r}$$
+
+where $a$ is the constant of the series and $r$ is the ratio. In our case, $a = c$ and $r = 2$. So we have
+
+$$T(n) = c \sum_{i = 0}^{n-1}2^i = \frac{c(1-2^n)}{1 - 2} = c (2^n -1) = O(2^n)$$
+
+This means that the computational time for the Tower of Hanoi problem is *exponential* with respect the input. As the number of input increases, the time it takes increases exponentially. 
+
+* when $n = 1$, it takes 1 step
+* when $n = 2$, it takes 3 steps
+* when $n = 3$, it takes 7 steps
+* when $n = 4$, it takes 15 steps
+* when $n = 5$, it takes 31 steps
+
+Notice also that in this case $c = 1$ as we can get the number of steps from $2^n - 1$. 
