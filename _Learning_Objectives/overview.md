@@ -41,10 +41,10 @@ show_date: false
 
 - Create `class` definitions with initialization and other methods
 - Create **stored** property and **computed** property
-- Draw **object diagram** of an object
+- Draw UML class diagram of a class with attributes and methods
 - Explain `has-a` relationship
 - Discuss object **aliasing** and **copying**
-- Draw UML diagram for `has-a` relationship
+- Draw UML class diagram for `has-a` relationship
 - Implement abstract data type for **Stack**, **Queue** using Object Oriented paradigm
 - **Apply** Stack and Queue for some applications
 - Implement Queue using double **Stack** and discuss implementation **impact** on computation time
