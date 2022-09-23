@@ -18,6 +18,8 @@ MiniProjects:
         url: /mini_projects/background-cli
       - title: Web Basics
         url: /mini_projects/background-web
+      - title: Debug Notes
+        url: /mini_projects/debug-notes
   - title: Mini Project 1
     children:
       - title: MP Sort
