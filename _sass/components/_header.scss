@@ -44,7 +44,6 @@
   height: map-get($layout, header-height);
   white-space: nowrap;
   margin-top: 1rem;
-  margin-left: 10rem;
   @include media-breakpoint-down(md) {
     height: map-get($layout, header-height);
     margin-left: 1rem;
@@ -68,7 +67,8 @@
 .header__brand {
   @include flexbox();
   @include align-items(center);
-  justify-content: left;
+  
+  justify-content:center;
   color: $text-color;
   & > svg {
     width: map-get($base, font-size-h4) * 1.6;

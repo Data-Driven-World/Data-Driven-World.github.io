@@ -73,6 +73,19 @@ html,
   display: none;
 }
 
+.page__sidebar::-webkit-scrollbar-thumb {
+  background-color: $main-color-3;
+}
+
+.page__sidebar::-webkit-scrollbar {
+  background-color: $main-color-3;
+}
+
+.page__sidebar::-webkit-scrollbar-track {
+  background: $main-color-3;
+}
+
+
 .page__sidebar {
   z-index: map-get($z-indexes, sidebar);
   display: block;
@@ -85,7 +98,7 @@ html,
   @include transition(transform map-get($animation, duration));
   @include overflow(auto);
   .sidebar-toc {
-    padding: map-get($spacers, 4) map-get($spacers, 3) map-get($spacers, 4) 10rem;
+    padding: map-get($spacers, 4) map-get($spacers, 3) map-get($spacers, 4) 5rem;
     @include media-breakpoint-down(lg) {
       padding: map-get($spacers, 4) map-get($spacers, 3) map-get($spacers, 4) map-get($spacers, 3);
     }
@@ -160,8 +173,12 @@ html,
   }
 }
 
+
+
+
 .page__main--immersive {
   .page__header {
+
     position: absolute;
     width: 100%;
   }
