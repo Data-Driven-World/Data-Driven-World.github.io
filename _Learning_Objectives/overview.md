@@ -11,7 +11,7 @@ show_edit_on_github: false
 show_date: false
 ---
 
-## Week 1: Python
+## Week 1: Python ([Concept Map](https://drive.google.com/file/d/11dFasj8ePnDj0TPYWCRrrWckVQk21fjd/view?usp=sharing))
 
 - Apply Python's **procedural** programming and **basic** data structures
 - **Define** and **call** functions
@@ -20,7 +20,7 @@ show_date: false
   - Insertion sort algorithms to **sort** a sequence of number
 - Use **print** statements to debug code
 
-## Week 2: Analysing Programs
+## Week 2: Analysing Programs ([Concept Map](https://drive.google.com/file/d/1PV9-Pe3D1AXhs4pao_70KnF3xyNcNX0P/view?usp=sharing))
 
 - Write functions to do **binary heap** data structure operation
 - Implement **heapsort** using iteration
@@ -29,7 +29,7 @@ show_date: false
 - Create **plots** from array data for **visualising** computational time
 - **Measure** computation time for bubble sort, insertion sort, built-in sort, and heapsort
 
-## Week 3: Divide and Conquer
+## Week 3: Divide and Conquer ([Concept Map](https://drive.google.com/file/d/1TRve3OUUgiqjE8DvUDA4breOvj6pmqK2/view?usp=sharing))
 
 - Solve problems using **recursion**
 - Identify problems that has recursive solutions
