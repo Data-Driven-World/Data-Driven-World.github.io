@@ -37,7 +37,7 @@ show_date: false
 - Derive solution of **recurrence** of merge sort using recursion-tree method
 - Measure computation time of merge sort and **compare** it with the other sort algorithms
 
-## Week 4: Object-Oriented Paradigm
+## Week 4: Object-Oriented Paradigm ([Concept Map](https://drive.google.com/file/d/1iLusuxa-wncnHcxOrRoX4207u07l18Nh/view?usp=sharing))
 
 - Create `class` definitions with initialization and other methods
 - Create **stored** property and **computed** property
