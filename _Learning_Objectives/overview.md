@@ -49,7 +49,7 @@ show_date: false
 - **Apply** Stack and Queue for some applications
 - Implement Queue using double **Stack** and discuss implementation **impact** on computation time
 
-## Week 5: Searching Data
+## Week 5: Searching Data ([Concept Map](https://drive.google.com/file/d/1B91OlTA0Ss2HLDxf_PJcS9O4GZPDRI9K/view?usp=sharing))
 
 - Use **Dictionary** to represent graph
 - Apply **basic** dictionary operations
