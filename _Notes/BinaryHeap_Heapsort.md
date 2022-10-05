@@ -19,7 +19,11 @@ One reason why we introduce different sorting algorithms is to show you that the
 
 ## Binary Heap
 
-Before, discussing Heapsort algorithm, we have to introduce a new data structure called _binary heap_ or simply called _heap_. The heap is an array of object that we can view as a nearly complete binary tree. You are familiar with the concept of array. But what is a binary tree? The easiest way to explain it is using some examples. The image below shows you an array of integers.
+Before, discussing Heapsort algorithm, we have to introduce a new data structure called _binary heap_ or simply called _heap_. The heap is an array of object that we can view as a nearly perfect binary tree (or we can call it a _complete_ binary tree).
+
+> A perfect binary tree is a full binary tree which **all** leaf nodes are at the same level. Complete binary trees are nearly perfect **except** the last level and all the leaves at the last level are packed towards the left.
+
+You are familiar with the concept of array. But what is a binary tree? The easiest way to explain it is using some examples. The image below shows you an array of integers.
 
 ![Array of Integers Representing Binary Heap](/assets/images/week2/Binary_Heap_Array.png)
 
@@ -38,7 +42,7 @@ Let's take a look at the example above and put in all the terms we have mentione
 - The node with element 7 (index 4) has only one child, which is the node with element 1 (index 9).
 - The node with element 1 (index 9) has node with index 4 as its _parent_.
 
-Now, let's go back to our definition of a _heap_. The heap is an array of object that we can view as a nearly complete binary tree.
+Now, let's go back to our definition of a _heap_. The heap is an array of object that we can view as a nearly perfect binary tree.
 
 - A binary tree is a tree where all the nodes have only a maximum of two children, which you can call _left_ child and _right_ child.
 - A _full_ binary tree is a tree where all the nodes except the leaves have _two_ children. In our case, heap is a _complete_ binary tree and not a _full_ binary tree. A _complete_ binary tree is a binary tree in which every level, except possibly the last, is _completely filled_, and all nodes are as far left as possible. A _complete_ binary tree is similar to a full binary tree with two major differences: all the leaf elements must lean toward the left and the last leaf element may not have the right sibling.
