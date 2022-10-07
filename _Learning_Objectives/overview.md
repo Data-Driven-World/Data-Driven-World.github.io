@@ -61,7 +61,7 @@ show_date: false
 - Explain and implement **breadth** first search
 - Explain and implement **depth** first search
 
-## Week 6: Inheritance and Object-Oriented Design
+## Week 6: Inheritance and Object-Oriented Design ([Concept Map](https://drive.google.com/file/d/1pkxE0M-V7uz_vteyBZsDotkL4sCkJj6b/view?usp=sharing))
 
 - Inherit a class to create a **child** class
 - Explain `is-a` relationship
