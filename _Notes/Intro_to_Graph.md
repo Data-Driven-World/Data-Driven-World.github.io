@@ -93,7 +93,7 @@ The above UML diagram shows that a `Graph` is composed of one or more `Vertex` o
 
 We can specify the attributes and methods for both classes as shown in the image below.
 
-![](/assets/images/week5/Graph_Vertex_Specification.jpeg)
+<img src="assets/images/week5/Graph_Vertex_Specification.png" alt="drawing" style="background-color:white" width="600"/>
 
 The class `Graph` has an attribute called `vertices`. This attribute contains all the vertices in the graph where each vertex is of the type `Vertex`. This class has several methods like how to create or retrieve a `Vertex` object in the graph, add an edge between two vertices given their starting and ending `id`s. It may also have some other helper methods like to get all the neighbouring vertices of a given `Vertex` or to get the number of vertices in the graph. You can design some other methods but these are some of the common operations we may want to perform with a graph.
 
