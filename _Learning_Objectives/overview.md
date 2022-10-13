@@ -11,7 +11,7 @@ show_edit_on_github: false
 show_date: false
 ---
 
-## Week 1: Python
+## Week 1: Python ([Concept Map](https://drive.google.com/file/d/11dFasj8ePnDj0TPYWCRrrWckVQk21fjd/view?usp=sharing))
 
 - Apply Python's **procedural** programming and **basic** data structures
 - **Define** and **call** functions
@@ -20,7 +20,7 @@ show_date: false
   - Insertion sort algorithms to **sort** a sequence of number
 - Use **print** statements to debug code
 
-## Week 2: Analysing Programs
+## Week 2: Analysing Programs ([Concept Map](https://drive.google.com/file/d/1PV9-Pe3D1AXhs4pao_70KnF3xyNcNX0P/view?usp=sharing))
 
 - Write functions to do **binary heap** data structure operation
 - Implement **heapsort** using iteration
@@ -29,7 +29,7 @@ show_date: false
 - Create **plots** from array data for **visualising** computational time
 - **Measure** computation time for bubble sort, insertion sort, built-in sort, and heapsort
 
-## Week 3: Divide and Conquer
+## Week 3: Divide and Conquer ([Concept Map](https://drive.google.com/file/d/1TRve3OUUgiqjE8DvUDA4breOvj6pmqK2/view?usp=sharing))
 
 - Solve problems using **recursion**
 - Identify problems that has recursive solutions
@@ -37,7 +37,7 @@ show_date: false
 - Derive solution of **recurrence** of merge sort using recursion-tree method
 - Measure computation time of merge sort and **compare** it with the other sort algorithms
 
-## Week 4: Object-Oriented Paradigm
+## Week 4: Object-Oriented Paradigm ([Concept Map](https://drive.google.com/file/d/1iLusuxa-wncnHcxOrRoX4207u07l18Nh/view?usp=sharing))
 
 - Create `class` definitions with initialization and other methods
 - Create **stored** property and **computed** property
@@ -49,7 +49,7 @@ show_date: false
 - **Apply** Stack and Queue for some applications
 - Implement Queue using double **Stack** and discuss implementation **impact** on computation time
 
-## Week 5: Searching Data
+## Week 5: Searching Data ([Concept Map](https://drive.google.com/file/d/1B91OlTA0Ss2HLDxf_PJcS9O4GZPDRI9K/view?usp=sharing))
 
 - Use **Dictionary** to represent graph
 - Apply **basic** dictionary operations
@@ -61,7 +61,7 @@ show_date: false
 - Explain and implement **breadth** first search
 - Explain and implement **depth** first search
 
-## Week 6: Inheritance and Object-Oriented Design
+## Week 6: Inheritance and Object-Oriented Design ([Concept Map](https://drive.google.com/file/d/1pkxE0M-V7uz_vteyBZsDotkL4sCkJj6b/view?usp=sharing))
 
 - Inherit a class to create a **child** class
 - Explain `is-a` relationship
