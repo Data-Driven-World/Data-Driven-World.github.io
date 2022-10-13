@@ -11,10 +11,27 @@
     }
   }
 
+  // prevent horrendous linebreaks between texts
+  p {
+    display: inline;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+    
   img,
   tr,
   pre,
   blockquote {
-    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  img {
+    display: inline;
+    break-inside: avoid;
+    filter: none !important;
+  }
+
+  svg, object {
+    filter: none !important;
   }
 }

@@ -30,6 +30,12 @@ path=_paths_rss -%}
 {%- include head/favicon.html -%} {%- include snippets/prepend-baseurl.html
 path='/assets/css/main.css' -%}
 <link class="current-stylesheet" rel="stylesheet" href="{{ __return }}" />
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ '/assets/css/main.css' | relative_url }}"
+  media="print"
+/>
 
 <style class="current-style">
   @import url("{{ '/assets/css/main.css' | relative_url }}");
