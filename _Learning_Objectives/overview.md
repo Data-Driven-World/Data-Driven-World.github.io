@@ -66,7 +66,7 @@ show_date: false
 - Inherit a class to create a **child** class
 - Explain `is-a` relationship
 - Draw **UML** diagram for `is-a` relationship
-- **Overload** operators to extend class methods
+- **Override** operators to extend parent's methods
 - Implement **Deque** data structure as a subclass of **Queue**
 - Implement **Array** and **Linked List** data structure from the same base class
 
