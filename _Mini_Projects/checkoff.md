@@ -96,6 +96,24 @@ Don't worry, it will be very **basic**. If in doubt, please read [this handout a
 
 It is important to be **independent** and **curious** about things you've worked on, so that you can **apply** this knowledge in other circumstances and not just studying for the sake of the MP only. Doing things for one-off purposes are such a waste of time. And of course, for those of you who are going to ISTD, it is **crucial** to have this mindset and not to mention the knowledge about CLI and the Web. The material provided in the background handouts are **nothing** compared to what you will face in Term 4 and Term 5 as **most details** are omitted, but they will give you about 2% heads up 🥹.
 
-## Mini Project 2 Checklist
+## Mini Project 2 Details
 
-Coming soon.
+There are **8 checks** for both exercises in MP1. Each is worth 0.25 pts, totalling of 2pts under “Working Test Case” criteria. **This is similar to MP1**.
+
+### Exercise 1 [3 checks]
+
+1. In `/app/serverlibrary.py`, there exist a `mergesort` implementation **from scratch**, no other sorting libraries can be used.
+2. Able to **create** users **and** login as that user.
+3. Able to **create** many users and display all registered users under `Users` page.
+
+### Exercise 2 [5 checks]
+
+1. In `/app/serverlibrary.py`, there exist a `Stack` implementation in there **from scratch**, e.g: `pop`, `peek`, etc is implemented/
+2. In `/app/serverlibrary.py`, there exist a `EvaluateExpression` implementation in there **from scratch**.
+3. Users can create questions and the answer displayed in `/questions` page is correct. Users can also send it to multiple other users.
+4. Users can `Show/Hide` questions and enter the correct answer in the `/challenges` page, afterwhich the timer value is displayed at the row.
+5. In the **Hall of Fame**, we can see the **ranks** properly, where each ROW is a question, and WITHIN the same row of question, the display of username and score must be shown properly (top 3)/
+
+### Q&A
+
+Similar protocol like MP [above](http://127.0.0.1:4000/mini_projects/checkoff#qa). Please read all necessary markdown files: [Bootstrap](https://github.com/Data-Driven-World/d2w_mini_projects/blob/master/mp_calc/Bootstrap.md), [Database](https://github.com/Data-Driven-World/d2w_mini_projects/blob/master/mp_calc/Database.md), and [Forms](https://github.com/Data-Driven-World/d2w_mini_projects/blob/master/mp_calc/Forms.md) that was available at the [mini project 2 repository](https://github.com/Data-Driven-World/d2w_mini_projects/tree/master/mp_calc) before going for the checkoff.
