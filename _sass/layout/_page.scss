@@ -204,6 +204,7 @@ pre.highlight > button {
   border-radius: 6px;
   color: $text-color;
   &:hover {
+    color: $button-hover-color;
     background-color: $main-color-1;
     transition-duration: 0.1s;
   }
