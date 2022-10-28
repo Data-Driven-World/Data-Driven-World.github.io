@@ -39,6 +39,32 @@ function setupThemeButton() {
   }
 }
 
+// Button to copy code blocks
+function setupCopyButton() {
+  const codeBlocks = document.querySelectorAll("pre.highlight");
+
+  codeBlocks.forEach(function (codeBlock) {
+    const copyButton = document.createElement("button");
+    copyButton.className = "copy";
+    copyButton.type = "button";
+    copyButton.ariaLabel = "Copy code to clipboard";
+    copyButton.innerText = "Copy";
+
+    codeBlock.append(copyButton);
+
+    copyButton.addEventListener("click", function () {
+      const code = codeBlock.querySelector("code").innerText.trim();
+      navigator.clipboard.writeText(code);
+
+      copyButton.innerText = "Copied";
+
+      setTimeout(function () {
+        copyButton.innerText = "Copy";
+      }, 2000);
+    });
+  });
+}
+
 // Run scripts after DOM is loaded
 window.addEventListener("DOMContentLoaded", (event) => {
   var toggleTheme = document.querySelector(".toggle-theme");
@@ -54,7 +80,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   });
 
   setupThemeButton();
-
+  setupCopyButton();
   showContent();
 });
 
