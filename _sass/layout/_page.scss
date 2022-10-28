@@ -141,7 +141,7 @@ html,
 @include media-breakpoint-down(lg) {
   .page__sidebar {
     position: fixed;
-    @include transform(translate(-map-get($layout, sidebar-width), 0));
+    @include transform(translate(- map-get($layout, sidebar-width), 0));
   }
 
   .page__actions {
