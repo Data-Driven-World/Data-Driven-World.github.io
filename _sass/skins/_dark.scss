@@ -71,6 +71,9 @@ $linkedin-color: #1074af;
 $github-color: #000;
 $npm-color: #fff;
 
+// others
+$button-hover-color: $background-color;
+
 img, svg, object {
     filter: invert(0.9) hue-rotate(180deg);
   }

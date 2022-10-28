@@ -72,5 +72,8 @@ $linkedin-color: #1074af;
 $github-color: #000;
 $npm-color: #fff;
 
+// others
+$button-hover-color: $text-color;
+
 // highlight colors
 @import "skins/highlight/tomorrow";
