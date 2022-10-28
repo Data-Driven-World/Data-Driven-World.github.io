@@ -85,7 +85,6 @@ html,
   background: $main-color-3;
 }
 
-
 .page__sidebar {
   z-index: map-get($z-indexes, sidebar);
   display: block;
@@ -100,7 +99,8 @@ html,
   .sidebar-toc {
     padding: map-get($spacers, 4) map-get($spacers, 3) map-get($spacers, 4) 5rem;
     @include media-breakpoint-down(lg) {
-      padding: map-get($spacers, 4) map-get($spacers, 3) map-get($spacers, 4) map-get($spacers, 3);
+      padding: map-get($spacers, 4) map-get($spacers, 3) map-get($spacers, 4)
+        map-get($spacers, 3);
     }
   }
 }
@@ -141,7 +141,7 @@ html,
 @include media-breakpoint-down(lg) {
   .page__sidebar {
     position: fixed;
-    @include transform(translate(- map-get($layout, sidebar-width), 0));
+    @include transform(translate(-map-get($layout, sidebar-width), 0));
   }
 
   .page__actions {
@@ -173,16 +173,42 @@ html,
   }
 }
 
-
-
-
 .page__main--immersive {
   .page__header {
-
     position: absolute;
     width: 100%;
   }
   .hero__content {
     padding-top: map-get($layout, header-height);
   }
+}
+
+pre.highlight {
+  position: relative;
+}
+
+pre.highlight > button {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  opacity: 0;
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 15px;
+  vertical-align: middle;
+  border: 1px solid $text-color;
+  border-radius: 6px;
+  color: $text-color;
+  :hover {
+    border-color: #1b1f2326;
+    transition-duration: 0.1s;
+  }
+}
+
+pre.highlight:hover > button {
+  opacity: 1;
 }
