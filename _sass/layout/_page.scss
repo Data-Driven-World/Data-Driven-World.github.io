@@ -141,7 +141,7 @@ html,
 @include media-breakpoint-down(lg) {
   .page__sidebar {
     position: fixed;
-    @include transform(translate(- map-get($layout, sidebar-width), 0));
+    @include transform(translate(-map-get($layout, sidebar-width), 0));
   }
 
   .page__actions {
@@ -183,11 +183,11 @@ html,
   }
 }
 
-pre.highlight {
+div.highlight {
   position: relative;
 }
 
-pre.highlight > button {
+div.highlight > button {
   position: absolute;
   right: 0.5rem;
   top: 0.5rem;
@@ -195,21 +195,22 @@ pre.highlight > button {
   display: inline-block;
   outline: 0;
   cursor: pointer;
-  padding: 4px 12px;
+  padding: 4px 4px;
   font-size: 0.8rem;
   font-weight: 500;
   line-height: 15px;
   vertical-align: middle;
-  border: 1px solid $text-color;
+  // border: 1px solid $text-color;
   border-radius: 6px;
   color: $text-color;
+  background-color: $highlight-background;
+
   &:hover {
-    color: $button-hover-color;
-    background-color: $main-color-1;
     transition-duration: 0.1s;
+    filter: brightness(85%);
   }
 }
 
-pre.highlight:hover > button {
+div.highlight:hover > button {
   opacity: 1;
 }
