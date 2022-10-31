@@ -70,7 +70,7 @@ show_date: false
 - Implement **Deque** data structure as a subclass of **Queue**
 - Implement **Array** and **Linked List** data structure from the same base class
 
-## Week 8: Visualizing and Processing Data
+## Week 8: Visualizing and Processing Data([Concept Map](https://drive.google.com/file/d/1_qFdKT7ESIR-Uk0lklfzVM9k2ST_wAZQ/view?usp=sharing))
 
 - Create **scatter** plot and statistical plots like box plot, histogram, and bar plot
 - Create a **Panda's DataFrame** and selecting data from DataFrame
