@@ -79,7 +79,7 @@ show_date: false
 - **Normalize** data using min-max normalization
 - Give example of **linear regression and classification**
 
-## Week 9: Modelling Continuous Data
+## Week 9: Modelling Continuous Data ([Concept Map](https://drive.google.com/file/d/15EkM4XMdMyYjLkg_yFgeKlsgpl-qYjUU/view?usp=sharing))
 
 - Write **objective** function of linear regression
 - Implement **Gradient Descent algorithm** for optimisation
