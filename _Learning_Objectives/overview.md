@@ -90,7 +90,7 @@ show_date: false
 - Plot **cost** function over iteration time
 - Plot **linear** regression
 
-## Week 10: Classifying Categorical Data
+## Week 10: Classifying Categorical Data ([Concept Map](https://drive.google.com/file/d/1wSyrCyG3fFRR-CSCKfMadnhngANKVrcU/view?usp=sharing))
 
 - Write objective function of **logistic** regression
 - Use logistic regression to **calculate** probabilities of binary classification
@@ -100,7 +100,7 @@ show_date: false
 - Classify **multi-class** problems using one-vs-all technique
 - Calculate **confusion** **matrix**, **precision**, and **recall**
 
-## Week 12: Design of State Machines
+## Week 12: Design of State Machines ([Concept Map](https://drive.google.com/file/d/1Vql1S6jK7ysFhMvEhQ7LIG5THXoMFYJZ/view?usp=sharing))
 
 - Define a **state machine**
 - Implement an **Abstract Base Class** for State Machine using abc module
