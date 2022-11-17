@@ -379,7 +379,7 @@ To simplify our derivation, we will consider each case when $y=1$ and when $y=0$
 
 $$J(\beta) = -\frac{1}{m}\left[\Sigma_{i=1}^m  \log(p(x^i)) \right]$$
 
-Derivating this with respect to $\theta$ is
+Derivating this with respect to $\beta$ is
 
 $$\frac{\partial}{\partial \beta_j}J(\beta) = -\frac{1}{m}\Sigma \frac{1}{p(x)}\frac{\partial}{\partial \beta}p(x)$$
 
@@ -410,7 +410,7 @@ Now let's do the same for $y = 0$, the cost function is given by
 
 $$J(\beta) = -\frac{1}{m}\left[\Sigma_{i=1}^m  \log(1 - p(x^i))\right]$$
 
-Derivating this with respect to $\theta$ gives
+Derivating this with respect to $\beta$ gives
 
 $$\frac{\partial}{\partial \beta_j}J(\beta) = \frac{1}{m}\Sigma \frac{1}{1 - p(x)}\frac{\partial}{\partial \beta}p(x)$$
 
