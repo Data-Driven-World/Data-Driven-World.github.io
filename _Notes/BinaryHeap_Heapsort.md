@@ -359,85 +359,85 @@ We will sort the elements following these steps:
 
   [16, 14, 9, 10, 2, 8, 3, 7, 4, 1]
 
-- Now, we will swap the largest element with the last element, and exclude it from the heap. We will put the excluded element in what we called as `sorted`.
+- Now, we will swap the largest element with the last element, and exclude it from the heap. We will put the excluded element in what we called as **sorted** of the list. This sorted section is separated by `||` in the list below.
 
-  heap = [**1**, 14, 9, 10, 2, 8, 3, 7, 4], sorted = [**16**]
+  heap = [**1**, 14, 9, 10, 2, 8, 3, 7, 4 ,|| **16**]
 
 - Notice, now, that the array does not satisfy the _max-heap property_. So we must _max-heapify_ the array to push the element 1 down to its place. The process of _max-heapify_ from the root node will result in:
 
-  heap = [**1**, **14**, 9, 10, 2, 8, 3, 7, 4], sorted = [16]
+  heap = [**1**, **14**, 9, 10, 2, 8, 3, 7, 4, || 16]
 
-  heap = [**14**, **1**, 9, 10, 2, 8, 3, 7, 4], sorted = [16]
+  heap = [**14**, **1**, 9, 10, 2, 8, 3, 7, 4, || 16]
 
-  heap = [14, **10**, 9, **1**, 2, 8, 3, 7, 4], sorted = [16]
+  heap = [14, **10**, 9, **1**, 2, 8, 3, 7, 4, || 16]
 
-  heap = [14, 10, 9, **7**, 2, 8, 3, **1**, 4], sorted = [16]
+  heap = [14, 10, 9, **7**, 2, 8, 3, **1**, 4, || 16]
 
 - Once we have restored the _max-heap property_, we can take out the largest element from the first element and swap it with the last element in the heap.
 
-  heap = [**4**, 10, 9, 7, 2, 8, 3, 1], sorted = [**14**, 16]
+  heap = [**4**, 10, 9, 7, 2, 8, 3, 1, || **14**, 16]
 
 - We then _max-heapify_ the heap again to restore the _max-heap property_.
 
-  heap = [**4**, **10**, 9, 7, 2, 8, 3, 1], sorted = [**14**, 16]
+  heap = [**4**, **10**, 9, 7, 2, 8, 3, 1, || **14**, 16]
 
-  heap = [**10**, **4**, 9, 7, 2, 8, 3, 1], sorted = [**14**, 16]
+  heap = [**10**, **4**, 9, 7, 2, 8, 3, 1, || **14**, 16]
 
-  heap = [10, **7**, 9, **4**, 2, 8, 3, 1], sorted = [**14**, 16]
+  heap = [10, **7**, 9, **4**, 2, 8, 3, 1, || **14**, 16]
 
 - We then swap the largest element with the last element in the heap, and take it out from the heap.
 
-  heap = [**1**, 7, 9, 4, 2, 8, 3], sorted = [**10**, 14, 16]
+  heap = [**1**, 7, 9, 4, 2, 8, 3, || **10**, 14, 16]
 
 - The same process of _max-heapify_ happens again. We will now _remove_ the intermediate step and only show the first and the final state of the heaps.
 
-  heap = [**1**, 7, 9, 4, 2, 8, 3], sorted = [**10**, 14, 16]
+  heap = [**1**, 7, 9, 4, 2, 8, 3, || **10**, 14, 16]
 
-  heap = [9, 7, 8, 4, 2, **1**, 3], sorted = [**10**, 14, 16]
+  heap = [9, 7, 8, 4, 2, **1**, 3, || **10**, 14, 16]
 
 - We swap and take out again the largest element. The next iteration would be:
 
-  heap = [**3**, 7, 8, 4, 2, **1**], sorted = [**9**, 10, 14, 16]
+  heap = [**3**, 7, 8, 4, 2, **1**, || **9**, 10, 14, 16]
 
   then we max-heapify the array:
 
-  heap = [8, 7, **3**, 4, 2, 1], sorted = [**9**, 10, 14, 16]
+  heap = [8, 7, **3**, 4, 2, 1, || **9**, 10, 14, 16]
 
   Swapping and taking out the largest element:
 
-  heap = [**1**, 7, 3, 4, 2], sorted = [**8**, 9, 10, 14, 16]
+  heap = [**1**, 7, 3, 4, 2, || **8**, 9, 10, 14, 16]
 
   and max-heapify:
 
-  heap = [7, 4, 3, **1**, 2], sorted = [**8**, 9, 10, 14, 16]
+  heap = [7, 4, 3, **1**, 2, || **8**, 9, 10, 14, 16]
 
   Swapping and taking out the largest element:
 
-  heap = [**2**, 4, 3, 1], sorted = [**7**, 8, 9, 10, 14, 16]
+  heap = [**2**, 4, 3, 1, || **7**, 8, 9, 10, 14, 16]
 
   and max-heapify:
 
-  heap = [4, **2**, 3, 1], sorted = [**7**, 8, 9, 10, 14, 16]
+  heap = [4, **2**, 3, 1, || **7**, 8, 9, 10, 14, 16]
 
   Swapping and taking out the largest element:
 
-  heap = [**1**, 2, 3], sorted = [**4**, 7, 8, 9, 10, 14, 16]
+  heap = [**1**, 2, 3, || **4**, 7, 8, 9, 10, 14, 16]
 
   and max-heapify:
 
-  heap = [3, 2, **1**], sorted = [**4**, 7, 8, 9, 10, 14, 16]
+  heap = [3, 2, **1**, || **4**, 7, 8, 9, 10, 14, 16]
 
   Swapping and taking out the largest element:
 
-  heap = [**1**, 2], sorted = [**3**, 4, 7, 8, 9, 10, 14, 16]
+  heap = [**1**, 2, || **3**, 4, 7, 8, 9, 10, 14, 16]
 
   and max-heapify:
 
-  heap = [2, **1**], sorted = [**3**, 4, 7, 8, 9, 10, 14, 16]
+  heap = [2, **1**, || **3**, 4, 7, 8, 9, 10, 14, 16]
 
   Swapping and taking out the largest element:
 
-  heap = [**1**], sorted = [**2**, 3, 4, 7, 8, 9, 10, 14, 16]
+  heap = [**1**, || **2**, 3, 4, 7, 8, 9, 10, 14, 16]
 
 - At this point in time, the array is already sorted. If `heap` and `sorted` are not a separate array but rather one single array, we will have:
 
