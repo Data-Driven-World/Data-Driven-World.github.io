@@ -184,7 +184,7 @@ In the above figure, we remove element at position 1 (second position). To do th
 
 Since removing node involves traversing the linked list, the worst case complexity will be linear, i.e. $O(n)$. 
 
-## Base Class for List
+## An Abstract Base Class for Our List
 
 We have discussed two ways of implementing a list and each have its own advantages and disadvantages. For some application, one may choose to use a list based on fixed-size array, while for other applicaiton, one may choose to use a linked list. Both kinds of list, however, can be designed to implement the same operations. This is where our lesson on inheritance can be applied. We can design a base class for our list that is inherited by the two ways of implementing a list. The UML diagram is shown below.
 

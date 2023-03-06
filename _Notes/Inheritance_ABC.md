@@ -175,3 +175,34 @@ test = RightIterable()
 There will be no error when you run the above cell because now the method `__iter__()` has been implemented in the child class. The definition of `__iter__()` simply returns an iterable object from `self.data`. 
 
 So, we have shown the mechanism where Python ensures that when you create an Abstract Base Class with some abstract methods, the child class must implement this abstract method. Otherwise, Python will throw an exception. In future lessons, we will create our own Abstract Base Class. 
+
+## Abstract Base Class for Creating Abstract Data Types
+
+We can apply this concept of Abstract Base Class to implement Abstract Data Type (ADT). ADT is a data type for objects whose behaviour is defined by some specific interface. The interface defines the operations that the data type can perform. However, ADT does not define how these operations are to be *implemented*. It is called *abstract* because it is independent of its implementation. 
+
+As an example, we can create an Abstract Data Type (ADT) for a List object. In this list object, we can specify a set of operation as its interface. This operations specifies what List ADT can do. For example, here are some common List operations we can think of:
+- a List object an *access* an element in the list using its index.
+- a List object can *modify* an element in the list given its index.
+- a List object can *append* an element into the list.
+- a List object can *remove* an element given its index position.
+- a List object can *check the number* of elements in the list.
+
+As mentioned previously, ADT does not specify how to implement these operations nor how to implement the data structure underlying it. ADT only specifies its interface by stating what are the operations that this data type should be able to do. Why is this important? The reason is that certain implementation may be better for specific scenario while other implementation maybe be better for other scenario. 
+
+Let's give some example to this. Let's imagine if our List ADT is implemented using Python's built-in list. We know from Python computational model that the following holds true for the complexity of the following operations.
+- `append(item)` and `pop()` has complexity of $O(1)$. 
+- on the other hand, `insert(0, item)` has complexity of $O(n)$.
+
+Imagine if our use case has more operations to insert at the beginning of the List. In this case, Python's built-in list may not be the best implementation. Another implementation like Linked List maybe better. We will discuss about Linked List in the next section. But for now, we see that different implementation may have different performance. However, the operations for List remain the same. Regardless of how it is implementated, we still want to insert the item or remove it. 
+
+Therefore, it is useful to define an Abstract Base Class that specifies the interface of an Abstract Data Type. In our case, we can define that a List must have some specific operations that it has to support such as appending, inserting and removing elements. The Abstract Base Class may not have the full implementation and yet it specifies that it request some of these *methods* to be implemented in the child class. 
+
+We can then design an abstract base class for our List data as shown in the image below.
+
+<img src="/assets/images/week6/abc_python_array_linkedlist.png" alt="drawing" width="600"/>
+
+In this design, we have one abstract base class called `MyAbstractList` which defines the interface for our List ADT. This base class can be implemented in many ways. In your problem sets, you will implement this List ADT using a Fixed Size Array (`MyArrayList`) as well as using a Linked List (`MyLinkedList`). Details on the Fixed Size Array and Linked List is given in the next section. We gave you the implementation the List ADT using Python's built-in List (`MyPythonList`) in the problem set.
+
+The great thing is that all these three different implementation has a common interface and a same set of methods. This way, you can switch your List implementation and the rest of the code still works fine because it follows the common interface of our `MyAbstractList` ADT. In this case, our abstract base class `MyAbstractList` enforces that the child class has to implement some specific methods. Extending this concept further, we can actually inherit `MyAbstractList` from `collections.abc.Iterator`. In this way, we enforce that our List ADT must have the `__iter__()` method. This allows our List ADT to be iterated over each of its elements. We can draw the final UML diagram in this way.
+
+<img src="/assets/images/week6/uml_abc_iterator_abstract_list.png" alt="drawing" width="600"/>
