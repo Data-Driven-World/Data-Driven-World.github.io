@@ -204,12 +204,20 @@ TypeError                                 Traceback (most recent call last)
 TypeError: can only concatenate str (not "int") to str
 ```
 
-Therefore, it is important that we do encapsulation. Encapsulation ensures that any access to the data should be done through some specific methods. There are two kinds of methods for this purpose:
+Therefore, it is important that we do encapsulation. Encapsulation ensures that any access to the data should be done through some specific methods. 
+
+Let's look at another example of why we want to do encapsulation. Let's say we want to *update* our Robot class definition to implement relative coordinates where the robot has a absolute position and a relative position with respect to some initial position in the map. Let's say, the robot can start at any other position other than `0, 0` and we want to store the absolute position of the robot as its attribute. This change requires a change in the way the programmers set the value of the robot's position  since previously the position is always relative to the origin of `0,0`. Such changes may break the code since now the `_pos` attribute means differently. Previously, it is relative to `0, 0` and now it is going to be some absolute position in the map. With encapsulation, however, we can keep the way position is set while changing the internal attributes. For example, we can create `pos` as relative to the initial origin while storing the absolute position internally based on where the initial origin is. Encapsulation simply separates the internal data representation with how others interact with this object. Without encapsulation, we will break the code and requires new methods to be created.  
+
+To achieve this data encapsulation, we usually craete two kinds of methods:
 
 - enquiry or _getter_: this method is used to get or enquire the state of the object
 - modifier or _setter_: this method is used to modify or set the state of the object.
 
-In Python, we do this using the concept of **property**. A _property_ represents an attribute with its getter and setter. Let's rewrite the class using property this time. We are going to create two properties, one for `name` and the other one for `speed`. On the other hand, we wil create a property for position only with a getter. The reason is that we want position to be modified only by calling the `move()` method.
+![](/assets/images/week4/property_attribute.png)
+
+In Python, we do this using the concept of **property**. A _property_ represents an attribute with its getter and setter. Note that **a property is not the same as the attribute**. Because they are not the same, Python will require you to use two different names. The name of the property must not be the same as the name of the attribute. Property looks like an attribute but they behave differently. When we set a property's value, it passes through its **setter** method. Similarly, when we get a property's value, we can only obtain it from its **getter** method. Since all access passes through some methods, the data is encapsulated by the getter and the setter methods. We can make changes internally without affecting how the outside world interact with the data. 
+
+Let's rewrite our `RobotTurtle` class using property to encapsulate the `_name` attribute and `_speed` attribute. To do this, we are going to create two properties, one for `name` and the other one for `speed`. On the other hand, we wil create a property for position only with a getter. The reason is that we want position to be modified only by calling the `move()` method.
 
 ```python
 # Class definition
