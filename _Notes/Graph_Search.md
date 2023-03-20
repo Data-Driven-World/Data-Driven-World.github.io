@@ -21,7 +21,7 @@ To do these algorithms, our `Vertex` class and `Graph` class may need some addit
 
 ## Breadth First Search
 
-Breadth first search is normally used to find a shortest path between two vertices. For example, when you plan your travel from one point to another point, breadth first search can identify the path you should take that gives the shortest path. How does this work. Let's take a look at the graph below.
+Breadth first search is normally used to find a shortest path between two vertices. For example, when you plan your travel from one point to another point, breadth first search can identify the path you should take that gives the shortest path. How does this work? Let's take a look at the graph below.
 
 ### (C)ases
 
@@ -191,7 +191,7 @@ In the child class `VertexSearch` we redefine the `__init__()` method of the par
 
 ## Depth-First Search
 
-There is another kind of search that can be done on a graph. This is called **depth-first** search. As the name implies, this algorithm explores the neighbouring vertices in a depth-wise manner. Let's illustrate this with the same graph as we have seen previously.
+There is another kind of search that can be done on a graph. This is called **depth-first** search (DFS). As the name implies, this algorithm explores the neighbouring vertices in a depth-wise manner. DFS is used in topological sorting, scheduling problems, cycle detection in graph and solving puzzles with only one solution such as finding a path in a maze or solving a sudoku puzzle. Let's illustrate this with the same graph as we have seen previously.
 
 ### (C)ases
 
