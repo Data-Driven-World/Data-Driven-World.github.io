@@ -106,7 +106,9 @@ similarly, we have these two summations
 
 Let's write down the steps on how we solve those particular cases.
 
-```
+<div cursor="pointer" class="collapsible">Show Pseudocode</div>
+<div class="content_answer">
+<pre>
 Input: Array or list of numbers
 Output: the Sum of the array
 Steps:
@@ -114,7 +116,8 @@ Steps:
     1.1 Return that element as the sum of the array
 2. Otherwise,
     2.1 Return the addition of the first element with the sum of the rest of the array
-```
+</pre>
+</div>
 
 ### Recursive Basic Structure
 
@@ -193,7 +196,9 @@ Now we can write the steps.
 
 ### (D)esign of Algorithm
 
-```
+<div cursor="pointer" class="collapsible">Show Pseudocode</div>
+<div class="content_answer">
+<pre>
 Input: n, an integer
 Output: factorial of n, an integer
 Steps:
@@ -201,7 +206,8 @@ Steps:
     1.1 return 1
 2. otherwise,
     2.1 return n x factorial of n-1
-```
+</pre>
+</div>
 
 Notice again here that step 1 is the **base** case which is trivial. The base case is also the **terminating** case. Without the base case the recursive solution will not end. So it is important to remember that every recursive solution must have a base case.
 
@@ -293,7 +299,9 @@ We can then generalize the Tower of Hanoi problem to any number of disks as in t
 
 ### (D)esign of Algorithm
 
-```
+<div cursor="pointer" class="collapsible">Show Pseudocode</div>
+<div class="content_answer">
+<pre>
 Input: 
   - n, number of disks
   - source tower
@@ -308,7 +316,8 @@ Steps:
     2.1 Move the first n - 1 disks from source to auxiliary tower
     2.2 Move the last disk n from source to destination tower
     2.3 Move the first n - 1 disks from the auxiliary tower to the destination tower
-```
+</pre>
+</div>
 
 Notice that in the above steps, step 1 is the **base** case while step 2 is the **recursive** case. The base case is when the solution is trivial. This is the case when there is only one disk. The solution involves only one step which is to move that one disk from the source to the destination tower. On the other hand, step 2 is the recursive case. In this step, both steps 2.1 and step 2.3 are the recursive steps that reduce the problem smaller to $n-1$ disks. Step 2.2 consists of only a single step. 
 

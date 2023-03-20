@@ -16,6 +16,19 @@ show_date: false
 
 The best way to practice your programming skills is by writing actual code. One of the common computation is to sort some items in some way. For example, sorting a number from smallest to biggest or names from A to Z. In this notebook, we will describe some sorting algorithms which you can implement in Python. 
 
+**A Note about Show Pseudocode Button:**
+
+Throughout these notes, you will see a button that says **Show Pseudocode** as shown below. Go ahead and click it.
+
+<div cursor="pointer" class="collapsible">Show Pseudocode</div>
+<div class="content_answer">
+<p>
+The purpose of this button is to show you the pseudocode of the algorithm. But more importantly, the button is placed there so that you **don't immediately** see the pseudocode. The purpose is for you to **write down your own pseudocode** and compare your pseudocode with what is provided in these notes. 
+</p>
+</div>
+
+Another thing about pseudocode is that it is not a Python code. **Do not copy and paste the pseudocode** into any Python interpreter or Jupyter notebook cell and expect it to work. There is a good reason why it is called *pseudocode* and not *pythoncode*. See [definition of pseudo](https://www.google.com/search?client=opera&q=define%3A+pseudo&sourceid=opera&ie=UTF-8&oe=UTF-8).
+
 ## Bubble Sort
 
 Bubble sort is one of the simplest sorting algorithms. We will be following the PCDIT framework (**P**roblem statement, Test **C**ases, **D**esign of Algorithm, **I**mplementation, and **T**esting) in describing the steps of these algorithms. 
@@ -145,7 +158,9 @@ After we work on the test cases, we can now write down the steps in pseudocode. 
 
 Let's write down what we did in the above case. Note that in this algorithm we chose not to return the sorted list as a new object, but rather _sort the list in place_. This means that the input list is modified and the sorted list exists in the object pointed by the input list. The advantage of this is that the list need not be duplicated and the memory is saved as we deal only with one list. 
 
-```
+<div cursor="pointer" class="collapsible">Show Pseudocode</div>
+<div class="content_answer">
+<pre>
 Bubble Sort 
 Version: 1
 Input: array
@@ -158,8 +173,8 @@ Steps:
         2.1.2 second_number = array[inner_index]
         2.1.3 if first_number > second_number, do:
             2.1.3.1 swap(first_number, second_number)
-
-```
+</pre>
+</div>
 
 ## Optimised Bubble Sort
 
@@ -175,7 +190,9 @@ We can optimized bubble sort algorithm by noting the following:
     
     In the second iteration, no swap is made since all the numbers are already in the correct order. However, with the above algorithm, the outer iteration will still repeat for $n-1$ times. We can conclude therefore that if no swap is made in one pass of *outer* iteration, the sequence is already in order, and we can stop the *outer* iteration. We can then modify the pseudocode as follows.
     
-    ```
+    <div cursor="pointer" class="collapsible">Show Pseudocode</div>
+    <div class="content_answer">
+    <pre>
     Bubble Sort 
     Version: 2
     Input: array
@@ -191,7 +208,8 @@ We can optimized bubble sort algorithm by noting the following:
             3.2.3 if first_number > second_number, do:
                 3.2.3.1 swap(first_number, second_number)
                 3.2.3.2 swapped = True
-    ```
+    </pre>
+    </div>
 
 Let's compare this with version 1.
 * Notice that the number of *outer* iteration is much less in version two as compared to version one.
@@ -207,7 +225,9 @@ Let's compare this with version 1.
     
     We can re-write the pseudocode as follows.
     
-    ```
+    <div cursor="pointer" class="collapsible">Show Pseudocode</div>
+    <div class="content_answer">
+    <pre>
     Bubble Sort 
     Version: 3
     Input: array
@@ -224,7 +244,8 @@ Let's compare this with version 1.
                 3.2.3.1 swap(first_number, second_number)
                 3.2.3.2 swapped = True
         3.3 n = n -1
-    ```
+    </pre>
+    </div>
     
     The additional step is 3.3 which is to reduce the number of $n$. With this, Step 3.2 will decrease by one in the next *outer* iteration.
 
@@ -246,7 +267,9 @@ Let's compare this with version 1.
     
     We can modify our pseudocode as follows.
     
-    ```
+    <div cursor="pointer" class="collapsible">Show Pseudocode</div>
+    <div class="content_answer">
+    <pre>
     Bubble Sort
     Version: 4
     Input: array
@@ -265,7 +288,8 @@ Let's compare this with version 1.
                 3.3.3.2 swapped = True
                 3.3.3.3 new_n = inner_index
         3.4 n = new_n
-    ```
+    </pre>
+    </div>
     
     In the above pseudocode, we set record down the position of the element on the last swap (step 3.3.3.3), and we assign this as the new ending position for the next *outer* pass (step 3.4). 
 
@@ -407,7 +431,9 @@ Looking at the above case, we can try to write down our algorithm in pseudocode.
 
 Let's write it down.
 
-```
+<div cursor="pointer" class="collapsible">Show Pseudocode</div>
+<div class="content_answer">
+<pre>
 Insertion Sort 
 Version: 1
 Input: array
@@ -419,7 +445,9 @@ Steps:
     2.2 As long as (inner_index > 0) AND (array[inner_index] < array[inner_index - 1]), do:
         2.2.1 swap(array[inner_index - 1], array[inner_index])
         2.2.2 inner_index = inner_index - 1  # move to the left
-```
+</pre>
+</div>
+
 ### Optimised Insertion Sort
 
 We can improve the algorithm slightly by reducing the number of assignment in the inner loop. This means that instead of swapping and assigning elements in the *inner* iteration, we only assign the element once it finds its final position. To do this, we store the element we are going to move into a temporary variable. 
@@ -458,7 +486,9 @@ This is an animation example for a different sequence of number from Wikipedia.
 
 We can then modify the pseudocode as follows.
 
-```
+<div cursor="pointer" class="collapsible">Show Pseudocode</div>
+<div class="content_answer">
+<pre>
 Insertion Sort 
 Version: 2
 Input: array
@@ -472,7 +502,8 @@ Steps:
         2.3.1 array[inner_index] = array[inner_index - 1]) # shift to the right
         2.3.2 inner_index = inner_index - 1  # move to the left
     2.4 array[inner_index] = temporary # save temporary to its final position
-```
+</pre>
+</div>
 
 Note:
 

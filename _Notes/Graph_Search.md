@@ -51,7 +51,9 @@ In the figures above, we use a Queue data structure to explore the vertices. Whe
 
 ### (D)esign of Algorithm
 
-```
+<div cursor="pointer" class="collapsible">Show Pseudocode</div>
+<div class="content_answer">
+<pre>
 Input:
 - G: Graph
 - s: starting vertex
@@ -73,13 +75,16 @@ Steps:
       4.2.1.2 set the neighbour's distance to u's distance + 1
       4.2.1.3 put the neighbour into the Queue
   4.3 after finish exploring all neighbours, set u's color to black
-```
+</pre>
+</div>
 
 In the above algorithm, we start by setting all the vertices to white and have a distance of INF or any large number value greater than the number of the vertices. We then start from the vertex s and explore its neighbours. Everytime we explore a neighbour, we check its colour. If the colour is white, it means that it has not been visited previously, so we change the colour to grey and add the distance by one. We then put this neighbour into the queue to visit its neighbours later on. We proceed visiting the vertices by taking out the vertex from the Queue. As mentioned, it is the Queue that ensures that we visit the vertices in a breadth-first manner. 
 
 The only thing about this algorithm is that we only get a graph with distances on each vertex, but we would not be able to retrieve the path to take from s to the destination vertex. In order to find the shortest path, we need to store the **parent** vertex when we visit a neighbouring vertex. To do this, we modify the algorithm as follows.
 
-```
+<div cursor="pointer" class="collapsible">Show Pseudocode</div>
+<div class="content_answer">
+<pre>
 Input:
 - G: Graph
 - s: starting vertex
@@ -106,13 +111,16 @@ Steps:
       4.2.1.3 set u as the parent vertex of the neighbour 
       4.2.1.4 put the neighbour into the Queue
   4.3 after finish exploring all neighbours, set u's color to black
-```
+</pre>
+</div>
 
 In the second algorithm, we have a new attribute called **parent**. In the beginning we set all vertices to have NILL as their parents. Since s is the starting vertex, it has no parent and so we set to NILL in step 2.3. We added step 4.2.1.3 where we set u as the parent to the neighbouring vertex when we add that neighbouring vertex into the Queue. 
 
 With this, we can write another algorithm to retrieve the path from s to some destination vertex v. 
 
-```
+<div cursor="pointer" class="collapsible">Show Pseudocode</div>
+<div class="content_answer">
+<pre>
 Find-Path BFS
 Input:
 - G: graph after running BFS
@@ -128,7 +136,8 @@ Steps:
 3. otherwise, 
   3.1 call find-path(G, s, parent of v)
   3.2 add v into the result from 3.1
-```
+</pre>
+</div>
 
 The above algorithm uses recursion. There are two base cases. The first base case is when the destination vertex to be the same as the starting vertex. In this case, the output is just that vertex. The second base case is when there is no path from s to v. We know there is no path when along the path starting from v we find a vertex which parent is NILL. The recursion case is described in step 3. In this case, we call the same function but with the destination vertex to be the parent of the current destination vertex. By moving the destination vertex to the parent, we reduce the problem and make it smaller until we reach base case described in step 1. 
 
@@ -214,7 +223,9 @@ This brings us to the other kind of edges discovered by depth-first search. The 
 
 Now we can try to write the steps to do depth-first search. We will write the steps using two functions. The first one is called DFS as shown below.
 
-```
+<div cursor="pointer" class="collapsible">Show Pseudocode</div>
+<div class="content_answer">
+<pre>
 DFS
 Input:
 - G: graph
@@ -232,11 +243,14 @@ Steps:
 3. for each vertex in the graph G
   3.1 if the vertex's colour is white, do:
     3.1.1 dfs-visit(G, u)
-```
+</pre>
+</div>
 
 The above algorithm simply initialize the vertices and go through every vertex to perform the second function DFS-VISIT. 
 
-```
+<div cursor="pointer" class="collapsible">Show Pseudocode</div>
+<div class="content_answer">
+<pre>
 DFS-Visit
 Input:
 - G: graph
@@ -258,7 +272,8 @@ Steps:
 5. set u's colour to black
 6. increase time by 1
 7. set current time to be the finishing time
-```
+</pre>
+</div>
 
 This function simply set the discovery time for the visited vertex u and begins to visit all the neighbouring vertices of u. However, it only calls DFS-VISIT if the neighbouring vertices are white, which means these vertices have not been visited yet. Once it finishes visiting all the neighbouring vertices, it marks the vertex u to be black and set the finishing time. 
 
@@ -284,7 +299,9 @@ We can re-order the tasks by its finishing time from the largest to the smallest
 
 The sequence above is based on its finishing time from the largest to the smallest. The first three are independent and their sequence can be interchanged, but subsequently, "shirt" must be done only after "undershirt" task. This sequence may also depends on which vertex the search encounters first. With this in mind, we can write the topological sort steps as follows.
 
-```
+<div cursor="pointer" class="collapsible">Show Pseudocode</div>
+<div class="content_answer">
+<pre>
 Topological-Sort
 Input:
 - G: graph
@@ -294,5 +311,5 @@ Steps:
 1. call DFS(G) to compute the finishing time for each vertex in G
 2. sort the vertices based on its finishing time from largest to smallest
 3. return a list of sorted vertices 
-```
-
+</pre>
+</div>

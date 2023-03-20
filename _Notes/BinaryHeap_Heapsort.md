@@ -177,7 +177,9 @@ Let's look at the particular example above. Given the tree above, we do the foll
 
 We can write down the steps we did in the previous section as follows.
 
-```
+<div cursor="pointer" class="collapsible">Show Pseudocode</div>
+<div class="content_answer">
+<pre>
 def max-heapify(A, i):
 version: 1
 Input:
@@ -191,11 +193,14 @@ Steps:
     2.2 if array[max_child_i] > array[current_i], do:
         2.2.1 swap( array[max_child_i], array[current_i])
     2.3 current_i = max_child_i # move to the index of the largest child
-```
+</pre>
+</div>
 
 Note that the above steps will continue iterating down even if the current node already satisfies _max-heap_ property. This means that we can stop iterating if the largest children is already less than the current node. We can do this by checking if any swap is happening. If no swap is needed then we are done. This is because we assumes that the left child and the right child already satisfies _max-heap property_.
 
-```
+<div cursor="pointer" class="collapsible">Show Pseudocode</div>
+<div class="content_answer">
+<pre>
 def max-heapify(A, i):
 version: 2
 Input:
@@ -212,7 +217,8 @@ Steps:
         3.3.1 swap( array[max_child_i], array[current_i])
         3.3.2 swapped = True
     3.3 current_i = max_child_i # move to the index of the largest child
-```
+</pre>
+</div>
 
 Note:
 
@@ -316,7 +322,9 @@ Let's consider an array as shown below.
 
 We can then write down the steps in a pseudocode as follows:
 
-```
+<div cursor="pointer" class="collapsible">Show Pseudocode</div>
+<div class="content_answer">
+<pre>
 def build-max-heap(array):
 Input:
   - array: arbitrary array of integers
@@ -326,7 +334,7 @@ Steps:
 2. starting_index = integer(n / 2) - 1 # start from the middle or non-leaf node
 3. For current_index in Range(from starting_index down to 0), do:
     3.1 call max-heapify(array, current_index)
-```
+</pre>
 
 Note:
 
@@ -447,7 +455,9 @@ We will sort the elements following these steps:
 
 Let's write down the steps in the previous section in a pseudocode.
 
-```
+<div cursor="pointer" class="collapsible">Show Pseudocode</div>
+<div class="content_answer">
+<pre>
 def heapsort(array):
 Input:
   - array: any arbitrary array
@@ -459,7 +469,8 @@ Steps:
     3.1 swap( array[0], array[heap_end_pos])
     3.2 heap_end_pos = heap_end_pos -1 # reduce heap size
     3.3 call max-heapify(array[from index 0 to heap_end_pos inclusive], 0)
-```
+</pre>
+</div>
 
 Note:
 

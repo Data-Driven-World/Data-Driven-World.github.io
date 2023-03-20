@@ -90,7 +90,9 @@ As shown in the previous section, we can divide Merge sort into two algorithm. T
 
 In designing the main steps, we identify the recursive case and the base case. In our case, the base case is when the array contains only one element. In this case, the array is trivially sorted. Therefore, we do not need to do anything. On the other hand, when the number of element in the array is greater than one, we split the array into two, and call recursively the same steps, and combine them after they are sorted. We can write the algorithm in this way.
 
-```
+<div cursor="pointer" class="collapsible">Show Pseudocode</div>
+<div class="content_answer">
+<pre>
 Merge Sort
 Input: 
  - array = sequence of integers
@@ -103,7 +105,8 @@ Steps:
     1.2 call MergeSort(array, p, q)
     1.3 call MergeSort(array, q+1, r)
     1.4 call Merge(array, p, q, r)
-```
+</pre>
+</div>
 
 Note:
 * We only consider the recursive case in step 1, i.e. when the length of the array we consider is more than one items. The base case is trivial since it is sorted if there is only one element. We know it is only one element if the end index and the beginning index is greater than 0. 
@@ -113,7 +116,9 @@ Note:
 
 We can now discuss the *merge* step algorithm. To do this step, we have three indices, we will call them *left* (purple), *right* (blue), and *dest* (red). The idea is to start from the beginning and compare the numbers pointed by the *left* and the *right* arrow. The smaller number will placed in position pointed by *dest*. 
 
-```
+<div cursor="pointer" class="collapsible">Show Pseudocode</div>
+<div class="content_answer">
+<pre>
 Merge
 Input:
 - array = sequence of integers
@@ -145,7 +150,8 @@ Steps:
     9.1 array[dest] = right_array[right]
     9.2 right = right + 1
     9.3 dest = dest + 1
-```
+</pre>
+</div>
 
 Note: 
 * Steps 1 and 2 are used to calculate the numbe of elements in the left and right arrays.
