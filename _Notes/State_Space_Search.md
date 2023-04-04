@@ -136,7 +136,7 @@ We have been looking into this search problem from the perspective of state mach
 - `statemap`, which gives you the transition relationship from one state to another with respect to the legal input
 - `legal_inputs`, which is a set of legal inputs in this domain.
 
-We can enforce this in Python using the Abstract Base Class and creating an **abstract property**. We can, thus, define the following class:
+We can enforce this in Python using the Abstract Base Class and creating an **abstract property**. This is a similar concept as how we implement the computed property `start_state`. We can, thus, define the following class:
 
 ```python
 from abc import abstractmethod
@@ -151,13 +151,26 @@ class StateSpaceSearch(StateMachine):
     @abstractmethod
     def legal_inputs(self):
         pass
+
+    @property
+    @abstractmethod
+    def start_state(self):
+        return self.__start_state
+
+    @start_state.setter
+    @abstrctmethod
+    def start_state(self, value):
+        self.__start_state = value
+
 ```
 
-In the above definition, `StateSpaceSearch` class inherits from `StateMachine` class and it adds the required property `statemap` and `legal_inputs`. Any state machine class implementing `StateSpaceSearch` now must define these two properties and its getter method. For example, we can implement the `statemap` property as follows:
+In the above definition, `StateSpaceSearch` class inherits from `StateMachine` class and it adds the required property `statemap` and `legal_inputs`. Any state machine class implementing `StateSpaceSearch` now must define these two properties and its getter method. The last two abstract methods that we have is simply the getter and the setter of `start_state` computed property which has to be implemented for all `StateMachine` child class. We created a general implementation that sets and returns the attribute `__start_state`. We use Python name mangling with double underscore at the beginning of the variable to keep this attribute hidden. 
+
+So now, what we need to do is simply to implement the two abstract methods, i.e. `statemap` and `legal_inputs`, as well as initializing the `start_state` property.  For example, we can initialize the `start_state` property and implement the `statemap` property as follows:
 
 ```python
 class MapSM(StateSpaceSearch):
-        
+
     def __init__(self, start):
         self.start_state = start
 

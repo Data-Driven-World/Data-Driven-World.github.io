@@ -60,6 +60,11 @@ class StateMachine(ABC):
         self.state = ns
         return o
 
+    @property
+    @abstractmethod
+    def start_state(self):
+        pass
+
     @abstractmethod
     def get_next_values(self, state, inp):
         pass
@@ -89,7 +94,7 @@ s = StateMachine()
 
 If you try to instantiate an abstract class with some abstract method, Python will complain and throws an exception. 
 
-In the above implementation, we also define `start()` method as simply applying the `start_state` as the current `state` value of the machine. Moreover, the `step(inp)` calls `get_next_values(state, inp)`, which should be implemented in the child class, to get the next state and the output given the current state and the current input. The next state is then applied to the `state` and the `step()` method returns the output. 
+In the above implementation, we also define `start()` method as simply applying the `start_state` as the current `state` value of the machine. In this case, `self.start_state` is the computed property and we have defined this property to be an `@abstract_method`. This means that the child class has to define this computed property to return the starting state of the State Machine. Moreover, the `step(inp)` calls `get_next_values(state, inp)`, which should be implemented in the child class, to get the next state and the output given the current state and the current input. The next state is then applied to the `state` and the `step()` method returns the output. Similar to `start_state`, the method `get_next_values(state, inp)` is declared as an `@abstractmethod`. This means that the child class is responsible to implement the method's definition. It only makes sense that the starting state and the state transition diagram, defined in the `get_next_values()`, are implemented in the child class. The reason is that every state machine has different starting states and transition diagrams and it is not possible to capture these in the abstract base class. 
 
 Thus, `step()` is designed to update the state of the state machine. Thus, when `get_next_values()` is implemented, it must be implemented as a pure function.
 
@@ -142,15 +147,16 @@ lb1.transduce([0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1])
 Notice a few things. The class above has an attribute called `state` which store the state of the state machine. The `set_output()` method is similar to `step(inp)` and `get_next_values(state, inp)` methods since they provide the output and affect the state of the machine.
 
 In using the `StateMachine` class, we will use inheritance and only define two things:
-- `start_state` which has to be initialized to the machine initial state value, and
+- `start_state` computed property which has to be defined to return the machine initial state value, and
 - `get_next_values(state, inp)` method which provides the output and next state functions.
 
 
 ```python
 class LightBoxSM(StateMachine):
     
-    def __init__(self):
-        self.start_state = "off"
+    @property
+    def start_state(self):
+        return "off"
         
     def get_next_values(self, state, inp):
         
@@ -205,6 +211,10 @@ print(lb2.step(1))
 
 Notice that we have produced the same output using a different way of writing the light box state machine. It would be convenient to have something like the `transduce()` method where we can just put in a list of input to the machines and produce the output. You will work this method in your problem set.
 
+Another thing, you may want to note is that the class `LightBox` has to implement the computed property `start_state` and `get_next_values()`. When the child class does not have have these implementation, it will throw an exception. You can try to run the above code in Python Tutor as given below.
+
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=from%20abc%20import%20ABC,%20abstractmethod%0A%0Aclass%20StateMachine%28ABC%29%3A%0A%20%20%20%20%0A%20%20%20%20def%20start%28self%29%3A%0A%20%20%20%20%20%20%20%20self.state%20%3D%20self.start_state%0A%0A%20%20%20%20def%20step%28self,%20inp%29%3A%0A%20%20%20%20%20%20%20%20ns,%20o%20%3D%20self.get_next_values%28self.state,%20inp%29%0A%20%20%20%20%20%20%20%20self.state%20%3D%20ns%0A%20%20%20%20%20%20%20%20return%20o%0A%0A%20%20%20%20%40property%0A%20%20%20%20%40abstractmethod%0A%20%20%20%20def%20start_state%28self%29%3A%0A%20%20%20%20%20%20%20%20pass%0A%0A%20%20%20%20%40abstractmethod%0A%20%20%20%20def%20get_next_values%28self,%20state,%20inp%29%3A%0A%20%20%20%20%20%20%20%20pass%0A%20%20%20%20%0Aclass%20LightBoxSM%28StateMachine%29%3A%0A%20%20%20%20%0A%20%20%20%20%40property%0A%20%20%20%20def%20start_state%28self%29%3A%0A%20%20%20%20%20%20%20%20return%20%22off%22%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20def%20get_next_values%28self,%20state,%20inp%29%3A%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20if%20state%20%3D%3D%20%22off%22%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20inp%20%3D%3D%201%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20next_state%20%3D%20%22on%22%0A%20%20%20%20%20%20%20%20%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20next_state%20%3D%20%22off%22%0A%20%20%20%20%20%20%20%20elif%20state%20%3D%3D%20%22on%22%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20inp%20%3D%3D%201%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20next_state%20%3D%20%22off%22%0A%20%20%20%20%20%20%20%20%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20next_state%20%3D%20%22on%22%0A%20%20%20%20%20%20%20%20output%20%3D%20next_state%0A%20%20%20%20%20%20%20%20return%20next_state,%20output%0A%20%20%20%20%20%20%20%20%0Alb2%20%3D%20LightBoxSM%28%29%0Alb2.start%28%29%0Aprint%28lb2.step%280%29%29%0Aprint%28lb2.step%280%29%29%0Aprint%28lb2.step%281%29%29%0Aprint%28lb2.step%280%29%29%0Aprint%28lb2.step%280%29%29%0Aprint%28lb2.step%280%29%29%0Aprint%28lb2.step%280%29%29%0Aprint%28lb2.step%281%29%29%0Aprint%28lb2.step%281%29%29%0Aprint%28lb2.step%281%29%29%0Aprint%28lb2.step%281%29%29%0Aprint%28lb2.step%280%29%29%0Aprint%28lb2.step%281%29%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+
 ## Designing a State Machine
 
 In this section we will discuss how we can design a state machine and write its implementation in Python using some of the code we have provided such as in our `StateMachine` class. 
@@ -256,15 +266,18 @@ Fourth, we draw the state transition diagram based on our problem formulation. A
 
 The states are represented by the circle and we have only two states, i.e. "on" and "off". The arrow direction tells us the **next state function**. Given the current state and the input value, we know what is the next state by looking at the arrow direction. Furthermore, each arc is labelled with an input and its output. So for example, `B=0/OFF` on the most right arrow means that when the current state is "off" and the input 0, the output is "off" for that transition. This provides the **output function**.  
 
-Once we have the state transition diagram, then we can begin to write its Python implementation. First, we need to initialize the `start_state`. In our case "off" is the initial state of the machine.
+Once we have the state transition diagram, then we can begin to write its Python implementation. First, we need to define the `start_state` computed property. In our case "off" is the initial state of the machine.
 
 
 ```python
 class LightBoxSM(StateMachine):
     
-    def __init__(self):
-        self.start_state = "off"
+    @property
+    def start_state(self):
+        return "off"
 ```
+
+In the above definition, we declared `start_state` as a `property` using Python decorator. This computed property returns the value of the initial state of the machine, which in this case is `off`. 
 
 Next, we define the `get_next_values(state, inp)` from the state transition diagram. Notice that there are four arrows in the diagram. So we should expect to have four branches in our if-else statements.
 
@@ -272,8 +285,9 @@ Next, we define the `get_next_values(state, inp)` from the state transition diag
 ```python
 class LightBoxSM(StateMachine):
     
-    def __init__(self):
-        self.start_state = "off"
+    @property
+    def start_state(self):
+        return "off"
         
     def get_next_values(self, state, inp):
         
@@ -308,8 +322,9 @@ If the `get_next_values()` only returns one thing, Python will throw an exceptio
 ```python
 class LightBoxSM(StateMachine):
     
-    def __init__(self):
-        self.start_state = "off"
+    @property
+    def start_state(self):
+        return "off"
         
     def get_next_values(self, state, inp):
         
@@ -434,8 +449,9 @@ Knowing the output and next state functions enable us to write the implementatio
 ```python
 class AccumulatorSM(StateMachine):
     
-    def __init__(self):
-        self.start_state = 0
+    @property
+    def start_state(self):
+        return 0
         
     def get_next_values(self, state, inp):
         output = state + inp
