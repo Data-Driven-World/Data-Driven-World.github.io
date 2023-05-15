@@ -12,6 +12,14 @@ aside:
 show_edit_on_github: false
 show_date: false
 ---
+By the end of this lesson, you should be able to:
+- Create `class` definitions with initialization and other methods
+- Create **stored** property and **computed** property
+- Draw UML class diagram of a class with attributes and methods
+- Explain `has-a` relationship
+- Discuss object **aliasing** and **copying**
+- Draw UML class diagram for `has-a` relationship
+
 
 ## What is Object Oriented Programming?
 

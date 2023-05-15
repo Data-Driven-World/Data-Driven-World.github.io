@@ -13,6 +13,12 @@ show_edit_on_github: false
 show_date: false
 ---
 
+By the end of this lesson, you should be able to:
+- Solve problems using **recursion**
+- Identify problems that has recursive solutions
+
+## Introduction
+
 Many computing problems are recursive in structure. With the word *recursive* we mean that to solve a given problem, they *call themselves* one or more times to solve a closely related problems. These algorithms in a way follow a *divide-and-conquer* approach.
 
 Divide and conquer approach breaks the problem into several subproblems that are similar to the original problem but smaller in size. The algorithm then solves this smaller problems and then combines the solutions to create the solution to the original problem. The divide-and-conquer paradigm involves three steps at each level of the recursion:

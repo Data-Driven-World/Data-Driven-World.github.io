@@ -12,6 +12,11 @@ aside:
 show_edit_on_github: false
 show_date: false
 ---
+By the end of this lesson, you should be able to:
+- Implement:
+  - Bubble sort and
+  - Insertion sort algorithms to **sort** a sequence of number
+
 # Sorting Algorithm
 
 The best way to practice your programming skills is by writing actual code. One of the common computation is to sort some items in some way. For example, sorting a number from smallest to biggest or names from A to Z. In this notebook, we will describe some sorting algorithms which you can implement in Python. 

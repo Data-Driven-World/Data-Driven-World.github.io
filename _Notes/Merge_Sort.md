@@ -12,6 +12,12 @@ aside:
 show_edit_on_github: false
 show_date: false
 ---
+By the end of this lesson, you should be able to:
+- Explain and implement **merge sort** algorithm
+- Derive solution of **recurrence** of merge sort using recursion-tree method
+- Measure computation time of merge sort and **compare** it with the other sort algorithms
+
+## Introduction
 
 The previous example of summing an array gives a simple example of divide-and-conquer approach as an alternative to *iterative* solution. We also showed another problem which is easier to solve recursively as in the problem of Tower of Hanoi. Now, we will give another example which is intuitively recursive, merge sort algorithm.
 

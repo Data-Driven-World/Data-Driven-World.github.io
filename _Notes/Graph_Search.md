@@ -12,6 +12,9 @@ aside:
 show_edit_on_github: false
 show_date: false
 ---
+By the end of this lesson, you should be able to:
+- Explain and implement **breadth** first search
+- Explain and implement **depth** first search
 
 ## Introduction
 

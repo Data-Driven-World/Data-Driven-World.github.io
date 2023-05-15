@@ -13,6 +13,11 @@ show_edit_on_github: false
 show_date: false
 ---
 
+By the end of this lesson, you should be able to:
+- **Apply** breadth first search to perform state-space search
+
+## Introduction
+
 
 Previously we have learnt on how we can find data from a graph data structure. We implemented breadth-first search and explore depth-first search algorithm. We can look into this problem from a different angle as a state-space search. Instead of thinking about nodes and edges, we can see it as *states* and *transitions*. Each node can be thought of as one state and each edge can be thought of as a transition from one state to anther state. We can then apply graph algorithm for our state machines.
 

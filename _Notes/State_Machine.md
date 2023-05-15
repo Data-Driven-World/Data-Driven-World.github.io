@@ -12,7 +12,8 @@ aside:
 show_edit_on_github: false
 show_date: false
 ---
-
+By the end of this lesson, you should be able to:
+- Define a **state machine**
 
 ## State Machine as a Function
 

@@ -12,6 +12,11 @@ aside:
 show_edit_on_github: false
 show_date: false
 ---
+By the end of this lesson, you should be able to:
+- Implement an **Abstract Base Class** for State Machine using abc module
+- Define **output** function and **next** state function
+- Draw **state transition diagram** and **time-step table**
+- **Implement** output function and next state function inside `get_next_values` overridden method.
 
 ## Designing StateMachine Class
 

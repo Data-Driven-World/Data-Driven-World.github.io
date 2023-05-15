@@ -12,6 +12,12 @@ aside:
 show_edit_on_github: false
 show_date: false
 ---
+By the end of this lesson, you should be able to:
+- Define **Big-O** notation and other asymptotic notations
+- Derive **complexity** of a code using its computation model
+- **Measure** computation time for bubble sort, insertion sort, built-in sort, and heapsort
+
+## Introduction
 
 A performance of a computer program can be measured using its computation time and its memory space that it occupies. In this section, we will focus on analysing and measuring computation time.
 

@@ -12,6 +12,12 @@ aside:
 show_edit_on_github: false
 show_date: false
 ---
+By the end of this lesson, you should be able to:
+- Inherit a class to create a **child** class
+- Explain `is-a` relationship
+- Draw **UML** diagram for `is-a` relationship
+- **Override** operators to extend parent's methods
+- Implement **Deque** data structure as a subclass of **Queue**
 
 ## Inheritance
 
