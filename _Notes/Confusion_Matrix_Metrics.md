@@ -1,18 +1,8 @@
----
-title: Confusion Matrix and Metrics
-permalink: /notes/confusion_matrix_metrics
-key: notes-confusion-matrix-metrics
-layout: article
-nav_key: Notes
-sidebar:
-  nav: Notes
-license: false
-aside:
-  toc: true
-show_edit_on_github: false
-show_date: false
----
+By the end of this lesson, you should be able to:
+- Calculate confusion matrix, precision, and recall
 
+
+# Confusion Matrix and Metrics
 
 In Linear Regression, we use the correlation coefficient and some mean square errors as metrics to see if our model fits the data well. What kind of metrics we can use in the case of classification problems? In this lesson we will use confusion matrix and a few matrix to evaluate our classification model.
 
@@ -64,7 +54,7 @@ $$\text{accuracy} = \frac{\text{TP} + \text{TN}}{\text{Total Cases}}$$
 
 where TP is the number of True Positive cases, TN is the number of True Negative cases. You can also see accuracy as a fraction of the green circle over the blue circle in the image below.
 
-<img src="/assets/images/week10/confusion_matrix_accuracy.png" alt="drawing" width="600"/>
+<img src="https://data-driven-world.github.io/assets/images/week10/confusion_matrix_accuracy.png" alt="drawing" width="600"/>
 
 Given the accuracy, we can also calculate another metric called **error rate**. In fact, the error rate is just given by the following:
 
@@ -89,7 +79,7 @@ $$\text{precision} = \frac{\text{TP}}{\text{Total Predicted Positives}} = \frac{
 
 The calculation of precision can be seen as a fraction between the green circle and the blue circle in the image below.
 
-<img src="/assets/images/week10/confusion_matrix_precision.png" alt="drawing" width="600"/>
+<img src="https://data-driven-world.github.io/assets/images/week10/confusion_matrix_precision.png" alt="drawing" width="600"/>
 
 ### Sensitivity
 
@@ -108,7 +98,7 @@ $$\text{sensitivity} = \frac{\text{TP}}{\text{Total Actual Positives}} = \frac{\
 
 We can see sensitivty as a fraction between the green circle and the blue circle in the image below.
 
-<img src="/assets/images/week10/confusion_matrix_sensitivity.png" alt="drawing" width="600"/>
+<img src="https://data-driven-world.github.io/assets/images/week10/confusion_matrix_sensitivity.png" alt="drawing" width="600"/>
 
 
 ### Specificity
@@ -129,7 +119,7 @@ $$\text{specificity} = \frac{\text{TN}}{\text{Total Actual Negatives}} = \frac{\
 
 We can see specificity as a fraction between the green circle and the blue circle in the image below.
 
-<img src="/assets/images/week10/confusion_matrix_specificity.png" alt="drawing" width="600"/>
+<img src="https://data-driven-world.github.io/assets/images/week10/confusion_matrix_specificity.png" alt="drawing" width="600"/>
 
 ## Confusion Matrix for Multiple Classes
 

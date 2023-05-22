@@ -1,17 +1,7 @@
----
-title: Multiple Linear Regression
-permalink: /notes/multiple_linear_regression
-key: notes-multiple-linear-regression
-layout: article
-nav_key: Notes
-sidebar:
-  nav: Notes
-license: false
-aside:
-  toc: true
-show_edit_on_github: false
-show_date: false
----
+# Multiple Linear Regression
+
+By the end of this lesson, you should be able to:
+- Transform data for **higher** order features
 
 ## Introduction
 
@@ -30,7 +20,6 @@ where $x$ is the only independent variable or feature. In multiple linear regres
 $$\hat{y}(x) = \hat{\beta}_0 + \hat{\beta}_1 x_1 + \hat{\beta}_2 x_2 + \ldots + \hat{\beta}_n x_n$$
 
 In the above hypothesis, we have $n$ features. Note also that we can assume to have $x_0 = 1$ with $\hat{\beta}_0$ as its coefficient.
-
 
 We can write this in terms of a row vector, where the features are written as
 

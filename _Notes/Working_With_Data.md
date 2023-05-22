@@ -1,17 +1,11 @@
----
-title: Working With Data
-permalink: /notes/working_with_data
-key: notes-working-with-data
-layout: article
-nav_key: Notes
-sidebar:
-  nav: Notes
-license: false
-aside:
-  toc: true
-show_edit_on_github: false
-show_date: false
----
+# Working with Data
+
+By the end of this lesson, you should be able to:
+- Create a **Panda's DataFrame** and selecting data from DataFrame
+- Using library to read `CSV` or `EXCEL` file
+- Give example of **linear regression and classification**
+- **Split** data randomly into training set and testing set
+- **Normalize** data using min-max normalization
 
 ## Short Introduction to Machine Learning
 

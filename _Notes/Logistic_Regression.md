@@ -1,17 +1,10 @@
----
-title: Logistic Regression for Classification
-permalink: /notes/logistic_regression
-key: notes-logistic-regression
-layout: article
-nav_key: Notes
-sidebar:
-  nav: Notes
-license: false
-aside:
-  toc: true
-show_edit_on_github: false
-show_date: false
----
+# Logistic Regression for Classification
+
+By the end of this lesson, you should be able to:
+- Write objective function of **logistic** regression
+- Use logistic regression to **calculate** probabilities of binary classification
+- Train logistic **regression** model
+- Split data into **training**, **validation**, and **testing** set
 
 ## Introduction
 
@@ -21,7 +14,7 @@ The problem of classification deals with *categorical* data. In this problem, we
 
 Let's take an example of breast cancer classification problem. Let's say depending on the cell size, an expert can identify if the cell is benign or malignant. We can plot something like the following figure.
 
-![](/assets/images/week10/cancer_cell_plot.png)
+![](https://data-driven-world.github.io/assets/images/week10/cancer_cell_plot.png)
 
 In the y-axis, value of 1 means it is a malignant cell while value of 0 means it is benign. The x-axis can be considered as a normalized size of the cell with mean 0 and standard deviation of 1 (recall z-normalization).
 
@@ -50,12 +43,12 @@ plt.plot(z,y)
 
 
 
-    [<matplotlib.lines.Line2D at 0x7fc798285fa0>]
+    [<matplotlib.lines.Line2D at 0x7ff1294a0ac0>]
 
 
 
 
-![png](/assets/images/week10/Logistic_Regression_4_1.jpeg)
+![png](/assets/images/week10/Logistic_Regression_2_1.png)
 
 
 We can write our hypothesis as follows.
@@ -82,7 +75,7 @@ The above relationship shows that we can map the value of linear regression into
 
 The above conditions also means that we can classify $y=1$ when $\beta^T x \geq 0$ and $y = 0$ when $\beta^T x < 0$. We can draw these boundary conditions.
 
-![](/assets/images/week10/decision_boundary.png)
+![](https://data-driven-world.github.io/assets/images/week10/decision_boundary.png)
 
 In the figure above, we indicated the predicted label $y$ with the orange colour. We see that when $p(x)\geq 0.5$, the data is marked as $y=1$ (orange). On the other hand, when $p(x) \leq 0.5$, the data is marked as $y=0$ (orange). The thick black line shows the decision boundary for this particular example. 
 
@@ -157,6 +150,8 @@ $$\beta_j = \beta_j - \alpha \frac{1}{m}\Sigma_{i=1}^m \left(p(x)-y^i  \right)x_
 
 The above equations can be written in matrix notation so that we can perform a vectorized computation. 
 
+
+
 ### Hypothesis Function
 
 Recall that our hypothesis can be written as:
@@ -196,32 +191,6 @@ x_n \\
 Recall that this is for a single data with $n$ features. The result of this vector multiplication $z$ is a single number for that one single data with $n$ features. 
 
 
-
-What about if we have more that one data. Let's say if we have $m$ rows of data, We have to rewrite the $\mathbf{x}$ vector as a matrix $\mathbf{X}$.
-
-$$\mathbf{X} = \begin{bmatrix}
-1 & x_1^1 & x_2^1 & \ldots & x_n^1 \\
-1 & x_1^2 & x_2^2 & \ldots & x_n^2 \\
-\ldots & \ldots & \ldots & \ldots & \ldots \\
-1 &x_1^m & x_2^2 & \ldots & x_n^m 
-\end{bmatrix}$$
-
-In the above notation, we put the features as the columns and the different row as different rows in the matrix. With $m$ rows of data, our $z$ values is now a vector $\mathbf{z}$.
-
-$$\mathbf{z} = \mathbf{b}^T \mathbf{X}^T$$
-
-The above equation results in a **row** vector. If we prefer to keep it as a column vector, we can transpose it as follows.
-
-$$\mathbf{z} = (\mathbf{b}^T \mathbf{X}^T)^T$$
-
-We can have the same column vector by putting the matrix $\mathbf{X}$ on the left hand side of the matrix multiplication. 
-
-$$\mathbf{z} = \mathbf{X} \mathbf{b}$$
-
-And now our hypothesis for $m$ rows of data can be written as
-
-
-$$\mathbf{p}(x) = \frac{1}{1 + e^{-\mathbf{X}\mathbf{b}}}$$
 
 ### Cost Function
 
@@ -347,7 +316,7 @@ To facilitate this kind of prediction, instead of having **one** target column i
 | x         | x         | 0   | 0   | 1    |
 | x         | x         | 0   | 1   | 0    |
 
-We can then train the model **three times** and obtain the coefficients for **each class**. In this example, we would have **three sets** of beta coefficients, one for the cat versus no-cat, another one for dog versus no-dog, and the last one for fish versus no-fish. We can then use these coefficients to calculate the probability for each class and produce the probability
+We can then train the model **three times** and obtain the coefficients for **each class**. In this example, we would have **three sets** of beta coefficients, one for the cat versus no-cat, another one for dog versus no-dog, and the last one for fish versus no-fish. We can then use these coefficients to calculate the probability for each class and produce the probability.
 
 Recall that our hypothesis function returns a probability between 0 to 1.
 
@@ -369,8 +338,6 @@ In the above example, the first two rows have cat class as their highest probabi
 
 ## Derivation of Logistic Regression Derivative 
 
-
-
 We want to find $\frac{\partial}{\partial \beta_j}J(\beta)$, where
 
 $$J(\beta) = -\frac{1}{m}\left[\Sigma_{i=1}^m y^i \log(p(x^i)) + (1 - y^i) \log(1 - p(x^i))\right]$$
@@ -379,7 +346,7 @@ To simplify our derivation, we will consider each case when $y=1$ and when $y=0$
 
 $$J(\beta) = -\frac{1}{m}\left[\Sigma_{i=1}^m  \log(p(x^i)) \right]$$
 
-Derivating this with respect to $\beta$ is
+Derivating this with respect to $\theta$ is
 
 $$\frac{\partial}{\partial \beta_j}J(\beta) = -\frac{1}{m}\Sigma \frac{1}{p(x)}\frac{\partial}{\partial \beta}p(x)$$
 
@@ -410,15 +377,13 @@ Now let's do the same for $y = 0$, the cost function is given by
 
 $$J(\beta) = -\frac{1}{m}\left[\Sigma_{i=1}^m  \log(1 - p(x^i))\right]$$
 
-Derivating this with respect to $\beta$ gives
+Derivating this with respect to $\theta$ gives
 
 $$\frac{\partial}{\partial \beta_j}J(\beta) = \frac{1}{m}\Sigma \frac{1}{1 - p(x)}\frac{\partial}{\partial \beta}p(x)$$
-
 
 Substituting expression for the hypothesis function and its derivative  gives us
 
 $$\frac{\partial}{\partial \beta_j}J(\beta) = \frac{1}{m}\Sigma \frac{1}{1 - \frac{1}{1 + e^{-\beta^T x}}}  \frac{x_j e^{-\beta^T x}}{(1 + e^{-\beta^T x})^2} $$
-
 
 $$\frac{\partial}{\partial \beta_j}J(\beta) = \frac{1}{m}\Sigma \frac{1 + e^{-\beta^T x}}{e^{-\beta^T x}}  \frac{x_j e^{-\beta^T x}}{(1 + e^{-\beta^T x})^2} $$
 
@@ -437,3 +402,5 @@ $$\frac{\partial}{\partial \beta_j}J(\beta) = -\frac{1}{m}\Sigma_{i=1}^m y^i p(x
 $$\frac{\partial}{\partial \beta_j}J(\beta) = -\frac{1}{m}\Sigma_{i=1}^m \left(y^i p(x)(1 + e^{-\beta^T x})  - p(x) \right)x_j^i$$
 $$\frac{\partial}{\partial \beta_j}J(\beta) = -\frac{1}{m}\Sigma_{i=1}^m \left(y^i   - p(x) \right)x_j^i$$
 $$\frac{\partial}{\partial \beta_j}J(\beta) = \frac{1}{m}\Sigma_{i=1}^m \left(p(x)-y^i  \right)x_j^i$$
+
+
