@@ -1,7 +1,22 @@
+---
+title: Visualization
+permalink: /notes/visualization
+key: notes-visualization
+layout: article
+nav_key: Notes
+sidebar:
+  nav: Notes
+license: false
+aside:
+  toc: true
+show_edit_on_github: false
+show_date: false
+---
+
 By the end of this lesson, you should be able to:
 - Create **scatter** plot and statistical plots like box plot, histogram, and bar plot
 
-# Visualization
+## Introduction
 
 In this lesson, we will discuss common plots to visualize data using Matplotlib and Seaborn. Seaborn works on top of Matplotlib and you will need to import both packages in most of the cases. 
 

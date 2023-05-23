@@ -1,4 +1,17 @@
-# Working with Data
+---
+title: Working With Data
+permalink: /notes/working_with_data
+key: notes-working-with-data
+layout: article
+nav_key: Notes
+sidebar:
+  nav: Notes
+license: false
+aside:
+  toc: true
+show_edit_on_github: false
+show_date: false
+---
 
 By the end of this lesson, you should be able to:
 - Create a **Panda's DataFrame** and selecting data from DataFrame

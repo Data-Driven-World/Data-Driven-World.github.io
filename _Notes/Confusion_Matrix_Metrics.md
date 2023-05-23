@@ -1,8 +1,23 @@
+---
+title: Confusion Matrix and Metrics
+permalink: /notes/confusion_matrix_metrics
+key: notes-confusion-matrix-metrics
+layout: article
+nav_key: Notes
+sidebar:
+  nav: Notes
+license: false
+aside:
+  toc: true
+show_edit_on_github: false
+show_date: false
+---
+
 By the end of this lesson, you should be able to:
 - Calculate confusion matrix, precision, and recall
 
 
-# Confusion Matrix and Metrics
+## Introduction
 
 In Linear Regression, we use the correlation coefficient and some mean square errors as metrics to see if our model fits the data well. What kind of metrics we can use in the case of classification problems? In this lesson we will use confusion matrix and a few matrix to evaluate our classification model.
 

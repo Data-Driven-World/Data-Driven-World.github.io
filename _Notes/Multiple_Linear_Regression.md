@@ -1,4 +1,18 @@
-# Multiple Linear Regression
+---
+title: Multiple Linear Regression
+permalink: /notes/multiple_linear_regression
+key: notes-multiple-linear-regression
+layout: article
+nav_key: Notes
+sidebar:
+  nav: Notes
+license: false
+aside:
+  toc: true
+show_edit_on_github: false
+show_date: false
+---
+
 
 By the end of this lesson, you should be able to:
 - Transform data for **higher** order features

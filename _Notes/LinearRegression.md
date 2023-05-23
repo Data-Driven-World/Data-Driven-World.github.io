@@ -1,4 +1,17 @@
-# Linear Regression
+---
+title: Linear Regression
+permalink: /notes/linear_regression
+key: notes-linear-regression
+layout: article
+nav_key: Notes
+sidebar:
+  nav: Notes
+license: false
+aside:
+  toc: true
+show_edit_on_github: false
+show_date: false
+---
 
 By the end of this lesson, you should be able to:
 - Write **objective** function of linear regression
