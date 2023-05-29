@@ -19,6 +19,16 @@ By the end of this lesson, you should be able to:
 - Create a `Vertex` class and a Graph class
 - Represent graphs using **adjacency-list** representation or **adjacency-matrix** representation
 
+Important words:
+- graph
+- adjacency matrix
+- adjacency list
+- vertex
+- neighbours
+- edge
+- weight
+- directional edge
+
 ## What is a Graph?
 
 In previous sections, we have worked with various algorithms and data. For example, we did sorting algorithm in a sequence of data of a list or array-like type. List and array is one kind of data where the item has relationship only with its previous and next item in a sequence. Stack and Queues are another kind of data structures. Even with these two, each item is related only in linear fashion, either with the next one at the top of the Stack or with the next in the sequence of the Queue. A Graph allows more relationship to be represented between each item. Two examples of graph data structures are shown below.

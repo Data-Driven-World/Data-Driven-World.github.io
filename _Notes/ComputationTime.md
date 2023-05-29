@@ -17,6 +17,14 @@ By the end of this lesson, you should be able to:
 - Derive **complexity** of a code using its computation model
 - **Measure** computation time for bubble sort, insertion sort, built-in sort, and heapsort
 
+Important words:
+- complexity
+- time complexity
+- asymptotic notation
+- computation time
+- computational model
+- logarithmic, linear, log linear, quadratic, polynomial, exponential
+
 ## Introduction
 
 A performance of a computer program can be measured using its computation time and its memory space that it occupies. In this section, we will focus on analysing and measuring computation time.

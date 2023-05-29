@@ -17,6 +17,15 @@ By the end of this lesson, you should be able to:
 - **Apply** Stack and Queue for some applications
 - Implement Queue using double **Stack** and discuss implementation **impact** on computation time
 
+Important words:
+- data structure
+- stack
+- queue
+- pop
+- push
+- enqueue
+- dequeue
+
 ## Introduction
 
 You have encountered `list` as one of the built-in data types that Python support. You can use list to represent one dimensional or linear data collection where sequence and order matters. There are other kinds of linear data structures and we will explore some of them in this lesson.

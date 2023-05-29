@@ -19,6 +19,14 @@ By the end of this lesson, you should be able to:
 - **Override** operators to extend parent's methods
 - Implement **Deque** data structure as a subclass of **Queue**
 
+Important words:
+- inheritance
+- child class
+- parent class
+- super
+- override
+- abstract base class
+
 ## Inheritance
 
 In the previous lesson, we have shown that we can reuse the code from some *base* class by using inheritance. The syntax in Python for deriving a class from some base class is as follows:

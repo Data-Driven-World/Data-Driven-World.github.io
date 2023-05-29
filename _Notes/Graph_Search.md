@@ -16,6 +16,16 @@ By the end of this lesson, you should be able to:
 - Explain and implement **breadth** first search
 - Explain and implement **depth** first search
 
+Important words:
+- graph traversal
+- breadth first search
+- depth first search
+- topological search
+- distance
+- colour
+- parent vertex
+- start/finish time
+
 ## Introduction
 
 In the previous lesson, we have introduced how we can represent a graph using object oriented programming. We created two classes `Vertex` and `Graph`. One main use cases with this kind of data is to do some search. For example, given the graph of MRT lines, we would like to search what is the path to take from one station to another station. We usually are interested in the shortest path. This is what Google Map and other Map application does. In this lesson, we will discuss two graph search algorithms: breadth-first search and depth-first search.

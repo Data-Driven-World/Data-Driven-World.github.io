@@ -16,6 +16,19 @@ By the end of this lesson, you should be able to:
 - Write functions to do **binary heap** data structure operation
 - Implement **heapsort** using iteration
 
+Important words:
+- tree
+- binary tree
+- root
+- heap
+- heap property
+- heapify
+- node
+- leaf
+- parent node
+- child node
+- heapsort
+
 ## Introduction
 
 Previously, we discussed two sorting algorithms called [Bubble Sort and Insertion Sort]({% link _Notes/BubbleSort_InsertionSort.md %}). In this section we will apply our programming skills to investigate another sorting algorithm called the Heapsort. We will then compare the performance of Heapsort with the previous [Bubble Sort and Insertion Sort]({% link _Notes/BubbleSort_InsertionSort.md %}). We will discuss some notations on how to analyze these performance.

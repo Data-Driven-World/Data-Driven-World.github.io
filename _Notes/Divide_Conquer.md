@@ -17,6 +17,13 @@ By the end of this lesson, you should be able to:
 - Solve problems using **recursion**
 - Identify problems that has recursive solutions
 
+Important words:
+- recursion
+- base case
+- recursive case
+- helper function
+- recursive tree
+
 ## Introduction
 
 Many computing problems are recursive in structure. With the word *recursive* we mean that to solve a given problem, they *call themselves* one or more times to solve a closely related problems. These algorithms in a way follow a *divide-and-conquer* approach.

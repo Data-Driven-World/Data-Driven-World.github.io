@@ -15,6 +15,13 @@ show_date: false
 By the end of this lesson, you should be able to:
 - Define a **state machine**
 
+Important words:
+- state machine
+- start state
+- pure function
+- state transition diagram
+- time step table
+
 ## State Machine as a Function
 
 In the first few weeks, we do computation by defining a function. When the computation return a value, we can write its output in terms of a mathematical equation as shown below.

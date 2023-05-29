@@ -16,6 +16,16 @@ show_date: false
 By the end of this lesson, you should be able to:
 - **Apply** breadth first search to perform state-space search
 
+Important words:
+- state space search
+- legal inputs
+- state map
+- graph traversal
+- breadth first search
+- queue
+- path
+- step
+
 ## Introduction
 
 

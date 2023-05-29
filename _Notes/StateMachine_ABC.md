@@ -18,6 +18,14 @@ By the end of this lesson, you should be able to:
 - Draw **state transition diagram** and **time-step table**
 - **Implement** output function and next state function inside `get_next_values` overridden method.
 
+Important words:
+- start state
+- get_next_values
+- next state
+- current state
+- abstract base class
+- abstract method
+
 ## Designing StateMachine Class
 
 As mentioned previously, all state machine have some common characteristics. This motivates us to design an Abstract Base Class for State Machine. In designing an Abstract Base Class for state machine we try to identify what is the thing that all state machines have. We know that all state machine has a **state**. This shall be one of our attributes. We also try to figure out what all state machines *can do* in common. What are the common operations? For our design, we will create three methods that all state machines can do:

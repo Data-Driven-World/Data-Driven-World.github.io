@@ -15,6 +15,12 @@ show_date: false
 By the end of this lesson, you should be able to:
 - Implement **Array** and **Linked List** data structure from the same base class
 
+Important words:
+- abstract data type
+- list
+- fixed size array
+- linked list
+
 ## Introduction
 
 In this lesson we will detour a little bit to discuss two kinds of list. One is a Fixed Size Array and the other one is a Linked List. Both are list but they have their differences.
