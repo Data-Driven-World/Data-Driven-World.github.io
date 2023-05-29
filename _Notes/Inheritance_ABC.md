@@ -26,6 +26,7 @@ Important words:
 - super
 - override
 - abstract base class
+- iterable
 
 ## Inheritance
 
