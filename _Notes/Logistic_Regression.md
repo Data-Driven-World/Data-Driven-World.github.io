@@ -19,6 +19,18 @@ By the end of this lesson, you should be able to:
 - Train logistic **regression** model
 - Split data into **training**, **validation**, and **testing** set
 
+Important words:
+- classification
+- hypothesis
+- probability
+- logistic function
+- coefficients
+- binary classification
+- cost function
+- gradient descent
+- update function
+- matrix notation
+
 ## Introduction
 
 The problem of classification deals with *categorical* data. In this problem, we wish to identify a set of data whether they belong to a particular class of category. For example, a given text message from an email, we would like to classify if it is a spam or not a spam. Another example would be given some measurement of cancer cells we wish to classify if it is benign or malignant. In this section we will learn logistic regression to solve this classification problem.
@@ -61,7 +73,7 @@ plt.plot(z,y)
 
 
 
-![png](/assets/images/week10/Logistic_Regression_2_1.png)
+![png](Logistic_Regression_files/Logistic_Regression_4_1.png)
 
 
 We can write our hypothesis as follows.

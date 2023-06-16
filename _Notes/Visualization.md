@@ -16,7 +16,13 @@ show_date: false
 By the end of this lesson, you should be able to:
 - Create **scatter** plot and statistical plots like box plot, histogram, and bar plot
 
-## Introduction
+Important words:
+- scatter plot
+- line plot
+- pair plot
+- bar plot
+- box plot
+- histogram
 
 In this lesson, we will discuss common plots to visualize data using Matplotlib and Seaborn. Seaborn works on top of Matplotlib and you will need to import both packages in most of the cases. 
 
@@ -491,7 +497,7 @@ sns.histplot(x='resale_price', data=df_tampines)
 
 
 
-![png](/assets/images/week8/Visualization_11_1.png)
+![png](Visualization_files/Visualization_12_1.png)
 
 
 In the above plot, we use `df_tampines` as our data source and use `resale_price` column as our x-axis. We can change the plot if we want to show it vertically.
@@ -510,7 +516,7 @@ sns.histplot(y='resale_price', data=df_tampines)
 
 
 
-![png](/assets/images/week8/Visualization_13_1.png)
+![png](Visualization_files/Visualization_14_1.png)
 
 
 **Notice that the background changes**. This is because we have called `sns.set()` which set Seaborn default setting instead of using Matplotlib's setting. For example, Matplotlib uses whitebackground and no grid. Seaborn by default displays some white grid on gray background.
@@ -530,7 +536,7 @@ sns.histplot(y='resale_price', data=df_tampines, bins=10)
 
 
 
-![png](/assets/images/week8/Visualization_15_1.png)
+![png](Visualization_files/Visualization_16_1.png)
 
 
 We can see that majority of the sales of resale HDB in Tampines is priced at about \$400k to \$500k.
@@ -552,7 +558,7 @@ sns.boxplot(x='resale_price', data=df_tampines)
 
 
 
-![png](/assets/images/week8/Visualization_17_1.png)
+![png](Visualization_files/Visualization_18_1.png)
 
 
 See [Understanding Boxplot](https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51) for more detail. But the figure in that website summarizes the different information given in a boxplot.
@@ -577,7 +583,7 @@ myplot = sns.histplot(y='resale_price', data=df_tampines, bins=10)
 ```
 
 
-![png](/assets/images/week8/Visualization_20_0.png)
+![png](Visualization_files/Visualization_21_0.png)
 
 
 Once you obtain the handle, you can call Matplotlib's function by adding the word `set_` in front of it. For example, if the Matplotlib's function is `plt.xlabel()`, you call it as `myplot.set_xlabel()`. See the code below.
@@ -598,7 +604,7 @@ myplot.set_title('HDB Resale Price in Tampines', fontsize=16)
 
 
 
-![png](/assets/images/week8/Visualization_22_1.png)
+![png](Visualization_files/Visualization_23_1.png)
 
 
 Notice now that the plot has a title and both the x and y label has changed. 
@@ -652,7 +658,7 @@ myplot.set_title('HDB Resale Price in Tampines', fontsize=16)
 
 
 
-![png](/assets/images/week8/Visualization_26_1.png)
+![png](Visualization_files/Visualization_27_1.png)
 
 
 ## Using Hue
@@ -675,7 +681,7 @@ myplot.set_title('HDB Resale Price in Tampines', fontsize=16)
 
 
 
-![png](/assets/images/week8/Visualization_28_1.png)
+![png](Visualization_files/Visualization_29_1.png)
 
 
 So we can see from the distribution that 4-room flats in Tampines contributes roughly the largest sales. We can also see that 4-room flat resale price is around the median of the all the resale flats in this area. 
@@ -696,7 +702,7 @@ myplot.set_title('HDB Resale Price in Tampines', fontsize=16)
 
 
 
-![png](/assets/images/week8/Visualization_30_1.png)
+![png](Visualization_files/Visualization_31_1.png)
 
 
 The above colouring is not so obvious because they are on top of one another, one way is to change the settings in such a way that it is stacked. We can do this by setting the `multiple` argument for the case when there are multiple data in the same area.
@@ -719,7 +725,7 @@ myplot.set_title('HDB Resale Price in Tampines', fontsize=16)
 
 
 
-![png](/assets/images/week8/Visualization_32_1.png)
+![png](Visualization_files/Visualization_33_1.png)
 
 
 ## Scatter Plot and Line Plot
@@ -741,7 +747,7 @@ myplot.set_ylabel('Resale Price in $1000')
 
 
 
-![png](/assets/images/week8/Visualization_34_1.png)
+![png](Visualization_files/Visualization_35_1.png)
 
 
 As we can see from the plot above, that the price tend to increase with the increase in floor area. You can again use the `hue` argument to see any category in the plot.
@@ -763,7 +769,7 @@ myplot.set_ylabel('Resale Price in $1000')
 
 
 
-![png](/assets/images/week8/Visualization_36_1.png)
+![png](Visualization_files/Visualization_37_1.png)
 
 
 We can see that flat type in a way also has relationship with the floor area. 
@@ -778,7 +784,7 @@ myplot = sns.pairplot(data=df_tampines)
 ```
 
 
-![png](/assets/images/week8/Visualization_39_0.png)
+![png](Visualization_files/Visualization_40_0.png)
 
 
 The above plots immediately plot different scatter plots and histogram in a matrix form. The diagonal of the plot shows the histogram of that column data. The rest of the cell shows you the scatter plot of two columns in the data frame. From these, we can quickly see the relationship between different columns in the data frame.

@@ -1,7 +1,7 @@
 ---
-title: Multiple Linear Regression
-permalink: /notes/multiple_linear_regression
-key: notes-multiple-linear-regression
+title: Linear Regression
+permalink: /notes/linear_regression
+key: notes-linear-regression
 layout: article
 nav_key: Notes
 sidebar:
@@ -13,9 +13,14 @@ show_edit_on_github: false
 show_date: false
 ---
 
-
 By the end of this lesson, you should be able to:
 - Transform data for **higher** order features
+
+Important words:
+- hypothesis
+- polynomial
+- update function
+- matrix form
 
 ## Introduction
 

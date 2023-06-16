@@ -20,6 +20,18 @@ By the end of this lesson, you should be able to:
 - **Split** data randomly into training set and testing set
 - **Normalize** data using min-max normalization
 
+Important Words:
+- Data Frame
+- Series
+- index
+- column
+- vectorized operation
+- normalization
+- z-norm
+- min-max
+- dataset
+- test, training, validation set
+
 ## Short Introduction to Machine Learning
 
 In the previous weeks we have discussed how various computation can be done. We begin by discussing computational complexity and divide and conquer strategy through recursion. We then discusses how data can have computation associated with it through object oriented programming. We discussed several data structures and algorithms associated with various problems. We then end up with offering a different perspective by looking at computation as a state machine.

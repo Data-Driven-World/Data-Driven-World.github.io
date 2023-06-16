@@ -21,6 +21,18 @@ By the end of this lesson, you should be able to:
 - Plot **cost** function over iteration time
 - Plot **linear** regression
 
+Important words:
+- linear regression
+- hypothesis
+- coefficients
+- update function
+- gradient descent
+- matrix form
+- metrics
+- mean squared error
+- coefficient of determination
+
+
 ## Introduction
 
 Linear regression is a machine learning algorithm dealing with a continuous data and is considered a supervised machine learning algorithm. Linear regression is a useful tool for predicting a quantitative response. Though it may look just like another statistical methods, linear reguression is a good jumping point for newer approaches in machine learning. 
@@ -65,7 +77,7 @@ sns.scatterplot(y='resale_price', x='floor_area_sqm', data=df_tampines)
 
 
 
-![png](/assets/images/week9/LinearRegression_5_1.png)
+![png](LinearRegression_files/LinearRegression_6_1.png)
 
 
 Notice that the resale price increases as the floor area increases. So we can make a hypothesis by creating a straight line equation that predicts the resale price given the floor area data. The figure below shows the plot of a straight line and the existing data together.
@@ -85,7 +97,7 @@ sns.lineplot(y=y, x='floor_area_sqm', data=df_tampines, color='orange')
 
 
 
-![png](/assets/images/week9/LinearRegression_7_1.png)
+![png](LinearRegression_files/LinearRegression_8_1.png)
 
 
 Note that in the above code, we created a straight line equation with the following coefficients:
