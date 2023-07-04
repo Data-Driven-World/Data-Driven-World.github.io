@@ -353,6 +353,7 @@ Steps:
 3. For current_index in Range(from starting_index down to 0), do:
     3.1 call max-heapify(array, current_index)
 </pre>
+</div>
 
 Note:
 
