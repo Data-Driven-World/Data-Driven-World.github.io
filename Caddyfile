@@ -1,8 +1,0 @@
-:9090 {
-    handle_path /50005* {
-        uri strip_prefix  /50005
-        root * ./_site
-        try_files {path}.html {path}
-        file_server
-    }
-}
